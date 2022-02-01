@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go Roam</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sanjaya007/flex-library@master/dist/css/sanjaya.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/checkout.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="checkoutBody">
+    <!-- nav bar  -->
+    <div class="content-container nav-container">
+      <div class="nav-bar flex-css-row-sb">
+        <div class="logo-container">
+          <img src="./assets/image/new_logo-blue.png" alt="logo" />
+        </div>
+        <div class="input-container flex-css-row-sb">
+          <input type="text" placeholder="Where are you going ?" />
+          <div class="icon-container flex-css">
+            <img src="./assets/image/search_icon.png" alt="icon" />
+          </div>
+        </div>
+        <div class="link-container flex-css-row">
+          <a href="#" class="nav-lang">
+            <img
+              src="./assets/image/lang-icon-dark.png"
+              class="img-link"
+              alt="lang"
+            />
+            English
+          </a>
+          <a href="#">Explore</a>
+          <a href="#">About Us</a>
+          <a href="#">
+            <img
+              src="./assets/image/bell_icon.png"
+              class="img-link"
+              alt="icon"
+            />
+          </a>
+          <a href="#">
+            <div class="profile-container">
+              <img src="./assets/image/profile1.png" alt="" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- tab bar  -->
+    <div class="tab-container pt-5">
+      <a href="#" class="tab-link active">1.Choose Room</a>
+      <a href="#" class="tab-link">2. Confirmation</a>
+      <a href="#" class="tab-link">3. Checkout</a>
+      <div class="tab-line"></div>
+    </div>
+    <!-- main-container -->
+    <div class="content-container main-container">
+      <div class="header-container">
+        <p class="mb-2">Reservation Details</p>
+        <div class="heading-text flex-css-row-start pb-3 mb-4">
+          <h1>Arushi Boutique Hotel</h1>
+          <a href="#">Vip Access</a>
+        </div>
+        <div class="image-container">
+          <img src="./assets/image/cover.png" alt="cover" />
+        </div>
+      </div>
+      <div class="details-container">
+        <div class="header-text flex-css-row-sb mb-3">
+          <h1>Suite, Multiple Beds , Balcony</h1>
+          <div class="selected-box flex-css-row">
+            <img src="./assets/image/blue_tick.png" alt="tick" />
+            <p>Selected</p>
+          </div>
+        </div>
+        <div class="list-box flex-bottom-row-sb">
+          <div class="left-box">
+            <div class="list flex-css-row-start">
+              <img src="./assets/image/account.png" alt="list" />
+              <p>Sleep 3</p>
+            </div>
+            <div class="list flex-css-row-start">
+              <img src="./assets/image/room_bed.png" alt="list" />
+              <p>1 double bed 1 single bed</p>
+            </div>
+            <div class="list flex-css-row-start">
+              <img src="./assets/image/room_breakfast.png" alt="list" />
+              <p>Free breakfast</p>
+            </div>
+            <div class="list flex-css-row-start">
+              <img src="./assets/image/room_noise.png" alt="list" />
+              <p>Noise Making</p>
+            </div>
+            <div class="list flex-css-row-start">
+              <img src="./assets/image/room_researve.png" alt="list" />
+              <p>Researve now, pay later</p>
+            </div>
+            <div class="list flex-css-row-start">
+              <img src="./assets/image/nosmoking.png" alt="list" />
+              <p>Non Smoking</p>
+            </div>
+          </div>
+          <div class="right-box">
+            <div class="rate-box mb-4">
+              <div class="cost-text flex-css-row-end">
+                <span>Rs. 4300</span>
+                <h1>Rs. 3, 627</h1>
+              </div>
+              <p>per night</p>
+              <h5>Rs. 3850 total</h5>
+              <p>Includes taxes & fees</p>
+            </div>
+            <div class="price-list flex-css-row-end">
+              <div class="price-btn mb-5 flex-css-row">
+                <p>Price details</p>
+                <img src="./assets/image/blue_arrow.png" alt="arrow" />
+              </div>
+              <div class="box-wrapper" id="priceBoxWrapper">
+                <div class="box">
+                  <h1 class="mb-4">Price Details</h1>
+                  <div class="list flex-css-row-sb">
+                    <p>1 room x 1 night</p>
+                    <p>Rs. 3,627</p>
+                  </div>
+                  <div class="list flex-css-row-sb">
+                    <p>Tax and fees</p>
+                    <p>Rs. 223</p>
+                  </div>
+                  <div class="list flex-css-row-sb">
+                    <p class="total-text">Total</p>
+                    <p>Rs. 3,850</p>
+                  </div>
+                  <div class="discount-text mb-4">
+                    <p>40 % off - you save Rs.650 because you’re a member</p>
+                  </div>
+                  <div class="btn-container">
+                    <a href="#">Reserve</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-container">
+              <a href="#" class="back-btn">Back</a>
+              <a href="#" class="reserve-btn">Reserve</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer container  -->
+    <div class="content-container footer-container" id="footerContainer">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-logo">
+            <img src="./assets/image/new_logo-blue.png" alt="logo" />
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-links">
+            <p>Company</p>
+            <div class="link-list flex-top-column">
+              <a href="#">About</a>
+              <a href="#">Contact Us</a>
+              <a href="#">List your property</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-links">
+            <p>Terms and Policies</p>
+            <div class="link-list flex-top-column">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms of use</a>
+              <a href="#">Room Rewards Terms</a>
+              <a href="#"> Accessibility</a>
+              <a href="#"> Do not sell my personal information</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-links">
+            <p>Help</p>
+            <div class="link-list flex-top-column">
+              <a href="#"> Support </a>
+              <a href="#"> Cancel your hotel or vacation rental booking </a>
+              <a href="#"> Refund timelines, policies & processes </a>
+              <a href="#"> Use an Expedia coupon </a>
+              <a href="#"> International travel documents </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-banner pt-5 text-center">
+        <p>&#169; 2022 Roam Nepal, Inc. All rights reserved</p>
+      </div>
+    </div>
+    <script src="./assets/js/checkout.js"></script>
+  </body>
+</html>
