@@ -176,7 +176,7 @@ body {
 
 /* details container */
 .main-container .details-container {
-  margin-bottom: 50px !important;
+  margin-bottom: 80px !important;
 }
 
 .main-container .details-container .header-text h1 {
@@ -385,6 +385,53 @@ body {
   background-color: #ff5a10;
   color: #ffffff;
   margin-left: 20px !important;
+}
+
+/* amenities container  */
+.amenities-container {
+  margin-bottom: 30px !important;
+}
+.amenities-container .amenities-heading h1 {
+  color: #000000;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.amenities-container .box {
+  margin-bottom: 30px !important;
+}
+
+.amenities-container .box .list-head {
+  margin-bottom: 15px !important;
+}
+
+.amenities-container .box .list-head img {
+  height: 18px;
+  width: 18px;
+  object-fit: contain;
+  margin-right: 20px !important;
+}
+
+.amenities-container .box .list-head h1 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.amenities-container .box .list {
+  margin-bottom: 4px !important;
+  padding-left: 16px !important;
+}
+
+.amenities-container .box .list img {
+  height: 12px;
+  width: 12px;
+  object-fit: contain;
+  margin-right: 10px !important;
+}
+
+.amenities-container .box .list p {
+  font-size: 12px;
+  color: #000000;
 }
 
 /* footer container  */
