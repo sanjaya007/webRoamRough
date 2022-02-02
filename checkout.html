@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Go Roam</title>
+    <title>Checkout</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -64,13 +64,20 @@
     </div>
     <!-- tab bar  -->
     <div class="tab-container pt-5">
-      <a href="#" class="tab-link active">1.Choose Room</a>
-      <a href="#" class="tab-link">2. Confirmation</a>
-      <a href="#" class="tab-link">3. Checkout</a>
+      <a href="#" class="tab-link active" id="chooseRoomTabLink"
+        >1.Choose Room</a
+      >
+      <a href="#" class="tab-link" id="confirmationTabLink">2. Confirmation</a>
+      <a href="#" class="tab-link" id="checkOutTabLink">3. Checkout</a>
       <div class="tab-line"></div>
     </div>
     <!-- main-container -->
-    <div class="content-container main-container">
+    <!-- choose room container  -->
+    <div
+      class="content-container main-container hidden"
+      id="chooseRoomContainer"
+    >
+      <!-- choose room container -->
       <div class="header-container">
         <p class="mb-2">Reservation Details</p>
         <div class="heading-text flex-css-row-start pb-3 mb-4">
@@ -150,14 +157,24 @@
                     <p>40 % off - you save Rs.650 because you’re a member</p>
                   </div>
                   <div class="btn-container">
-                    <a href="#">Reserve</a>
+                    <a href="#" class="choose-room-reserve-btn">Reserve</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="btn-container">
-              <a href="#" class="back-btn">Back</a>
-              <a href="#" class="reserve-btn">Reserve</a>
+              <a
+                href="./index.html"
+                class="back-btn choose-room-back-btn"
+                id="chooseRoomBackBtn"
+                >Back</a
+              >
+              <a
+                href="#"
+                class="reserve-btn choose-room-reserve-btn"
+                id="reserveBtn"
+                >Reserve</a
+              >
             </div>
           </div>
         </div>
@@ -286,6 +303,195 @@
         </div>
       </div>
     </div>
+
+    <!-- confirmation container  -->
+    <div
+      class="content-container main-container hidden"
+      id="confirmationContainer"
+    >
+      <!-- confirmation container -->
+      <div class="confirmation-box">
+        <div class="header-box">
+          <p class="mb-2">Reservation Details</p>
+          <div class="heading-text flex-css-row-start pb-3 mb-4">
+            <h1>Arushi Boutique Hotel</h1>
+            <a href="#">Vip Access</a>
+          </div>
+        </div>
+        <div class="confirmation-detail-box flex-css-row-sb pb-5 pt-3">
+          <div class="left-box pr-4">
+            <div class="image-container">
+              <img src="./assets/image/room1.png" alt="room" />
+            </div>
+          </div>
+          <div class="right-box">
+            <div class="header-text flex-css-row-sb mb-3">
+              <h1>Suite, Multiple Beds , Balcony</h1>
+              <div class="selected-box flex-css-row">
+                <img src="./assets/image/blue_tick.png" alt="tick" />
+                <p>Selected</p>
+              </div>
+            </div>
+            <div class="detail-box flex-bottom-row-sb">
+              <div class="list-box">
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/account.png" alt="list" />
+                  <p>Sleep 3</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_bed.png" alt="list" />
+                  <p>1 double bed 1 single bed</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_breakfast.png" alt="list" />
+                  <p>Free breakfast</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_noise.png" alt="list" />
+                  <p>Noise Making</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_researve.png" alt="list" />
+                  <p>Researve now, pay later</p>
+                </div>
+              </div>
+              <div class="rate-box">
+                <div class="cost-text flex-css-row-end">
+                  <h1>Rs. 3, 627</h1>
+                </div>
+                <p>per night</p>
+                <h5>Rs. 3850 total</h5>
+                <p>Includes taxes & fees</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box flex-css-row-sb pt-5 pb-4">
+          <a href="#" class="change-room-link">Change the Room</a>
+          <div class="btn-container">
+            <a href="#" class="back-btn confirmation-back-btn">Back</a>
+            <a href="#" class="confirm-btn">Confirm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- checkout container  -->
+    <div class="content-container main-container" id="checkoutContainer">
+      <div class="checkout-heading mb-3">
+        <h1>Secure your booking only takes a minute</h1>
+      </div>
+      <div class="checkout-box flex-top-row-sb">
+        <div class="left-box pr-3"></div>
+        <div class="right-box">
+          <div class="image-heading">
+            <img src="./assets/image/room3.png" alt="room" />
+          </div>
+          <div class="right-details p-4">
+            <div class="address-box mb-1">
+              <h1>Thamel, 44600 Kathmandu, Nepal</h1>
+            </div>
+            <div class="rating-box flex-css-row-start mb-4">
+              <img src="./assets/image/orange_star.png" alt="star" />
+              <p>4.5</p>
+              <span>117 reviews</span>
+            </div>
+            <div class="booking-box mb-5">
+              <div class="booking-heading mb-3">
+                <h1>Your booking details</h1>
+              </div>
+              <div class="list-box flex-css-row-sb mb-4">
+                <div class="list">
+                  <h1>Check-in</h1>
+                  <p>Sun, Feb 6, 2022</p>
+                  <p>2:00 PM – 12:00 AM</p>
+                </div>
+                <div class="list">
+                  <h1>Check-out</h1>
+                  <p>Tue, Feb 22, 2022</p>
+                  <p>12:00 PM – 12:30 PM</p>
+                </div>
+              </div>
+              <div class="list-box">
+                <div class="list">
+                  <p>Total length of stay:</p>
+                  <h1>16 nights</h1>
+                </div>
+              </div>
+            </div>
+            <div class="price-box mb-5">
+              <div class="price-heading mb-3">
+                <h1>Price Details</h1>
+              </div>
+              <div class="list-box pb-2">
+                <div class="list flex-css-row-sb">
+                  <p>1 Room X 1 Night</p>
+                  <h1>Rs. 3,227</h1>
+                </div>
+                <div class="list flex-css-row-sb">
+                  <p>VAT</p>
+                  <h1>Rs. 200</h1>
+                </div>
+                <div class="list flex-css-row-sb">
+                  <p>Property service charges</p>
+                  <h1>Rs. 100</h1>
+                </div>
+              </div>
+              <div class="total-list py-3">
+                <div class="list flex-css-row-sb">
+                  <h1>Total</h1>
+                  <h1>Rs. 3,627</h1>
+                </div>
+              </div>
+              <div class="price-note">
+                <div class="list">
+                  <p>
+                    * Keep in mind that you have to present ID upon arrival.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="time-box mb-5">
+              <div class="time-heading mb-3">
+                <h1>Your time of arrival</h1>
+              </div>
+              <div class="time-note mb-3">
+                <p>
+                  Your room will be ready for check-in between 2:00 PM and 12:00
+                  AM
+                </p>
+              </div>
+              <div class="input-container">
+                <label for="time"
+                  >Add your estimated arrival time (optional)</label
+                >
+              </div>
+            </div>
+            <div class="payment-box mb-5">
+              <div class="payment-heading mb-3">
+                <h1>Your payment schedule</h1>
+              </div>
+              <div class="payment-note">
+                <p>No payment today. You'll pay when you stay.</p>
+              </div>
+            </div>
+            <div class="cancel-box">
+              <div class="cancel-heading">
+                <h1 class="mb-3">How much will it cost to cancel?</h1>
+              </div>
+              <div class="cancel-note">
+                <p class="mb-1">Free cancellation until 11:59 PM on Feb 4</p>
+              </div>
+              <div class="list flex-css-row-start">
+                <p class="pr-5">From 12:00 AM on Feb 5</p>
+                <p>NPR 384</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- footer container  -->
     <div class="content-container footer-container" id="footerContainer">
       <div class="row">

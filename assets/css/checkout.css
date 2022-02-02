@@ -6,6 +6,10 @@
   box-sizing: border-box !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f8f8f8;
   font-family: "Poppins", sans-serif;
@@ -99,9 +103,10 @@ body {
   color: #959595;
   font-weight: normal;
   position: relative;
-  margin-right: 20px !important;
+  margin-right: 40px !important;
   text-decoration: none;
   padding-bottom: 20px !important;
+  pointer-events: none;
 }
 
 .tab-container .tab-link::after {
@@ -129,6 +134,10 @@ body {
 .main-container {
   padding-top: 50px !important;
   padding-bottom: 20px !important;
+}
+
+.main-container.hidden {
+  display: none;
 }
 
 /* room choose  */
@@ -363,6 +372,7 @@ body {
   border-radius: 100px;
   font-weight: bold;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .main-container
@@ -432,6 +442,420 @@ body {
 .amenities-container .box .list p {
   font-size: 12px;
   color: #000000;
+}
+
+/* confirmation container */
+.main-container .confirmation-box {
+  background-color: #ffffff;
+  margin-bottom: 50px !important;
+  border-radius: 18px;
+  padding: 40px !important;
+}
+
+.main-container .confirmation-box .confirmation-detail-box {
+  border-bottom: 2px solid #95959533;
+}
+
+.main-container .confirmation-box .header-box p {
+  font-size: 14px;
+  color: #959595;
+}
+
+.main-container .confirmation-box .header-box .heading-text {
+  border-bottom: 2px solid #95959533;
+}
+
+.main-container .confirmation-box .header-box .heading-text h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.main-container .confirmation-box .header-box .heading-text a {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+  margin-left: 8px !important;
+  padding: 5px 20px !important;
+  border-radius: 100px;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .left-box
+  .image-container {
+  min-width: 360px;
+  max-width: 360px;
+  min-height: 230px;
+  max-height: 230px;
+  width: 360px;
+  height: 230px;
+  border-radius: 12px;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .left-box
+  .image-container
+  img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.main-container .confirmation-box .confirmation-detail-box .right-box {
+  width: 100%;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .header-text
+  h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .header-text
+  .selected-box {
+  background-color: #e2f0ff;
+  border-radius: 100px;
+  padding: 10px 20px !important;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .header-text
+  .selected-box
+  img {
+  height: 12px;
+  margin-right: 10px !important;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .header-text
+  .selected-box
+  p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #006ce6;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .detail-box
+  .list-box
+  .list {
+  margin-bottom: 10px !important;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .detail-box
+  .list-box
+  .list:nth-last-child(1) {
+  margin-bottom: 0 !important;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .detail-box
+  .list-box
+  .list
+  img {
+  height: 16px;
+  width: 16px;
+  object-fit: contain;
+  margin-right: 10px !important;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .detail-box
+  .list-box
+  .list
+  p {
+  font-size: 14px;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .detail-box
+  .rate-box {
+  text-align: right;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .detail-box
+  .rate-box
+  h1 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 10px !important;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .detail-box
+  .rate-box
+  p {
+  font-size: 12px;
+  color: #959595;
+}
+
+.main-container
+  .confirmation-box
+  .confirmation-detail-box
+  .right-box
+  .detail-box
+  .rate-box
+  h5 {
+  font-size: 12px;
+  color: #000000;
+}
+
+.main-container .confirmation-box .btn-box .change-room-link {
+  color: #006ce6;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.main-container .confirmation-box .btn-box .btn-container a {
+  padding: 14px 50px !important;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.main-container .confirmation-box .btn-box .btn-container a.back-btn {
+  background-color: #ffffff;
+  color: #ff5a10;
+  border: 1px solid #ff5a10;
+}
+
+.main-container .confirmation-box .btn-box .btn-container a.confirm-btn {
+  background-color: #ff5a10;
+  color: #ffffff;
+  margin-left: 20px !important;
+}
+
+/* checkout container  */
+.main-container .checkout-heading h1 {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.main-container .checkout-box .left-box {
+  width: 70%;
+}
+
+.main-container .checkout-box .right-box {
+  width: 30%;
+  background-color: #ffffff;
+  border-radius: 18px 18px 0px 0px;
+}
+
+.main-container .checkout-box .right-box .image-heading {
+  width: 100%;
+  height: 270px;
+  border-radius: 18px 18px 0px 0px;
+}
+
+.main-container .checkout-box .right-box .image-heading img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px 18px 0px 0px;
+}
+
+.main-container .checkout-box .right-box .right-details .address-box h1 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.main-container .checkout-box .right-box .right-details .rating-box img {
+  height: 12px;
+  margin-right: 5px !important;
+}
+
+.main-container .checkout-box .right-box .right-details .rating-box p {
+  color: #ff5a10;
+  font-size: 12px;
+  margin-right: 10px !important;
+}
+
+.main-container .checkout-box .right-box .right-details .rating-box span {
+  color: #006ce6;
+  font-size: 12px;
+}
+
+.main-container
+  .checkout-box
+  .right-box
+  .right-details
+  .booking-box
+  .booking-heading
+  h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-container
+  .checkout-box
+  .right-box
+  .right-details
+  .booking-box
+  .list-box
+  .list
+  h1 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.main-container
+  .checkout-box
+  .right-box
+  .right-details
+  .booking-box
+  .list-box
+  .list
+  p {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.main-container
+  .checkout-box
+  .right-box
+  .right-details
+  .price-box
+  .price-heading
+  h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-container .checkout-box .right-box .right-details .price-box .list-box {
+  border-bottom: 1px solid #9595957e;
+}
+
+.main-container .checkout-box .right-box .right-details .price-box .list {
+  margin-bottom: 10px !important;
+}
+
+.main-container .checkout-box .right-box .right-details .price-box .list h1 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.main-container .checkout-box .right-box .right-details .price-box .list p {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.main-container
+  .checkout-box
+  .right-box
+  .right-details
+  .time-box
+  .time-heading
+  h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-container .checkout-box .right-box .right-details .time-box .time-note p {
+  font-size: 12px;
+}
+
+.main-container
+  .checkout-box
+  .right-box
+  .right-details
+  .time-box
+  .input-container
+  label {
+  font-size: 10px;
+}
+
+.main-container
+  .checkout-box
+  .right-box
+  .right-details
+  .payment-box
+  .payment-heading
+  h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-container
+  .checkout-box
+  .right-box
+  .right-details
+  .payment-box
+  .payment-note
+  p {
+  font-size: 12px;
+}
+
+.main-container
+  .checkout-box
+  .right-box
+  .right-details
+  .cancel-box
+  .cancel-heading
+  h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-container
+  .checkout-box
+  .right-box
+  .right-details
+  .cancel-box
+  .cancel-note
+  p {
+  font-size: 12px;
+  color: #006ce6;
+}
+
+.main-container .checkout-box .right-box .right-details .cancel-box .list p {
+  font-size: 12px;
 }
 
 /* footer container  */
