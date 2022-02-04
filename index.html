@@ -22,6 +22,10 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+
+    <!-- litepicker date picker lib -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker-polyfills-ie11/dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
   </head>
   <body>
     <!-- nav bar  -->
@@ -87,12 +91,12 @@
         </div>
       </div>
       <div class="tab-container py-4 mt-2 mb-4">
-        <a href="#" class="tab-link active"> Overview </a>
-        <a href="#" class="tab-link"> Amenities </a>
-        <a href="#" class="tab-link"> Rooms </a>
-        <a href="#" class="tab-link"> Locations </a>
-        <a href="#" class="tab-link"> Policies </a>
-        <a href="#" class="tab-link"> Reviews </a>
+        <a href="#overviewContainer" class="tab-link active"> Overview </a>
+        <a href="#amenitiesContainer" class="tab-link"> Amenities </a>
+        <a href="#roomContainer" class="tab-link"> Rooms </a>
+        <a href="#locationContainer" class="tab-link"> Locations </a>
+        <a href="#reviewContainer" class="tab-link"> Reviews </a>
+        <a href="#policyContainer" class="tab-link"> Policies </a>
       </div>
       <div class="rating-text flex-css-row-start mb-3">
         <div class="rate-star flex-css-row-start mr-4">
@@ -104,7 +108,7 @@
       <div class="about-container flex-top-row-sb">
         <div class="left-container pr-3">
           <div class="box">
-            <div class="box-content about-box">
+            <div class="box-content about-box" id="overviewContainer">
               <h1>About this property</h1>
               <p>
                 This smoke-free hotel features 15 restaurants, a full-service
@@ -120,7 +124,7 @@
               <h1>Awards and affiliations</h1>
               <p>The property is a member of Preferred Hotels & Resorts.</p>
             </div>
-            <div class="box-content amenities-box">
+            <div class="box-content amenities-box" id="amenitiesContainer">
               <h1>Popular amenities</h1>
               <div class="list-box flex-css-row-start-wrap">
                 <div class="list flex-css-row-start">
@@ -206,6 +210,33 @@
               </div>
             </div>
           </div>
+          <div class="box schedule-box">
+            <div class="schedule-header flex-css-row-sb mb-5">
+              <div class="schedule-heading">
+                <h1>Select check in - check out date</h1>
+                <p>Minimum stay: 3 nights</p>
+              </div>
+              <div class="schedule-btn">
+                <a href="#">Check Rates</a>
+              </div>
+            </div>
+            <div id="litepicker"></div>
+            <div class="weather-box pt-5">
+              <div class="weather-details flex-css-row-start">
+                <img
+                  src="./assets/image/rainy_icon.png"
+                  id="weatherImage"
+                  alt="icon"
+                />
+                <h1 class="flex-css-row-start">
+                  Todays weather is &nbsp;
+                  <p id="weatherTemp">...</p>
+                  &nbsp; and &nbsp;
+                  <p id="weatherStatus">...</p>
+                </h1>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="right-container">
           <div class="box">
@@ -240,7 +271,7 @@
           </div>
         </div>
       </div>
-      <div class="room-container">
+      <div class="room-container" id="roomContainer">
         <div class="room-heading mb-4">
           <h1>Rooms</h1>
         </div>
@@ -559,7 +590,7 @@
           </div>
         </div>
       </div>
-      <div class="location-container">
+      <div class="location-container" id="locationContainer">
         <div class="location-heading">
           <h1>About this area</h1>
         </div>
@@ -606,7 +637,7 @@
           </div>
         </div>
       </div>
-      <div class="review-container">
+      <div class="review-container" id="reviewContainer">
         <div class="review-heading">
           <h1>Review</h1>
         </div>
@@ -700,7 +731,7 @@
           <a href="#">Rate yourself</a>
         </div>
       </div>
-      <div class="policy-container">
+      <div class="policy-container" id="policyContainer">
         <div class="policy-heading">
           <h1>Policies</h1>
         </div>

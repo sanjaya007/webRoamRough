@@ -32,3 +32,34 @@ $(".confirmation-back-btn").on("click", function (e) {
 
   $(window).scrollTop(0);
 });
+
+$("#specialBtn").on("click", function () {
+  $("#dropWrapper").slideToggle();
+});
+
+$("#checkoutBody").on("click", function (e) {
+  const targetEl = e.target;
+  const className = $(targetEl).attr("class")?.split(" ")[1];
+  if (className !== "special-btn") {
+    $("#dropWrapper").slideUp();
+  }
+});
+
+// check out form container
+$("#receiveTextInput").on("click", function () {
+  $(this).toggleClass("active");
+  if ($(this).hasClass("active")) {
+    $(this).attr("data-status", "active");
+  } else {
+    $(this).attr("data-status", "inactive");
+  }
+});
+
+$("#termsAndConditionsInput").on("click", function () {
+  $(this).toggleClass("active");
+  if ($(this).hasClass("active")) {
+    $(this).attr("data-status", "active");
+  } else {
+    $(this).attr("data-status", "inactive");
+  }
+});

@@ -382,7 +382,118 @@
         <h1>Secure your booking only takes a minute</h1>
       </div>
       <div class="checkout-box flex-top-row-sb">
-        <div class="left-box pr-3"></div>
+        <div class="left-box pr-3">
+          <div class="profile-box flex-css-row-start">
+            <a href="#" class="image-container">
+              <img src="./assets/image/profile1.png" alt="profile" />
+            </a>
+            <div class="profile-details flex-top-column pl-2">
+              <p>Your signed as</p>
+              <h1 class="mb-1">Anish.21@gmail.com</h1>
+              <span>*You’ve earned 20 Roam Tokens</span>
+            </div>
+          </div>
+          <div class="room-form-box">
+            <div class="room-form-heading flex-top-row-start mb-4">
+              <div class="image-container">
+                <img src="./assets/image/account.png" alt="account" />
+              </div>
+              <div class="text-container pl-2">
+                <h1 class="mb-1">Suite room 1</h1>
+                <p>2 Adults , 1 Queen Bed , 2 Twin Beds , Non- smoking</p>
+              </div>
+            </div>
+            <div class="form-container">
+              <div class="form-list">
+                <label for="traveler">Traveler name<span>*</span></label
+                ><br />
+                <input type="text" placeholder="First name" />
+              </div>
+              <div class="form-list">
+                <label for="traveler">Phone number<span>*</span></label
+                ><br />
+                <div class="input-list flex-css-row-start">
+                  <input
+                    type="text"
+                    class="phone-input1"
+                    placeholder="Nep +977"
+                    disabled
+                  />
+                  <input
+                    type="text"
+                    class="phone-input2"
+                    placeholder="So the property can reach you"
+                  />
+                </div>
+              </div>
+              <div class="check-input flex-css-row-start mb-3">
+                <div
+                  class="circle-box active flex-css"
+                  id="receiveTextInput"
+                  data-status="active"
+                >
+                  <div class="inner-box"></div>
+                </div>
+                <p>
+                  Receive text alerts about this trip. Message and data rates
+                  may apply.
+                </p>
+              </div>
+              <div class="special-box flex-css-row-start">
+                <div
+                  class="item-box special-btn flex-css-row-start"
+                  id="specialBtn"
+                >
+                  <img src="./assets/image/special.png" alt="special" />
+                  <p>Special/Accessibility requests (optional)</p>
+                  <img
+                    src="./assets/image/blue_arrow.png"
+                    class="blue-arrow-icon"
+                    alt="arrow"
+                  />
+                </div>
+                <div
+                  class="drop-wrapper"
+                  id="dropWrapper"
+                  style="display: none"
+                >
+                  <div class="drop-box p-4">
+                    <h1 class="mb-2">Special requests</h1>
+                    <p class="mb-3">
+                      Special/accessibility requests (e.g. roll-away beds, late
+                      check-in, and accessible rooms) are not guaranteed. If you
+                      don't hear back from the property, you may want to contact
+                      them directly to confirm. The property may charge a fee
+                      for certain special requests.
+                    </p>
+                    <input type="text" placeholder="Limit to 250 words" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payment-form-box">
+            <div class="payment-form-heading mb-3">
+              <h1 class="mb-1">Payment method</h1>
+              <p>Please enter your payment method</p>
+            </div>
+            <div class="form-container">
+              <div class="check-input flex-css-row-start mb-2">
+                <div class="circle-box flex-css">
+                  <div class="inner-box"></div>
+                </div>
+                <p>Credit card</p>
+              </div>
+              <div class="form-list">
+                <label for="card">Card number</label>
+                <input type="text" placeholder="Card number" />
+              </div>
+              <div class="form-list">
+                <label for="card"></label>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="right-box">
           <div class="image-heading">
             <img src="./assets/image/room3.png" alt="room" />
@@ -489,6 +600,41 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="additional-box">
+        <div class="additional-heading mb-1">
+          <h1>Additional informations</h1>
+        </div>
+        <p class="mb-3">Need something else? We will make it for you!</p>
+        <div class="input-container">
+          <label for="note">Order notes</label> <br />
+          <textarea
+            cols="30"
+            rows="5"
+            placeholder="Need anything to say"
+          ></textarea>
+        </div>
+      </div>
+      <div class="terms-box flex-css-row-start mb-4">
+        <div
+          class="circle-box flex-css"
+          id="termsAndConditionsInput"
+          data-status="inactive"
+        >
+          <div class="inner-box"></div>
+        </div>
+        <p>I agree to all the Terms and Conditions.</p>
+      </div>
+      <div class="policy-box mb-5">
+        <p>
+          Your booking is directly with Hotel Blue Horizon and by complezting
+          this booking you agree to the <a href="#">booking conditions</a>,
+          <a href="#">general terms</a>, and <a href="#">privacy policy.</a>
+        </p>
+      </div>
+      <div class="booking-btn-container mb-5">
+        <a href="#" class="complete-booking-btn">Complete booking</a>
+        <a href="#" class="check-booking-btn">Check your booking</a>
       </div>
     </div>
 

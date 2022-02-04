@@ -6,6 +6,10 @@
   box-sizing: border-box !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f8f8f8;
   font-family: "Poppins", sans-serif;
@@ -341,6 +345,110 @@ body {
   .list-box
   .list {
   width: 100%;
+}
+
+.main-container
+  .about-container
+  .left-container
+  .box.schedule-box
+  .schedule-heading
+  h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.main-container
+  .about-container
+  .left-container
+  .box.schedule-box
+  .schedule-heading
+  p {
+  font-size: 12px;
+  color: #959595;
+}
+
+.main-container
+  .about-container
+  .left-container
+  .box.schedule-box
+  .schedule-btn
+  a {
+  font-size: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ff5a10;
+  font-weight: normal;
+  border-radius: 100px;
+  padding: 18px 40px !important;
+}
+
+.main-container
+  .about-container
+  .left-container
+  .box.schedule-box
+  .weather-box
+  .weather-details
+  img {
+  margin-right: 10px !important;
+}
+
+.main-container
+  .about-container
+  .left-container
+  .box.schedule-box
+  .weather-box
+  .weather-details
+  h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.main-container
+  .about-container
+  .left-container
+  .box.schedule-box
+  .weather-box
+  .weather-details
+  p {
+  color: #006ce6;
+}
+
+/* lite picker  */
+
+.litepicker .container__months {
+  box-sizing: content-box !important;
+}
+
+.litepicker .container__months .month-item-header div > .month-item-name {
+  margin-right: 5px !important;
+}
+
+.litepicker .container__months .month-item-header .button-previous-month,
+.litepicker .container__months .month-item-header .button-next-month {
+  padding: 3px 5px !important;
+}
+
+.litepicker .container__months .month-item-header {
+  padding: 10px 5px !important;
+}
+
+.litepicker .container__months .month-item-weekdays-row > div {
+  padding: 5px 0 !important;
+}
+
+.litepicker .container__days > div,
+.litepicker .container__days > a {
+  padding: 5px 0 !important;
+}
+
+.litepicker .container__months .month-item {
+  padding: 5px !important;
+  box-sizing: content-box !important;
+}
+
+.litepicker .container__days .day-item.is-end-date {
+  background-color: #ff5a10 !important;
 }
 
 .main-container .about-container .right-container .box {
