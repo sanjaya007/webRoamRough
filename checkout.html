@@ -23,7 +23,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body id="checkoutBody">
+  <body class="checkout-body" id="checkoutBody">
     <!-- nav bar  -->
     <div class="content-container nav-container">
       <div class="nav-bar flex-css-row-sb">
@@ -54,9 +54,9 @@
               alt="icon"
             />
           </a>
-          <a href="#">
+          <a href="./profile.html">
             <div class="profile-container">
-              <img src="./assets/image/profile1.png" alt="" />
+              <img src="./assets/image/profile1.png" alt="profile" />
             </div>
           </a>
         </div>
@@ -68,15 +68,12 @@
         >1.Choose Room</a
       >
       <a href="#" class="tab-link" id="confirmationTabLink">2. Confirmation</a>
-      <a href="#" class="tab-link" id="checkOutTabLink">3. Checkout</a>
+      <a href="#" class="tab-link" id="checkoutTabLink">3. Checkout</a>
       <div class="tab-line"></div>
     </div>
     <!-- main-container -->
     <!-- choose room container  -->
-    <div
-      class="content-container main-container hidden"
-      id="chooseRoomContainer"
-    >
+    <div class="content-container main-container" id="chooseRoomContainer">
       <!-- choose room container -->
       <div class="header-container">
         <p class="mb-2">Reservation Details</p>
@@ -370,14 +367,14 @@
           <a href="#" class="change-room-link">Change the Room</a>
           <div class="btn-container">
             <a href="#" class="back-btn confirmation-back-btn">Back</a>
-            <a href="#" class="confirm-btn">Confirm</a>
+            <a href="#" class="confirm-btn confirmation-confirm-btn">Confirm</a>
           </div>
         </div>
       </div>
     </div>
 
     <!-- checkout container  -->
-    <div class="content-container main-container" id="checkoutContainer">
+    <div class="content-container main-container hidden" id="checkoutContainer">
       <div class="checkout-heading mb-3">
         <h1>Secure your booking only takes a minute</h1>
       </div>
@@ -477,19 +474,141 @@
               <h1 class="mb-1">Payment method</h1>
               <p>Please enter your payment method</p>
             </div>
-            <div class="form-container">
+            <div class="form-container mb-4">
               <div class="check-input flex-css-row-start mb-2">
-                <div class="circle-box flex-css">
+                <div
+                  class="circle-box payment-check-box flex-css"
+                  id="cardPay"
+                  data-status="inactive"
+                >
                   <div class="inner-box"></div>
                 </div>
                 <p>Credit card</p>
               </div>
               <div class="form-list">
-                <label for="card">Card number</label>
+                <label for="card">Card number</label> <br />
                 <input type="text" placeholder="Card number" />
               </div>
+              <div class="form-list flex-css-row">
+                <div class="input-list">
+                  <label for="card">Card holder</label> <br />
+                  <input type="text" placeholder="Card holder" />
+                </div>
+                <div class="input-list date-input">
+                  <label for="card">Expiration date</label> <br />
+                  <input type="date" placeholder="Card holder" />
+                </div>
+                <div class="input-list cvc-input">
+                  <label for="card">CVC</label> <br />
+                  <input type="text" placeholder="CVC" />
+                </div>
+              </div>
+            </div>
+            <div class="form-container">
+              <div class="check-input flex-css-row-start mb-2">
+                <div
+                  class="circle-box payment-check-box active flex-css"
+                  id="walletPay"
+                  data-status="active"
+                >
+                  <div class="inner-box"></div>
+                </div>
+                <p>Other Payment Options</p>
+              </div>
+              <div class="list-box">
+                <div
+                  class="list wallet-list active"
+                  id="esewaPay"
+                  data-status="active"
+                >
+                  <div class="check-input flex-css-row-start">
+                    <div class="circle-box flex-css">
+                      <div class="inner-box"></div>
+                    </div>
+                    <p>Esewa</p>
+                  </div>
+                </div>
+                <div
+                  class="list wallet-list"
+                  id="fonePay"
+                  data-status="inactive"
+                >
+                  <div class="check-input flex-css-row-start">
+                    <div class="circle-box flex-css">
+                      <div class="inner-box"></div>
+                    </div>
+                    <p>Fonepay</p>
+                  </div>
+                </div>
+                <div
+                  class="list wallet-list"
+                  id="khaltiPay"
+                  data-status="inactive"
+                >
+                  <div class="check-input flex-css-row-start">
+                    <div class="circle-box flex-css">
+                      <div class="inner-box"></div>
+                    </div>
+                    <p>Khalti</p>
+                  </div>
+                </div>
+                <div
+                  class="list wallet-list"
+                  id="bankPay"
+                  data-status="inactive"
+                >
+                  <div class="check-input flex-css-row-start">
+                    <div class="circle-box flex-css">
+                      <div class="inner-box"></div>
+                    </div>
+                    <p>Bank Transfer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="booking-form-box">
+            <div class="booking-form-heading mb-4">
+              <h1>Mange your Booking</h1>
+            </div>
+            <div class="travel-radio mb-4">
+              <h1 class="mb-2">Are you traveling for work?</h1>
+              <div class="check-input-list flex-css-row-start">
+                <div class="check-input flex-css-row-start mr-5">
+                  <div
+                    class="circle-box travel-check-box flex-css"
+                    data-status="inactive"
+                  >
+                    <div class="inner-box"></div>
+                  </div>
+                  <p>Yes</p>
+                </div>
+                <div class="check-input flex-css-row-start">
+                  <div
+                    class="circle-box travel-check-box active flex-css"
+                    data-status="active"
+                  >
+                    <div class="inner-box"></div>
+                  </div>
+                  <p>No</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-container">
+              <div class="form-heading mb-2">
+                <h1>Confirmation of email</h1>
+                <p>
+                  Please enter your email address and where would you like to
+                  recieve your confirmation
+                </p>
+              </div>
               <div class="form-list">
-                <label for="card"></label>
+                <label for="email"> Email Address<span>*</span></label>
+                <input type="email" placeholder="Email" />
+              </div>
+              <div class="form-list">
+                <label for="email"> Confirm Email<span>*</span></label>
+                <input type="email" placeholder="Email" />
               </div>
             </div>
           </div>
@@ -633,8 +752,91 @@
         </p>
       </div>
       <div class="booking-btn-container mb-5">
-        <a href="#" class="complete-booking-btn">Complete booking</a>
-        <a href="#" class="check-booking-btn">Check your booking</a>
+        <a href="#" class="complete-booking-btn" id="completeBookingBtn"
+          >Complete booking</a
+        >
+        <a href="#" class="check-booking-btn" id="checkBookingBtn"
+          >Check your booking</a
+        >
+      </div>
+    </div>
+
+    <!-- pop up modal  -->
+    <div class="payment-modal esewa-modal flex-css hidden" id="esewaPayModal">
+      <div class="modal-box">
+        <div class="modal-heading pb-3">
+          <h1>Esewa details</h1>
+        </div>
+        <div class="modal-form pt-3">
+          <div class="form-list form-full flex-css-row">
+            <div class="input-list mr-3">
+              <label for="name">First name</label> <br />
+              <input type="text" placeholder="First name" />
+            </div>
+            <div class="input-list">
+              <label for="name">Last name</label> <br />
+              <input type="text" placeholder="Last name" />
+            </div>
+          </div>
+          <div class="form-list">
+            <label for="id">Esewa ID No.</label> <br />
+            <input type="text" placeholder="Esewa ID" />
+          </div>
+          <div class="form-list">
+            <label for="id">Password</label> <br />
+            <input type="password" placeholder="Enter Password/Pin" />
+          </div>
+          <div class="btn-container pt-3">
+            <button>Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-modal khalti-modal flex-css hidden" id="khaltiPayModal">
+      <div class="modal-box">
+        <div class="modal-heading pb-3">
+          <h1>Khalti details</h1>
+        </div>
+        <div class="modal-form pt-3">
+          <div class="form-list form-full flex-css-row">
+            <div class="input-list mr-3">
+              <label for="name">First name</label> <br />
+              <input type="text" placeholder="First name" />
+            </div>
+            <div class="input-list">
+              <label for="name">Last name</label> <br />
+              <input type="text" placeholder="Last name" />
+            </div>
+          </div>
+          <div class="form-list">
+            <label for="id">Khalti ID No.</label> <br />
+            <input type="text" placeholder="Khalti ID" />
+          </div>
+          <div class="form-list">
+            <label for="id">Password</label> <br />
+            <input type="password" placeholder="Enter Password/Pin" />
+          </div>
+          <div class="btn-container pt-3">
+            <button>Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-modal fonepay-modal flex-css hidden" id="fonePayModal">
+      <div class="modal-box">
+        <div class="modal-heading pb-3">
+          <h1>Fonepay details</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-modal bank-modal flex-css hidden" id="bankPayModal">
+      <div class="modal-box">
+        <div class="modal-heading pb-3">
+          <h1>Bank details</h1>
+        </div>
       </div>
     </div>
 

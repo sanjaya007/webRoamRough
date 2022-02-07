@@ -15,6 +15,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+body.fixed-body {
+  overflow: hidden;
+}
+
 .content-container {
   padding-left: 100px !important;
   padding-right: 100px !important;
@@ -784,7 +788,7 @@ body {
   outline: none;
   background: #ffffff;
   border: 1px solid #d1d1d1;
-  padding: 8px 20px !important;
+  padding: 10px 20px !important;
   border-radius: 100px;
   font-size: 12px;
   width: 100%;
@@ -948,13 +952,22 @@ body {
   .room-form-box
   .form-container
   .special-box
-  .drop-box {
-  background-color: #ffffff;
-  border-radius: 18px;
+  .drop-wrapper {
   position: absolute;
   width: 100%;
   left: 0;
   top: 25px;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .room-form-box
+  .form-container
+  .special-box
+  .drop-box {
+  background-color: #ffffff;
+  border-radius: 18px;
   filter: drop-shadow(55px 154px 145px rgba(0, 0, 0, 0.2));
 }
 
@@ -1158,7 +1171,7 @@ body {
   outline: none;
   background: #ffffff;
   border: 1px solid #d1d1d1;
-  padding: 8px 20px !important;
+  padding: 10px 20px !important;
   border-radius: 100px;
   font-size: 12px;
   width: 100%;
@@ -1173,6 +1186,329 @@ body {
   input::placeholder {
   color: #959595;
   font-size: 12px;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .payment-form-box
+  .form-container
+  .form-list
+  .input-list {
+  width: 100%;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .payment-form-box
+  .form-container
+  .form-list
+  .input-list.date-input {
+  width: 170px;
+  margin: 0 10px !important;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .payment-form-box
+  .form-container
+  .form-list
+  .input-list.cvc-input {
+  width: 130px;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .payment-form-box
+  .form-container
+  .list-box
+  .list {
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  padding: 10px 20px !important;
+  border-radius: 100px;
+  font-size: 12px;
+  width: 100%;
+  margin-bottom: 12px !important;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .payment-form-box
+  .form-container
+  .list-box
+  .check-input
+  .circle-box {
+  margin-right: 20px !important;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .payment-form-box
+  .form-container
+  .list-box
+  .list.active
+  .check-input
+  .circle-box {
+  background-color: #006ce6;
+  border-color: #006ce6;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .payment-form-box
+  .form-container
+  .list-box
+  .list.active
+  .check-input
+  .circle-box
+  .inner-box {
+  display: block;
+}
+
+.main-container .checkout-box .left-box .booking-form-box {
+  padding: 40px !important;
+  background-color: #ffffff;
+  margin-bottom: 30px !important;
+  border-radius: 18px;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .booking-form-heading
+  h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.main-container .checkout-box .left-box .booking-form-box .travel-radio h1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .travel-radio
+  .check-input
+  .circle-box {
+  max-width: 16px;
+  max-height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px !important;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .travel-radio
+  .check-input
+  .circle-box
+  .inner-box {
+  background-color: #ffffff;
+  max-width: 8px;
+  max-height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  display: none;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .travel-radio
+  .check-input
+  .circle-box.active {
+  background-color: #006ce6;
+  border-color: #006ce6;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .travel-radio
+  .check-input
+  .circle-box.active
+  .inner-box {
+  display: block;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .travel-radio
+  .check-input
+  p {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .form-container
+  .form-heading
+  h1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .form-container
+  .form-heading
+  p {
+  font-size: 10px;
+  color: #a9a9a9;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .form-container
+  .form-list {
+  margin-bottom: 12px !important;
+  width: 100%;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .form-container
+  .form-list
+  label {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .form-container
+  .form-list
+  label
+  span {
+  color: #ff1010;
+}
+
+.main-container
+  .checkout-box
+  .left-box
+  .booking-form-box
+  .form-container
+  .form-list
+  input {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  padding: 10px 20px !important;
+  border-radius: 100px;
+  font-size: 12px;
+  width: 100%;
+}
+
+/* modal  */
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999999;
+}
+
+.payment-modal.hidden {
+  display: none;
+}
+
+.payment-modal .modal-box {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 40px !important;
+  min-width: 600px;
+}
+
+.payment-modal .modal-box .modal-heading {
+  border-bottom: 2px solid #9595953b;
+}
+
+.payment-modal .modal-box .modal-heading h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.payment-modal .modal-box .modal-form .form-list {
+  margin-bottom: 20px !important;
+  width: 50%;
+}
+
+.payment-modal .modal-box .modal-form .form-list.form-full {
+  width: 100%;
+}
+
+.payment-modal .modal-box .modal-form .form-list .input-list {
+  width: 100%;
+}
+
+.payment-modal .modal-box .modal-form .form-list label {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.payment-modal .modal-box .modal-form .form-list input {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  padding: 10px 20px !important;
+  border-radius: 100px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.payment-modal .modal-box .modal-form .btn-container button {
+  border: none;
+  outline: none;
+  background-color: #ff5a10;
+  color: #ffffff;
+  padding: 10px 40px !important;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 100px;
 }
 
 /* checkout right box */
@@ -1448,6 +1784,7 @@ body {
   font-weight: bold;
   padding: 12px 34px !important;
   border-radius: 100px;
+  text-decoration: none;
 }
 
 .main-container .booking-btn-container a.complete-booking-btn {

@@ -5,12 +5,12 @@ $(".price-btn").on("click", function () {
 $("#checkoutBody").on("click", function (e) {
   const targetEl = e.target;
   const className = $(targetEl).attr("class")?.split(" ")[0];
-  console.log(className);
   if (className !== "price-btn") {
     $("#priceBoxWrapper").slideUp();
   }
 });
 
+// toggle container starts
 $(".choose-room-reserve-btn").on("click", function (e) {
   e.preventDefault();
   $(".main-container").addClass("hidden");
@@ -18,6 +18,17 @@ $(".choose-room-reserve-btn").on("click", function (e) {
 
   $(".tab-link").removeClass("active");
   $("#confirmationTabLink").addClass("active");
+
+  $(window).scrollTop(0);
+});
+
+$(".confirmation-confirm-btn").on("click", function (e) {
+  e.preventDefault();
+  $(".main-container").addClass("hidden");
+  $("#checkoutContainer").removeClass("hidden");
+
+  $(".tab-link").removeClass("active");
+  $("#checkoutTabLink").addClass("active");
 
   $(window).scrollTop(0);
 });
@@ -32,6 +43,19 @@ $(".confirmation-back-btn").on("click", function (e) {
 
   $(window).scrollTop(0);
 });
+
+$(".check-booking-btn").on("click", function (e) {
+  e.preventDefault();
+  $(".main-container").addClass("hidden");
+  $("#confirmationContainer").removeClass("hidden");
+
+  $(".tab-link").removeClass("active");
+  $("#confirmationTabLink").addClass("active");
+
+  $(window).scrollTop(0);
+});
+
+// toggle container ends
 
 $("#specialBtn").on("click", function () {
   $("#dropWrapper").slideToggle();
@@ -61,5 +85,71 @@ $("#termsAndConditionsInput").on("click", function () {
     $(this).attr("data-status", "active");
   } else {
     $(this).attr("data-status", "inactive");
+  }
+});
+
+let currentWallet = "esewaPay";
+let allowWallet = true;
+// payment options
+$(".payment-check-box").on("click", function () {
+  allowWallet = false;
+  $(".payment-check-box").removeClass("active");
+  $(".payment-check-box").attr("data-status", "inactive");
+
+  $(".wallet-list").removeClass("active");
+  $(".wallet-list").attr("data-status", "inactive");
+
+  $(this).addClass("active");
+  $(this).attr("data-status", "active");
+
+  if ($(this).attr("id") === "walletPay") {
+    allowWallet = true;
+    $(`#${currentWallet}`).addClass("active");
+    $(`#${currentWallet}`).attr("data-status", "active");
+  }
+});
+
+$(".wallet-list").on("click", function () {
+  currentWallet = $(this).attr("id");
+  allowWallet = true;
+
+  $(".wallet-list").removeClass("active");
+  $(".wallet-list").attr("data-status", "inactive");
+
+  $(this).addClass("active");
+  $(this).attr("data-status", "active");
+
+  $(".payment-check-box").removeClass("active");
+  $(".payment-check-box").attr("data-status", "inactive");
+
+  $("#walletPay").addClass("active");
+  $("#walletPay").attr("data-status", "active");
+});
+
+// manage booking
+$(".travel-check-box").on("click", function () {
+  $(".travel-check-box").removeClass("active");
+  $(".travel-check-box").attr("data-status", "inactive");
+
+  $(this).addClass("active");
+  $(this).attr("data-status", "active");
+});
+
+// booking action
+$("#completeBookingBtn").on("click", function (e) {
+  if (allowWallet) {
+    e.preventDefault();
+    $(".payment-modal").addClass("hidden");
+    $(`#${currentWallet}Modal`).removeClass("hidden");
+  }
+});
+
+// modal
+$(".payment-modal").on("click", function (e) {
+  const targetEl = e.target;
+  const className = $(targetEl).attr("class")?.split(" ")[0];
+  if (className === "payment-modal") {
+    $(this).addClass("hidden");
+    $("#checkoutBody").removeClass("fixed-body");
   }
 });

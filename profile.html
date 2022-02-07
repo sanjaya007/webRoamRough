@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sanjaya007/flex-library@master/dist/css/sanjaya.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/profile.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="profile-body" id="profileBody">
+    <!-- nav bar  -->
+    <div class="content-container nav-container">
+      <div class="nav-bar flex-css-row-sb">
+        <div class="logo-container">
+          <img src="./assets/image/new_logo-blue.png" alt="logo" />
+        </div>
+        <div class="input-container flex-css-row-sb">
+          <input type="text" placeholder="Where are you going ?" />
+          <div class="icon-container flex-css">
+            <img src="./assets/image/search_icon.png" alt="icon" />
+          </div>
+        </div>
+        <div class="link-container flex-css-row">
+          <a href="#" class="nav-lang">
+            <img
+              src="./assets/image/lang-icon-dark.png"
+              class="img-link"
+              alt="lang"
+            />
+            English
+          </a>
+          <a href="#">Explore</a>
+          <a href="#">About Us</a>
+          <a href="#">
+            <img
+              src="./assets/image/bell_icon.png"
+              class="img-link"
+              alt="icon"
+            />
+          </a>
+          <a href="./profile.html">
+            <div class="profile-container">
+              <img src="./assets/image/profile1.png" alt="profile" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- main-container -->
+    <div class="content-container main-container">
+      <!-- profile banner  -->
+      <div class="profile-banner flex-css-row-start my-4">
+        <div class="image-container mr-4">
+          <img src="./assets/image/profile2.png" alt="profile" />
+          <div class="plus-icon flex-css">
+            <div class="inner-circle flex-css">
+              <p>+</p>
+            </div>
+          </div>
+        </div>
+        <div class="profile-details flex-top-row-start">
+          <div class="intro-box mr-5">
+            <h1 class="mb-1">Anish Pokharel</h1>
+            <p class="mb-3">anish@gmail.com</p>
+            <a href="#">Change my profile picture</a>
+          </div>
+          <div class="point-box mx-5">
+            <p class="mb-1">Available Points</p>
+            <h1>0</h1>
+          </div>
+          <div class="level-box ml-5">
+            <p class="mb-2">Level</p>
+            <h5>Basic 1</h5>
+          </div>
+        </div>
+      </div>
+      <!-- tab bar  -->
+      <div class="tab-container">
+        <a href="#" class="tab-link active" id="accountTabLink">My Account</a>
+        <a href="#" class="tab-link" id="tokenTabLink">Tokens</a>
+        <a href="#" class="tab-link" id="couponTabLink">Coupons and Rewards</a>
+        <a href="#" class="tab-link" id="reviewTabLink">Reviews</a>
+        <a href="#" class="tab-link" id="privacyTabLink"
+          >Privacy and Security</a
+        >
+        <a href="#" class="tab-link" id="bookingTabLink">Bookings</a>
+      </div>
+      <!-- main box  -->
+      <!-- account box -->
+      <div class="main-box account-box" id="accountBox">
+        <div
+          class="inner-main-box inner-account-box flex-top-row-sb"
+          id="innerAccountBox"
+        >
+          <div class="box left-box mr-3">
+            <div class="heading-text flex-css-row-sb">
+              <h1>My Account Information</h1>
+              <a href="#" id="editAccountBtn">Edit Information</a>
+            </div>
+            <div class="list-box pt-3">
+              <div class="list flex-css-row-start">
+                <img src="./assets/image/account.png" alt="account" />
+                <p>Anish Pokhrel</p>
+              </div>
+              <div class="list flex-css-row-start">
+                <img src="./assets/image/birthday.png" alt="account" />
+                <p>21-11-1993</p>
+              </div>
+              <div class="list flex-css-row-start">
+                <img src="./assets/image/male.png" alt="account" />
+                <p>Male</p>
+              </div>
+              <div class="list flex-css-row-start">
+                <img src="./assets/image/phone.png" alt="account" />
+                <p>+977-9873452123</p>
+              </div>
+            </div>
+          </div>
+          <div class="box right-box">
+            <div class="heading-text flex-css-row-sb">
+              <h1>My Account Information</h1>
+            </div>
+            <div class="list-box pt-3">
+              <div class="list">
+                <a href="#" class="account-link"> Email and Password </a>
+              </div>
+              <div class="list">
+                <a href="#" class="account-link"> Add / Payment Methods </a>
+              </div>
+              <div class="list">
+                <a href="#" class="account-link"> Email Preferences </a>
+              </div>
+              <div class="list">
+                <a href="#" class="account-link"> SMS Preferences </a>
+              </div>
+              <div class="list">
+                <a href="#" class="account-link"> Connected Accounts </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-main-box inner-edit-box hidden" id="innerEditBox">
+          <div class="box">
+            <div class="heading-text">
+              <h1>My Profile</h1>
+            </div>
+            <div class="form-container pt-3">
+              <div class="form-list">
+                <label for="name">Traveler name<span>*</span></label>
+                <div class="input-list flex-css-row-sb">
+                  <input type="text" placeholder="First Name" />
+                  <input type="text" class="mx-3" placeholder="Middle Name" />
+                  <input type="text" placeholder="Last Name" />
+                </div>
+              </div>
+              <div class="form-list">
+                <label for="name">Birthdate<span>*</span></label>
+                <div class="input-list flex-css-row-sb">
+                  <div class="select-box">
+                    <select>
+                      <option value="placeholder" disabled selected hidden>
+                        Date
+                      </option>
+                      <option value="1995">1995</option>
+                      <option value="1996">1996</option>
+                      <option value="1997">1997</option>
+                      <option value="1998">1998</option>
+                      <option value="1999">1999</option>
+                    </select>
+                    <img src="./assets/image/blue_arrow.png" alt="arrow" />
+                  </div>
+                  <div class="select-box mx-3">
+                    <select>
+                      <option value="placeholder" disabled selected hidden>
+                        Day
+                      </option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                    </select>
+                    <img src="./assets/image/blue_arrow.png" alt="arrow" />
+                  </div>
+                  <div class="select-box">
+                    <select>
+                      <option value="placeholder" disabled selected hidden>
+                        Year
+                      </option>
+                      <option value="1995">1995</option>
+                      <option value="1996">1996</option>
+                      <option value="1997">1997</option>
+                      <option value="1998">1998</option>
+                      <option value="1999">1999</option>
+                    </select>
+                    <img src="./assets/image/blue_arrow.png" alt="arrow" />
+                  </div>
+                </div>
+              </div>
+              <div class="form-list">
+                <div class="input-list flex-css-row-sb">
+                  <div class="select-wrapper">
+                    <label for="nationality">Nationality<span>*</span></label>
+                    <div class="select-box">
+                      <select>
+                        <option value="placeholder" disabled selected hidden>
+                          Nationality
+                        </option>
+                        <option value="Nepal">Nepali</option>
+                      </select>
+                      <img src="./assets/image/blue_arrow.png" alt="arrow" />
+                    </div>
+                  </div>
+                  <div class="select-wrapper mx-3">
+                    <label for="gender">Gender<span>*</span></label>
+                    <div class="select-box">
+                      <select>
+                        <option value="placeholder" disabled selected hidden>
+                          Gender
+                        </option>
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                      </select>
+                      <img src="./assets/image/blue_arrow.png" alt="arrow" />
+                    </div>
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="phone">Contact Information<span>*</span></label>
+                    <div class="input-box flex-css-row">
+                      <input
+                        type="text"
+                        class="phone-code-input mr-2"
+                        placeholder="Nep +977"
+                        disabled
+                      />
+                      <input type="text" placeholder="Phone Number" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-list">
+                <div class="input-list flex-css-row-sb">
+                  <div class="select-wrapper">
+                    <label for="nationality">State/Country<span>*</span></label>
+                    <div class="select-box">
+                      <select>
+                        <option value="placeholder" disabled selected hidden>
+                          Country
+                        </option>
+                        <option value="Nepal">Nepal</option>
+                      </select>
+                      <img src="./assets/image/blue_arrow.png" alt="arrow" />
+                    </div>
+                  </div>
+                  <div class="input-wrapper mx-3">
+                    <label for="phone">Address<span>*</span></label>
+                    <input type="text" placeholder="Your Address" />
+                  </div>
+                  <div class="input-wrapper flex-css-row">
+                    <div class="input-box mr-2">
+                      <label for="city">Town/City</label> <br />
+                      <input type="text" placeholder="City" />
+                    </div>
+                    <div class="input-box postal-code-input-box">
+                      <label for="postalcode">Zip/Postal Code</label>
+                      <input type="text" placeholder="1234" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-container pt-2">
+                <button id="saveAccountBtn">Save Information</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- token box  -->
+      <div class="main-box token-box hidden" id="tokenBox">
+        <div class="box">
+          <div class="heading-text">
+            <h1>Tokens</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- coupon box  -->
+      <div class="main-box coupon-box hidden" id="couponBox">
+        <div class="box">
+          <div class="heading-text">
+            <h1>Want to upgrade from Level Basic 1 to Higher ?</h1>
+          </div>
+          <div class="coupon-bar my-4">
+            <div class="bar flex-css-row-start">
+              <div class="middle-line"></div>
+              <div class="range-bar flex-css"></div>
+            </div>
+            <div class="label-bar flex-css-row-sb pt-2">
+              <p>Starting</p>
+              <p>10 Bookings in a Year</p>
+              <p>Gold Level</p>
+            </div>
+          </div>
+          <div class="coupon-details mt-4 mb-4">
+            <h1 class="mb-1">Recent Activity</h1>
+            <p>
+              You have no activity for this period. Booking, visiting hotel,
+              Subscribing to the Hotel packages and Refering others the hotels
+              can helps to earn points toward status.
+            </p>
+          </div>
+          <div class="coupon-details">
+            <h1 class="mb-1">Coupons</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+              turpis molestie, dictum est a,
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- review box  -->
+      <div class="main-box review-box hidden" id="reviewBox">
+        <div class="box">
+          <div class="heading-text flex-css-row-sb mb-1">
+            <h1>Review on <span> Arushi Boutique Hotel </span></h1>
+            <a href="#">Delete</a>
+          </div>
+          <div class="date-text flex-css-row-start mb-3">
+            <p>5/5 Excellent</p>
+            <span>Jul 20, 2021</span>
+          </div>
+          <div class="detail-text mb-3">
+            <p>
+              This lovely hotel deserves its outstanding reputation - not only
+              because it is physically charming and lovely, but because both the
+              food and staff are outstanding. I stayed a week alone. The staff
+              went out of their way to make sure I was comfortable. Every
+              morning I ate at their delicious breakfast buffet. There were
+              selections featuring Indian, Nepali, and American foods, as well
+              as made to order omelettes. As someone else noted, their gardens
+              are like an oasis from the chaos of Kathmandu. I can't think of a
+              better place to be "stuck". I look forward to returning there
+              soon!
+            </p>
+          </div>
+          <div class="like-icon flex-css-row-start">
+            <img src="./assets/image/like.png" alt="like" />
+            <p>5 Likes</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="heading-text flex-css-row-sb mb-1">
+            <h1>Review on <span> Hotel Yak </span></h1>
+            <a href="#">Delete</a>
+          </div>
+          <div class="date-text flex-css-row-start mb-3">
+            <p>5/5 Excellent</p>
+            <span>Jul 20, 2021</span>
+          </div>
+          <div class="detail-text mb-3">
+            <p>
+              This lovely hotel deserves its outstanding reputation - not only
+              because it is physically charming and lovely, but because both the
+              food and staff are outstanding. I stayed a week alone. The staff
+              went out of their way to make sure I was comfortable. Every
+              morning I ate at their delicious breakfast buffet. There were
+              selections featuring Indian, Nepali, and American foods, as well
+              as made to order omelettes. As someone else noted, their gardens
+              are like an oasis from the chaos of Kathmandu. I can't think of a
+              better place to be "stuck". I look forward to returning there
+              soon!
+            </p>
+          </div>
+          <div class="like-icon flex-css-row-start">
+            <img src="./assets/image/like.png" alt="like" />
+            <p>5 Likes</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="heading-text flex-css-row-sb mb-1">
+            <h1>Review on <span> Hotel Yeti </span></h1>
+            <a href="#">Delete</a>
+          </div>
+          <div class="date-text flex-css-row-start mb-3">
+            <p>5/5 Excellent</p>
+            <span>Jul 20, 2021</span>
+          </div>
+          <div class="detail-text mb-3">
+            <p>
+              This lovely hotel deserves its outstanding reputation - not only
+              because it is physically charming and lovely, but because both the
+              food and staff are outstanding. I stayed a week alone. The staff
+              went out of their way to make sure I was comfortable. Every
+              morning I ate at their delicious breakfast buffet. There were
+              selections featuring Indian, Nepali, and American foods, as well
+              as made to order omelettes. As someone else noted, their gardens
+              are like an oasis from the chaos of Kathmandu. I can't think of a
+              better place to be "stuck". I look forward to returning there
+              soon!
+            </p>
+          </div>
+          <div class="like-icon flex-css-row-start">
+            <img src="./assets/image/like.png" alt="like" />
+            <p>5 Likes</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- privacy box  -->
+      <div class="main-box privacy-box hidden" id="privacyBox">
+        <div class="box">
+          <div class="heading-text mb-2">
+            <h1 class="mb-1">Do you want to delete your Account?</h1>
+            <p>
+              If you wish to delete your account permanently then enter your
+              current email and password.
+            </p>
+          </div>
+          <div class="form-box">
+            <div class="input-box flex-css-row">
+              <div class="input-list mr-4">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Your Email" />
+              </div>
+              <div class="input-list">
+                <label for="email">Password</label>
+                <input type="password" placeholder="Current Password" />
+              </div>
+            </div>
+            <div class="btn-container mt-3">
+              <button class="delete-btn">Delete your Account</button>
+              <button class="cancel-btn">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="heading-text mb-2">
+            <h1 class="mb-1">Change Email</h1>
+            <p>It takes 2 Step Verification for your Email to change.</p>
+          </div>
+          <div class="form-box">
+            <div class="input-box flex-css-row">
+              <div class="input-list mr-4">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Your Email" />
+              </div>
+              <div class="input-list">
+                <label for="email">Your Verification Code</label>
+                <input
+                  type="text"
+                  class="code-input"
+                  placeholder="6 Digit Verification Code"
+                />
+              </div>
+            </div>
+            <div class="btn-container mt-3">
+              <button class="email-verification-btn">
+                Send Verification Code
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="heading-text mb-2">
+            <h1 class="mb-1">Change Password</h1>
+            <p>It takes 2 Step Verification for your password to change.</p>
+          </div>
+          <div class="form-box">
+            <div class="input-box flex-css-row">
+              <div class="input-list mr-4">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Your Email" />
+              </div>
+              <div class="input-list">
+                <label for="email">Your Verification Code</label>
+                <input
+                  type="text"
+                  class="code-input"
+                  placeholder="6 Digit Verification Code"
+                />
+              </div>
+            </div>
+            <div class="btn-container mt-3">
+              <button class="email-verification-btn">
+                Send Verification Code
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- booking box  -->
+      <div class="main-box booking-box hidden" id="bookingBox">
+        <div class="box">
+          <div class="heading-text flex-bottom-row-sb">
+            <h1 class="flex-bottom-row-start">
+              <span class="mr-1">1. </span>Arushi Boutique Hotel
+              <a href="#">VIP Access</a>
+            </h1>
+            <p>Rs. 3,627</p>
+          </div>
+          <div class="booking-details flex-top-row-sb pt-3 pb-4">
+            <div class="date-text">
+              <div class="list flex-css-row-start">
+                <p>From</p>
+                <h1>Sun, Feb 6, 2022</h1>
+              </div>
+              <div class="list flex-css-row-start">
+                <p>To</p>
+                <h1>Sun, Feb22, 2022</h1>
+              </div>
+            </div>
+            <div class="cost-box">
+              <div class="list flex-css-row-sb">
+                <p>No of People</p>
+                <h1>1 Adult</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <p>1 Room X 1 Night</p>
+                <h1>Rs. 3,227</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <p>VAT</p>
+                <h1>Rs. 200</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <p>Property service charges</p>
+                <h1>Rs. 100</h1>
+              </div>
+            </div>
+          </div>
+          <div class="btn-container flex-css-row-sb pt-3">
+            <a href="#" class="delete-history-link">Delete History</a>
+            <div class="btn-list flex-css-row">
+              <a href="#" class="re-book-link">Re-book</a>
+              <a href="#" class="rate-link">Rate It</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="heading-text flex-bottom-row-sb">
+            <h1 class="flex-bottom-row-start">
+              <span class="mr-1">2. </span>Hotel Yeti
+            </h1>
+            <p>Rs. 3,627</p>
+          </div>
+          <div class="booking-details flex-top-row-sb pt-3 pb-4">
+            <div class="date-text">
+              <div class="list flex-css-row-start">
+                <p>From</p>
+                <h1>Sun, Feb 6, 2022</h1>
+              </div>
+              <div class="list flex-css-row-start">
+                <p>To</p>
+                <h1>Sun, Feb22, 2022</h1>
+              </div>
+            </div>
+            <div class="cost-box">
+              <div class="list flex-css-row-sb">
+                <p>No of People</p>
+                <h1>1 Adult</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <p>1 Room X 1 Night</p>
+                <h1>Rs. 3,227</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <p>VAT</p>
+                <h1>Rs. 200</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <p>Property service charges</p>
+                <h1>Rs. 100</h1>
+              </div>
+            </div>
+          </div>
+          <div class="btn-container flex-css-row-sb pt-3">
+            <a href="#" class="delete-history-link">Delete History</a>
+            <div class="btn-list flex-css-row">
+              <a href="#" class="re-book-link">Re-book</a>
+              <a href="#" class="rate-link">Rate It</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="heading-text flex-bottom-row-sb">
+            <h1 class="flex-bottom-row-start">
+              <span class="mr-1">3. </span>Hotel Yak
+            </h1>
+            <p>Rs. 3,627</p>
+          </div>
+          <div class="booking-details flex-top-row-sb pt-3 pb-4">
+            <div class="date-text">
+              <div class="list flex-css-row-start">
+                <p>From</p>
+                <h1>Sun, Feb 6, 2022</h1>
+              </div>
+              <div class="list flex-css-row-start">
+                <p>To</p>
+                <h1>Sun, Feb22, 2022</h1>
+              </div>
+            </div>
+            <div class="cost-box">
+              <div class="list flex-css-row-sb">
+                <p>No of People</p>
+                <h1>1 Adult</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <p>1 Room X 1 Night</p>
+                <h1>Rs. 3,227</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <p>VAT</p>
+                <h1>Rs. 200</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <p>Property service charges</p>
+                <h1>Rs. 100</h1>
+              </div>
+            </div>
+          </div>
+          <div class="btn-container flex-css-row-sb pt-3">
+            <a href="#" class="delete-history-link">Delete History</a>
+            <div class="btn-list flex-css-row">
+              <a href="#" class="re-book-link">Re-book</a>
+              <a href="#" class="rate-link">Rate It</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer container  -->
+    <div class="content-container footer-container" id="footerContainer">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-logo">
+            <img src="./assets/image/new_logo-blue.png" alt="logo" />
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-links">
+            <p>Company</p>
+            <div class="link-list flex-top-column">
+              <a href="#">About</a>
+              <a href="#">Contact Us</a>
+              <a href="#">List your property</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-links">
+            <p>Terms and Policies</p>
+            <div class="link-list flex-top-column">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms of use</a>
+              <a href="#">Room Rewards Terms</a>
+              <a href="#"> Accessibility</a>
+              <a href="#"> Do not sell my personal information</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-links">
+            <p>Help</p>
+            <div class="link-list flex-top-column">
+              <a href="#"> Support </a>
+              <a href="#"> Cancel your hotel or vacation rental booking </a>
+              <a href="#"> Refund timelines, policies & processes </a>
+              <a href="#"> Use an Expedia coupon </a>
+              <a href="#"> International travel documents </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-banner pt-5 text-center">
+        <p>&#169; 2022 Roam Nepal, Inc. All rights reserved</p>
+      </div>
+    </div>
+    <script src="./assets/js/profile.js"></script>
+  </body>
+</html>
