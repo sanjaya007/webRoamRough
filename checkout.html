@@ -24,18 +24,39 @@
     ></script>
   </head>
   <body class="checkout-body" id="checkoutBody">
+    <!-- mobile nav  -->
+    <div class="mobile-nav">
+      <div class="mobile-logo">
+        <img
+          src="./assets/image/new_logo-blue.png"
+          class="mb-link"
+          alt="logo"
+        />
+      </div>
+      <div class="mobile-links flex-top-column-start">
+        <a href="#" class="mb-link">Explore</a>
+        <a href="#" class="mb-link">About Us</a>
+        <a href="#" class="mb-link">Log In</a>
+        <a href="#" class="mb-link nav-lang">
+          <img src="./assets/image/lang-icon-dark.png" alt="lang" />
+          English
+        </a>
+      </div>
+    </div>
     <!-- nav bar  -->
     <div class="content-container nav-container">
       <div class="nav-bar flex-css-row-sb">
         <div class="logo-container">
           <img src="./assets/image/new_logo-blue.png" alt="logo" />
         </div>
+
         <div class="input-container flex-css-row-sb">
           <input type="text" placeholder="Where are you going ?" />
           <div class="icon-container flex-css">
             <img src="./assets/image/search_icon.png" alt="icon" />
           </div>
         </div>
+
         <div class="link-container flex-css-row">
           <a href="#" class="nav-lang">
             <img
@@ -60,16 +81,22 @@
             </div>
           </a>
         </div>
+
+        <div class="nav-tab flex-css-column" data-value="open">
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
+
     <!-- tab bar  -->
     <div class="tab-container pt-5">
+      <div class="tab-line"></div>
       <a href="#" class="tab-link active" id="chooseRoomTabLink"
         >1.Choose Room</a
       >
       <a href="#" class="tab-link" id="confirmationTabLink">2. Confirmation</a>
       <a href="#" class="tab-link" id="checkoutTabLink">3. Checkout</a>
-      <div class="tab-line"></div>
     </div>
     <!-- main-container -->
     <!-- choose room container  -->
@@ -118,6 +145,12 @@
             <div class="list flex-css-row-start">
               <img src="./assets/image/nosmoking.png" alt="list" />
               <p>Non Smoking</p>
+            </div>
+          </div>
+          <div class="mobile-selected-button flex-css">
+            <div class="selected-box flex-css-row">
+              <img src="./assets/image/blue_tick.png" alt="tick" />
+              <p>Selected</p>
             </div>
           </div>
           <div class="right-box">
@@ -181,7 +214,7 @@
           <h1>Room amenities</h1>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-6 amenities-col">
             <div class="box">
               <div class="list-head flex-css-row-start">
                 <img src="./assets/image/room_bed.png" alt="amenities" />
@@ -197,7 +230,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-6 amenities-col pl-3">
             <div class="box">
               <div class="list-head flex-css-row-start">
                 <img src="./assets/image/food.png" alt="amenities" />
@@ -217,7 +250,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-6 amenities-col">
             <div class="box">
               <div class="list-head flex-css-row-start">
                 <img src="./assets/image/shower.png" alt="amenities" />
@@ -241,7 +274,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-6 amenities-col pl-3">
             <div class="box">
               <div class="list-head flex-css-row-start">
                 <img src="./assets/image/food.png" alt="amenities" />
@@ -261,7 +294,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-6 amenities-col">
             <div class="box">
               <div class="list-head flex-css-row-start">
                 <img src="./assets/image/more.png" alt="amenities" />
@@ -285,7 +318,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-6 amenities-col pl-3">
             <div class="box">
               <div class="list-head flex-css-row-start">
                 <img src="./assets/image/amenities_wifi.png" alt="amenities" />
@@ -352,6 +385,12 @@
                   <p>Researve now, pay later</p>
                 </div>
               </div>
+              <div class="mobile-selected-button flex-css">
+                <div class="selected-box flex-css-row">
+                  <img src="./assets/image/blue_tick.png" alt="tick" />
+                  <p>Selected</p>
+                </div>
+              </div>
               <div class="rate-box">
                 <div class="cost-text flex-css-row-end">
                   <h1>Rs. 3, 627</h1>
@@ -375,393 +414,824 @@
 
     <!-- checkout container  -->
     <div class="content-container main-container hidden" id="checkoutContainer">
-      <div class="checkout-heading mb-3">
-        <h1>Secure your booking only takes a minute</h1>
-      </div>
-      <div class="checkout-box flex-top-row-sb">
-        <div class="left-box pr-3">
-          <div class="profile-box flex-css-row-start">
-            <a href="#" class="image-container">
-              <img src="./assets/image/profile1.png" alt="profile" />
-            </a>
-            <div class="profile-details flex-top-column pl-2">
-              <p>Your signed as</p>
-              <h1 class="mb-1">Anish.21@gmail.com</h1>
-              <span>*You’ve earned 20 Roam Tokens</span>
-            </div>
-          </div>
-          <div class="room-form-box">
-            <div class="room-form-heading flex-top-row-start mb-4">
-              <div class="image-container">
-                <img src="./assets/image/account.png" alt="account" />
-              </div>
-              <div class="text-container pl-2">
-                <h1 class="mb-1">Suite room 1</h1>
-                <p>2 Adults , 1 Queen Bed , 2 Twin Beds , Non- smoking</p>
+      <div class="checkout-wrapper" id="checkoutFormBox">
+        <div class="checkout-heading mb-3">
+          <h1>Secure your booking only takes a minute</h1>
+        </div>
+        <div class="checkout-box flex-top-row-sb">
+          <div class="left-box pr-3">
+            <div class="profile-box flex-css-row-start">
+              <a href="#" class="image-container">
+                <img src="./assets/image/profile1.png" alt="profile" />
+              </a>
+              <div class="profile-details flex-top-column pl-2">
+                <p>Your signed as</p>
+                <h1 class="mb-1">Anish.21@gmail.com</h1>
+                <span>*You’ve earned 20 Roam Tokens</span>
               </div>
             </div>
-            <div class="form-container">
-              <div class="form-list">
-                <label for="traveler">Traveler name<span>*</span></label
-                ><br />
-                <input type="text" placeholder="First name" />
-              </div>
-              <div class="form-list">
-                <label for="traveler">Phone number<span>*</span></label
-                ><br />
-                <div class="input-list flex-css-row-start">
-                  <input
-                    type="text"
-                    class="phone-input1"
-                    placeholder="Nep +977"
-                    disabled
-                  />
-                  <input
-                    type="text"
-                    class="phone-input2"
-                    placeholder="So the property can reach you"
-                  />
+            <div class="room-form-box">
+              <div class="room-form-heading flex-top-row-start mb-4">
+                <div class="image-container">
+                  <img src="./assets/image/account.png" alt="account" />
+                </div>
+                <div class="text-container pl-2">
+                  <h1 class="mb-1">Suite room 1</h1>
+                  <p>2 Adults , 1 Queen Bed , 2 Twin Beds , Non- smoking</p>
                 </div>
               </div>
-              <div class="check-input flex-css-row-start mb-3">
-                <div
-                  class="circle-box active flex-css"
-                  id="receiveTextInput"
-                  data-status="active"
-                >
-                  <div class="inner-box"></div>
+              <div class="form-container">
+                <div class="form-list">
+                  <label for="traveler">Traveler name<span>*</span></label
+                  ><br />
+                  <input type="text" placeholder="First name" />
                 </div>
-                <p>
-                  Receive text alerts about this trip. Message and data rates
-                  may apply.
-                </p>
-              </div>
-              <div class="special-box flex-css-row-start">
-                <div
-                  class="item-box special-btn flex-css-row-start"
-                  id="specialBtn"
-                >
-                  <img src="./assets/image/special.png" alt="special" />
-                  <p>Special/Accessibility requests (optional)</p>
-                  <img
-                    src="./assets/image/blue_arrow.png"
-                    class="blue-arrow-icon"
-                    alt="arrow"
-                  />
-                </div>
-                <div
-                  class="drop-wrapper"
-                  id="dropWrapper"
-                  style="display: none"
-                >
-                  <div class="drop-box p-4">
-                    <h1 class="mb-2">Special requests</h1>
-                    <p class="mb-3">
-                      Special/accessibility requests (e.g. roll-away beds, late
-                      check-in, and accessible rooms) are not guaranteed. If you
-                      don't hear back from the property, you may want to contact
-                      them directly to confirm. The property may charge a fee
-                      for certain special requests.
-                    </p>
-                    <input type="text" placeholder="Limit to 250 words" />
+                <div class="form-list">
+                  <label for="traveler">Phone number<span>*</span></label
+                  ><br />
+                  <div class="input-list flex-css-row-start">
+                    <input
+                      type="text"
+                      class="phone-input1"
+                      placeholder="Nep +977"
+                      disabled
+                    />
+                    <input
+                      type="text"
+                      class="phone-input2"
+                      placeholder="So the property can reach you"
+                    />
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="payment-form-box">
-            <div class="payment-form-heading mb-3">
-              <h1 class="mb-1">Payment method</h1>
-              <p>Please enter your payment method</p>
-            </div>
-            <div class="form-container mb-4">
-              <div class="check-input flex-css-row-start mb-2">
-                <div
-                  class="circle-box payment-check-box flex-css"
-                  id="cardPay"
-                  data-status="inactive"
-                >
-                  <div class="inner-box"></div>
-                </div>
-                <p>Credit card</p>
-              </div>
-              <div class="form-list">
-                <label for="card">Card number</label> <br />
-                <input type="text" placeholder="Card number" />
-              </div>
-              <div class="form-list flex-css-row">
-                <div class="input-list">
-                  <label for="card">Card holder</label> <br />
-                  <input type="text" placeholder="Card holder" />
-                </div>
-                <div class="input-list date-input">
-                  <label for="card">Expiration date</label> <br />
-                  <input type="date" placeholder="Card holder" />
-                </div>
-                <div class="input-list cvc-input">
-                  <label for="card">CVC</label> <br />
-                  <input type="text" placeholder="CVC" />
-                </div>
-              </div>
-            </div>
-            <div class="form-container">
-              <div class="check-input flex-css-row-start mb-2">
-                <div
-                  class="circle-box payment-check-box active flex-css"
-                  id="walletPay"
-                  data-status="active"
-                >
-                  <div class="inner-box"></div>
-                </div>
-                <p>Other Payment Options</p>
-              </div>
-              <div class="list-box">
-                <div
-                  class="list wallet-list active"
-                  id="esewaPay"
-                  data-status="active"
-                >
-                  <div class="check-input flex-css-row-start">
-                    <div class="circle-box flex-css">
-                      <div class="inner-box"></div>
-                    </div>
-                    <p>Esewa</p>
-                  </div>
-                </div>
-                <div
-                  class="list wallet-list"
-                  id="fonePay"
-                  data-status="inactive"
-                >
-                  <div class="check-input flex-css-row-start">
-                    <div class="circle-box flex-css">
-                      <div class="inner-box"></div>
-                    </div>
-                    <p>Fonepay</p>
-                  </div>
-                </div>
-                <div
-                  class="list wallet-list"
-                  id="khaltiPay"
-                  data-status="inactive"
-                >
-                  <div class="check-input flex-css-row-start">
-                    <div class="circle-box flex-css">
-                      <div class="inner-box"></div>
-                    </div>
-                    <p>Khalti</p>
-                  </div>
-                </div>
-                <div
-                  class="list wallet-list"
-                  id="bankPay"
-                  data-status="inactive"
-                >
-                  <div class="check-input flex-css-row-start">
-                    <div class="circle-box flex-css">
-                      <div class="inner-box"></div>
-                    </div>
-                    <p>Bank Transfer</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="booking-form-box">
-            <div class="booking-form-heading mb-4">
-              <h1>Mange your Booking</h1>
-            </div>
-            <div class="travel-radio mb-4">
-              <h1 class="mb-2">Are you traveling for work?</h1>
-              <div class="check-input-list flex-css-row-start">
-                <div class="check-input flex-css-row-start mr-5">
+                <div class="check-input flex-css-row-start mb-3">
                   <div
-                    class="circle-box travel-check-box flex-css"
-                    data-status="inactive"
-                  >
-                    <div class="inner-box"></div>
-                  </div>
-                  <p>Yes</p>
-                </div>
-                <div class="check-input flex-css-row-start">
-                  <div
-                    class="circle-box travel-check-box active flex-css"
+                    class="circle-box active flex-css"
+                    id="receiveTextInput"
                     data-status="active"
                   >
                     <div class="inner-box"></div>
                   </div>
-                  <p>No</p>
-                </div>
-              </div>
-            </div>
-            <div class="form-container">
-              <div class="form-heading mb-2">
-                <h1>Confirmation of email</h1>
-                <p>
-                  Please enter your email address and where would you like to
-                  recieve your confirmation
-                </p>
-              </div>
-              <div class="form-list">
-                <label for="email"> Email Address<span>*</span></label>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div class="form-list">
-                <label for="email"> Confirm Email<span>*</span></label>
-                <input type="email" placeholder="Email" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="right-box">
-          <div class="image-heading">
-            <img src="./assets/image/room3.png" alt="room" />
-          </div>
-          <div class="right-details p-4">
-            <div class="address-box mb-1">
-              <h1>Thamel, 44600 Kathmandu, Nepal</h1>
-            </div>
-            <div class="rating-box flex-css-row-start mb-4">
-              <img src="./assets/image/orange_star.png" alt="star" />
-              <p>4.5</p>
-              <span>117 reviews</span>
-            </div>
-            <div class="booking-box mb-5">
-              <div class="booking-heading mb-3">
-                <h1>Your booking details</h1>
-              </div>
-              <div class="list-box flex-css-row-sb mb-4">
-                <div class="list">
-                  <h1>Check-in</h1>
-                  <p>Sun, Feb 6, 2022</p>
-                  <p>2:00 PM – 12:00 AM</p>
-                </div>
-                <div class="list">
-                  <h1>Check-out</h1>
-                  <p>Tue, Feb 22, 2022</p>
-                  <p>12:00 PM – 12:30 PM</p>
-                </div>
-              </div>
-              <div class="list-box">
-                <div class="list">
-                  <p>Total length of stay:</p>
-                  <h1>16 nights</h1>
-                </div>
-              </div>
-            </div>
-            <div class="price-box mb-5">
-              <div class="price-heading mb-3">
-                <h1>Price Details</h1>
-              </div>
-              <div class="list-box pb-2">
-                <div class="list flex-css-row-sb">
-                  <p>1 Room X 1 Night</p>
-                  <h1>Rs. 3,227</h1>
-                </div>
-                <div class="list flex-css-row-sb">
-                  <p>VAT</p>
-                  <h1>Rs. 200</h1>
-                </div>
-                <div class="list flex-css-row-sb">
-                  <p>Property service charges</p>
-                  <h1>Rs. 100</h1>
-                </div>
-              </div>
-              <div class="total-list py-3">
-                <div class="list flex-css-row-sb">
-                  <h1>Total</h1>
-                  <h1>Rs. 3,627</h1>
-                </div>
-              </div>
-              <div class="price-note">
-                <div class="list">
                   <p>
-                    * Keep in mind that you have to present ID upon arrival.
+                    Receive text alerts about this trip. Message and data rates
+                    may apply.
                   </p>
                 </div>
+                <div class="special-box flex-css-row-start">
+                  <div
+                    class="item-box special-btn flex-css-row-start"
+                    id="specialBtn"
+                  >
+                    <img src="./assets/image/special.png" alt="special" />
+                    <p>Special/Accessibility requests (optional)</p>
+                    <img
+                      src="./assets/image/blue_arrow.png"
+                      class="blue-arrow-icon"
+                      alt="arrow"
+                    />
+                  </div>
+                  <div
+                    class="drop-wrapper"
+                    id="dropWrapper"
+                    style="display: none"
+                  >
+                    <div class="drop-box p-4">
+                      <h1 class="mb-2">Special requests</h1>
+                      <p class="mb-3">
+                        Special/accessibility requests (e.g. roll-away beds,
+                        late check-in, and accessible rooms) are not guaranteed.
+                        If you don't hear back from the property, you may want
+                        to contact them directly to confirm. The property may
+                        charge a fee for certain special requests.
+                      </p>
+                      <input type="text" placeholder="Limit to 250 words" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="time-box mb-5">
-              <div class="time-heading mb-3">
-                <h1>Your time of arrival</h1>
+            <div class="payment-form-box">
+              <div class="payment-form-heading mb-3">
+                <h1 class="mb-1">Payment method</h1>
+                <p>Please enter your payment method</p>
               </div>
-              <div class="time-note mb-3">
-                <p>
-                  Your room will be ready for check-in between 2:00 PM and 12:00
-                  AM
-                </p>
+              <div class="form-container mb-4">
+                <div class="check-input flex-css-row-start mb-2">
+                  <div
+                    class="circle-box payment-check-box flex-css"
+                    id="cardPay"
+                    data-status="inactive"
+                  >
+                    <div class="inner-box"></div>
+                  </div>
+                  <p>Credit card</p>
+                </div>
+                <div class="form-list">
+                  <label for="card">Card number</label> <br />
+                  <input type="text" placeholder="Card number" />
+                </div>
+                <div class="form-list flex-css-row">
+                  <div class="input-list">
+                    <label for="card">Card holder</label> <br />
+                    <input type="text" placeholder="Card holder" />
+                  </div>
+                  <div class="input-list date-input">
+                    <label for="card">Expiration date</label> <br />
+                    <input type="date" placeholder="Card holder" />
+                  </div>
+                  <div class="input-list cvc-input">
+                    <label for="card">CVC</label> <br />
+                    <input type="text" placeholder="CVC" />
+                  </div>
+                </div>
               </div>
-              <div class="input-container">
-                <label for="time"
-                  >Add your estimated arrival time (optional)</label
-                >
+              <div class="form-container">
+                <div class="check-input flex-css-row-start mb-2">
+                  <div
+                    class="circle-box payment-check-box active flex-css"
+                    id="walletPay"
+                    data-status="active"
+                  >
+                    <div class="inner-box"></div>
+                  </div>
+                  <p>Other Payment Options</p>
+                </div>
+                <div class="list-box">
+                  <div
+                    class="list wallet-list active"
+                    id="esewaPay"
+                    data-status="active"
+                  >
+                    <div class="check-input flex-css-row-start">
+                      <div class="circle-box flex-css">
+                        <div class="inner-box"></div>
+                      </div>
+                      <p>Esewa</p>
+                    </div>
+                  </div>
+                  <div
+                    class="list wallet-list"
+                    id="fonePay"
+                    data-status="inactive"
+                  >
+                    <div class="check-input flex-css-row-start">
+                      <div class="circle-box flex-css">
+                        <div class="inner-box"></div>
+                      </div>
+                      <p>Fonepay</p>
+                    </div>
+                  </div>
+                  <div
+                    class="list wallet-list"
+                    id="khaltiPay"
+                    data-status="inactive"
+                  >
+                    <div class="check-input flex-css-row-start">
+                      <div class="circle-box flex-css">
+                        <div class="inner-box"></div>
+                      </div>
+                      <p>Khalti</p>
+                    </div>
+                  </div>
+                  <div
+                    class="list wallet-list"
+                    id="bankPay"
+                    data-status="inactive"
+                  >
+                    <div class="check-input flex-css-row-start">
+                      <div class="circle-box flex-css">
+                        <div class="inner-box"></div>
+                      </div>
+                      <p>Bank Transfer</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="payment-box mb-5">
-              <div class="payment-heading mb-3">
-                <h1>Your payment schedule</h1>
+            <div class="booking-form-box">
+              <div class="booking-form-heading mb-4">
+                <h1>Mange your Booking</h1>
               </div>
-              <div class="payment-note">
-                <p>No payment today. You'll pay when you stay.</p>
+              <div class="travel-radio mb-4">
+                <h1 class="mb-2">Are you traveling for work?</h1>
+                <div class="check-input-list flex-css-row-start">
+                  <div class="check-input flex-css-row-start mr-5">
+                    <div
+                      class="circle-box travel-check-box flex-css"
+                      data-status="inactive"
+                    >
+                      <div class="inner-box"></div>
+                    </div>
+                    <p>Yes</p>
+                  </div>
+                  <div class="check-input flex-css-row-start">
+                    <div
+                      class="circle-box travel-check-box active flex-css"
+                      data-status="active"
+                    >
+                      <div class="inner-box"></div>
+                    </div>
+                    <p>No</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-container">
+                <div class="form-heading mb-2">
+                  <h1>Confirmation of email</h1>
+                  <p>
+                    Please enter your email address and where would you like to
+                    recieve your confirmation
+                  </p>
+                </div>
+                <div class="form-list">
+                  <label for="email"> Email Address<span>*</span></label>
+                  <input type="email" placeholder="Email" />
+                </div>
+                <div class="form-list">
+                  <label for="email"> Confirm Email<span>*</span></label>
+                  <input type="email" placeholder="Email" />
+                </div>
               </div>
             </div>
-            <div class="cancel-box">
-              <div class="cancel-heading">
-                <h1 class="mb-3">How much will it cost to cancel?</h1>
+          </div>
+          <div class="right-box">
+            <div class="image-heading">
+              <img src="./assets/image/room3.png" alt="room" />
+            </div>
+            <div class="right-details p-4">
+              <div class="address-box mb-1">
+                <h1>Thamel, 44600 Kathmandu, Nepal</h1>
               </div>
-              <div class="cancel-note">
-                <p class="mb-1">Free cancellation until 11:59 PM on Feb 4</p>
+              <div class="rating-box flex-css-row-start mb-4">
+                <img src="./assets/image/orange_star.png" alt="star" />
+                <p>4.5</p>
+                <span>117 reviews</span>
               </div>
-              <div class="list flex-css-row-start">
-                <p class="pr-5">From 12:00 AM on Feb 5</p>
-                <p>NPR 384</p>
+              <div class="booking-box mb-5">
+                <div class="booking-heading mb-3">
+                  <h1>Your booking details</h1>
+                </div>
+                <div class="list-box flex-css-row-sb mb-4">
+                  <div class="list">
+                    <h1>Check-in</h1>
+                    <p>Sun, Feb 6, 2022</p>
+                    <p>2:00 PM – 12:00 AM</p>
+                  </div>
+                  <div class="list">
+                    <h1>Check-out</h1>
+                    <p>Tue, Feb 22, 2022</p>
+                    <p>12:00 PM – 12:30 PM</p>
+                  </div>
+                </div>
+                <div class="list-box">
+                  <div class="list">
+                    <p>Total length of stay:</p>
+                    <h1>16 nights</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="price-box mb-5">
+                <div class="price-heading mb-3">
+                  <h1>Price Details</h1>
+                </div>
+                <div class="list-box pb-2">
+                  <div class="list flex-css-row-sb">
+                    <p>1 Room X 1 Night</p>
+                    <h1>Rs. 3,227</h1>
+                  </div>
+                  <div class="list flex-css-row-sb">
+                    <p>VAT</p>
+                    <h1>Rs. 200</h1>
+                  </div>
+                  <div class="list flex-css-row-sb">
+                    <p>Property service charges</p>
+                    <h1>Rs. 100</h1>
+                  </div>
+                </div>
+                <div class="total-list py-3">
+                  <div class="list flex-css-row-sb">
+                    <h1>Total</h1>
+                    <h1>Rs. 3,627</h1>
+                  </div>
+                </div>
+                <div class="price-note">
+                  <div class="list">
+                    <p>
+                      * Keep in mind that you have to present ID upon arrival.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="time-box mb-5">
+                <div class="time-heading mb-3">
+                  <h1>Your time of arrival</h1>
+                </div>
+                <div class="time-note mb-3">
+                  <p>
+                    Your room will be ready for check-in between 2:00 PM and
+                    12:00 AM
+                  </p>
+                </div>
+                <div class="input-container">
+                  <label for="time" class="mb-2"
+                    >Add your estimated arrival time (optional)</label
+                  >
+                  <div class="select-wrapper">
+                    <select>
+                      <option value="placeholder" disabled selected hidden>
+                        Select Time
+                      </option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <img src="./assets/image/blue_arrow.png" alt="arrow" />
+                  </div>
+                  <small>24-hour front desk – help whenever you need it!</small>
+                </div>
+              </div>
+              <div class="payment-box mb-5">
+                <div class="payment-heading mb-3">
+                  <h1>Your payment schedule</h1>
+                </div>
+                <div class="payment-note">
+                  <p>No payment today. You'll pay when you stay.</p>
+                </div>
+              </div>
+              <div class="cancel-box">
+                <div class="cancel-heading">
+                  <h1 class="mb-3">How much will it cost to cancel?</h1>
+                </div>
+                <div class="cancel-note">
+                  <p class="mb-1">Free cancellation until 11:59 PM on Feb 4</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <p class="pr-5">From 12:00 AM on Feb 5</p>
+                  <p>NPR 384</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="additional-box">
-        <div class="additional-heading mb-1">
-          <h1>Additional informations</h1>
+        <div class="additional-box">
+          <div class="additional-heading mb-1">
+            <h1>Additional informations</h1>
+          </div>
+          <p class="mb-3">Need something else? We will make it for you!</p>
+          <div class="input-container">
+            <label for="note">Order notes</label> <br />
+            <textarea
+              cols="30"
+              rows="5"
+              placeholder="Need anything to say"
+            ></textarea>
+          </div>
         </div>
-        <p class="mb-3">Need something else? We will make it for you!</p>
-        <div class="input-container">
-          <label for="note">Order notes</label> <br />
-          <textarea
-            cols="30"
-            rows="5"
-            placeholder="Need anything to say"
-          ></textarea>
+        <div class="terms-box flex-css-row-start mb-4">
+          <div
+            class="circle-box flex-css"
+            id="termsAndConditionsInput"
+            data-status="inactive"
+          >
+            <div class="inner-box"></div>
+          </div>
+          <p>I agree to all the Terms and Conditions.</p>
+        </div>
+        <div class="policy-box mb-5">
+          <p>
+            Your booking is directly with Hotel Blue Horizon and by complezting
+            this booking you agree to the <a href="#">booking conditions</a>,
+            <a href="#">general terms</a>, and <a href="#">privacy policy.</a>
+          </p>
+        </div>
+        <div class="booking-btn-container mb-5">
+          <a href="#" class="complete-booking-btn" id="completeBookingBtn"
+            >Complete booking</a
+          >
+          <a href="#" class="check-booking-btn" id="checkBookingBtn"
+            >Check your booking</a
+          >
         </div>
       </div>
-      <div class="terms-box flex-css-row-start mb-4">
-        <div
-          class="circle-box flex-css"
-          id="termsAndConditionsInput"
-          data-status="inactive"
-        >
-          <div class="inner-box"></div>
+      <div class="checkout-wrapper hidden" id="checkoutFinalBox">
+        <div class="covid-banner flex-css-row-start">
+          <div class="icon-container flex-css-row-start">
+            <img src="./assets/image/info.png" alt="info" />
+            <h1>COVID19:</h1>
+          </div>
+          <div class="note-text flex-css-row-start">
+            <p>
+              Get the advice you need. Check the latest
+              <a href="#">Restrictions </a> regarding the COVID 19 before you
+              travel.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
         </div>
-        <p>I agree to all the Terms and Conditions.</p>
-      </div>
-      <div class="policy-box mb-5">
-        <p>
-          Your booking is directly with Hotel Blue Horizon and by complezting
-          this booking you agree to the <a href="#">booking conditions</a>,
-          <a href="#">general terms</a>, and <a href="#">privacy policy.</a>
-        </p>
-      </div>
-      <div class="booking-btn-container mb-5">
-        <a href="#" class="complete-booking-btn" id="completeBookingBtn"
-          >Complete booking</a
-        >
-        <a href="#" class="check-booking-btn" id="checkBookingBtn"
-          >Check your booking</a
-        >
+        <div class="success-banner flex-top-row-start">
+          <div class="icon-container">
+            <img src="./assets/image/success.png" alt="success" />
+          </div>
+          <div class="note-text">
+            <h1 class="mb-2">Booking Successful!</h1>
+            <p>
+              <span>Thankyou!</span> Your Booking is complete. Booking
+              Confirmation has been sent to your Email Address. And your
+              Confirmation number is
+              <span> 223661. </span>
+            </p>
+          </div>
+        </div>
+        <div class="checkout-box flex-top-row-sb">
+          <div class="left-box pr-3">
+            <div class="profile-box flex-css-row-start">
+              <a href="#" class="image-container">
+                <img src="./assets/image/profile1.png" alt="profile" />
+              </a>
+              <div class="profile-details flex-top-column pl-2">
+                <p>Your signed as</p>
+                <h1 class="mb-1">Anish.21@gmail.com</h1>
+                <span>*You’ve earned 20 Roam Tokens</span>
+              </div>
+            </div>
+            <div class="final-hotel-box">
+              <div class="heading-text">
+                <p class="mb-2">Hotel Details</p>
+                <div class="title flex-css-row-start">
+                  <h1>Arushi Boutique Hotel</h1>
+                  <a href="#">VIP Access</a>
+                </div>
+              </div>
+              <div class="list-box pt-3">
+                <h1 class="mb-3">Suite, Multiple Beds (Two Doubles)</h1>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/account.png" alt="list" />
+                  <p>Sleep 3</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_bed.png" alt="list" />
+                  <p>1 double bed 1 single bed</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_breakfast.png" alt="list" />
+                  <p>Free breakfast</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_noise.png" alt="list" />
+                  <p>Noise making</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_researve.png" alt="list" />
+                  <p>Researve now, pay later</p>
+                </div>
+              </div>
+            </div>
+            <div class="final-traveler-box">
+              <div class="heading-text flex-top-row-start">
+                <img src="/assets/image/account.png" alt="account" />
+                <div class="title">
+                  <h1 class="mb-1">Traveler Information</h1>
+                  <p>Confirm the details</p>
+                </div>
+              </div>
+              <div class="list-box pt-3">
+                <div class="list-wrapper flex-css-row-start">
+                  <div class="list flex-css-row-start">
+                    <p>First Name</p>
+                    <h1>Anish</h1>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <p>Last Name</p>
+                    <h1>Pokharel</h1>
+                  </div>
+                </div>
+                <div class="list flex-css-row-start">
+                  <p>Phone Number</p>
+                  <h1>(+977)-9812345678</h1>
+                </div>
+                <div class="list flex-css-row-start">
+                  <p>Email Address</p>
+                  <h1>anish.21@gmail.com</h1>
+                </div>
+                <div class="list flex-css-row-start">
+                  <p>Address</p>
+                  <h1>Kathmandu</h1>
+                </div>
+              </div>
+            </div>
+            <div class="final-payment-box">
+              <div class="heading-text flex-top-row-start">
+                <img src="/assets/image/account.png" alt="account" />
+                <div class="title">
+                  <h1 class="mb-1">Payment Method</h1>
+                  <p>Your Payment details</p>
+                </div>
+              </div>
+              <div class="list-box pt-3">
+                <div class="list flex-css-row-sb">
+                  <p>Name on card</p>
+                  <h1>Name</h1>
+                </div>
+                <div class="list flex-css-row-sb">
+                  <p>Card Type</p>
+                  <h1>VISA</h1>
+                </div>
+                <div class="list flex-css-row-sb">
+                  <p>Expiry Date</p>
+                  <h1>12/12/22</h1>
+                </div>
+              </div>
+            </div>
+            <div class="final-help-box">
+              <div class="heading-text">
+                <h1>Need help with the Reservation?</h1>
+              </div>
+              <div class="list-box pt-3">
+                <div class="list">
+                  <p>Visit our Customer Support Page</p>
+                </div>
+                <div class="list">
+                  <p>Call us at number 000-00-00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-box">
+            <div class="image-heading">
+              <img src="./assets/image/room3.png" alt="room" />
+            </div>
+            <div class="right-details p-4">
+              <div class="address-box mb-1">
+                <h1>Thamel, 44600 Kathmandu, Nepal</h1>
+              </div>
+              <div class="rating-box flex-css-row-start mb-4">
+                <img src="./assets/image/orange_star.png" alt="star" />
+                <p>4.5</p>
+                <span>117 reviews</span>
+              </div>
+              <div class="booking-box mb-4">
+                <div class="booking-heading mb-3">
+                  <h1>Your booking details</h1>
+                </div>
+                <div class="list-box flex-css-row-sb mb-4">
+                  <div class="list">
+                    <h1>Check-in</h1>
+                    <p>Sun, Feb 6, 2022</p>
+                    <p>2:00 PM – 12:00 AM</p>
+                  </div>
+                  <div class="list">
+                    <h1>Check-out</h1>
+                    <p>Tue, Feb 22, 2022</p>
+                    <p>12:00 PM – 12:30 PM</p>
+                  </div>
+                </div>
+                <div class="list-box">
+                  <div class="list">
+                    <p>Total length of stay:</p>
+                    <h1>16 nights</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="time-box final-time-box py-4 mb-4">
+                <div class="time-heading mb-3">
+                  <h1>Your time of arrival</h1>
+                </div>
+                <div class="time-note mb-3">
+                  <p>
+                    Your room will be ready for check-in between 2:00 PM and
+                    12:00 AM
+                  </p>
+                </div>
+                <div class="input-container">
+                  <label for="time" class="mb-1"
+                    >Add your estimated arrival time (optional)</label
+                  >
+                  <input type="text" value="3:00 PM" />
+                  <small>24-hour front desk – help whenever you need it!</small>
+                </div>
+              </div>
+              <div class="price-box final-price-box">
+                <div class="price-heading mb-3">
+                  <h1>Price Summary</h1>
+                </div>
+                <div class="list-box pb-2">
+                  <div class="list flex-css-row-sb">
+                    <p>No of People</p>
+                    <h1>Rs. 3,227</h1>
+                  </div>
+                  <div class="list flex-css-row-sb">
+                    <p>1 Room X 1 Night</p>
+                    <h1>Rs. 3,227</h1>
+                  </div>
+                  <div class="list flex-css-row-sb">
+                    <p>VAT</p>
+                    <h1>Rs. 200</h1>
+                  </div>
+                  <div class="list flex-css-row-sb">
+                    <p>Property service charges</p>
+                    <h1>Rs. 100</h1>
+                  </div>
+                </div>
+                <div class="total-list py-3">
+                  <div class="list flex-css-row-sb">
+                    <h1>Total</h1>
+                    <h1 class="bill-value">Rs. 3,627</h1>
+                  </div>
+                </div>
+                <div class="price-note">
+                  <div class="list">
+                    <p>
+                      * Keep in mind that you have to present ID upon arrival.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="booking-btn-container mb-4">
+          <a href="#" class="modify-booking-btn" id="modifyBookingBtn"
+            >Modify booking</a
+          >
+          <a href="#" class="cancel-booking-btn" id="cancelBookingBtn"
+            >Cancel booking</a
+          >
+        </div>
+        <div class="warning-note py-2 mb-5">
+          <p>*Booking can be cancelled until Feb-. Within 15 days of Booking</p>
+        </div>
       </div>
     </div>
 
     <!-- pop up modal  -->
+    <div class="room-modal hidden flex-css" id="roomModal">
+      <div class="modal-box">
+        <div class="room-list-box flex-css-row-sb active">
+          <div class="left-box pr-3">
+            <div class="image-container">
+              <img src="./assets/image/room1.png" alt="room" />
+            </div>
+          </div>
+          <div class="right-box">
+            <div class="header-text flex-css-row-sb mb-2">
+              <h1>Suite, Multiple Beds , Balcony</h1>
+              <div class="selected-box flex-css-row">
+                <img src="./assets/image/white_tick.png" alt="tick" />
+                <p>Selected</p>
+              </div>
+            </div>
+            <div class="detail-box flex-bottom-row-sb">
+              <div class="list-box">
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/account.png" alt="list" />
+                  <p>Sleep 3</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_bed.png" alt="list" />
+                  <p>1 double bed 1 single bed</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_breakfast.png" alt="list" />
+                  <p>Free breakfast</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_noise.png" alt="list" />
+                  <p>Noise Making</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_researve.png" alt="list" />
+                  <p>Researve now, pay later</p>
+                </div>
+              </div>
+              <div class="mobile-selected-button flex-css">
+                <div class="selected-box flex-css-row">
+                  <img src="./assets/image/white_tick.png" alt="tick" />
+                  <p>Selected</p>
+                </div>
+              </div>
+              <div class="rate-box">
+                <div class="cost-text flex-css-row-end">
+                  <h1>Rs. 3, 627</h1>
+                </div>
+                <p>per night</p>
+                <h5>Rs. 3850 total</h5>
+                <p>Includes taxes & fees</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room-list-box flex-css-row-sb">
+          <div class="left-box pr-3">
+            <div class="image-container">
+              <img src="./assets/image/room1.png" alt="room" />
+            </div>
+          </div>
+          <div class="right-box">
+            <div class="header-text flex-css-row-sb mb-2">
+              <h1>Suite, Multiple Beds , Balcony</h1>
+              <div class="selected-box flex-css-row">
+                <img src="./assets/image/white_tick.png" alt="tick" />
+                <p>Selected</p>
+              </div>
+            </div>
+            <div class="detail-box flex-bottom-row-sb">
+              <div class="list-box">
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/account.png" alt="list" />
+                  <p>Sleep 3</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_bed.png" alt="list" />
+                  <p>1 double bed 1 single bed</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_breakfast.png" alt="list" />
+                  <p>Free breakfast</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_noise.png" alt="list" />
+                  <p>Noise Making</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_researve.png" alt="list" />
+                  <p>Researve now, pay later</p>
+                </div>
+              </div>
+              <div class="mobile-selected-button flex-css">
+                <div class="selected-box flex-css-row">
+                  <img src="./assets/image/white_tick.png" alt="tick" />
+                  <p>Selected</p>
+                </div>
+              </div>
+              <div class="rate-box">
+                <div class="cost-text flex-css-row-end">
+                  <h1>Rs. 3, 627</h1>
+                </div>
+                <p>per night</p>
+                <h5>Rs. 3850 total</h5>
+                <p>Includes taxes & fees</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room-list-box flex-css-row-sb">
+          <div class="left-box pr-3">
+            <div class="image-container">
+              <img src="./assets/image/room1.png" alt="room" />
+            </div>
+          </div>
+          <div class="right-box">
+            <div class="header-text flex-css-row-sb mb-2">
+              <h1>Suite, Multiple Beds , Balcony</h1>
+              <div class="selected-box flex-css-row">
+                <img src="./assets/image/white_tick.png" alt="tick" />
+                <p>Selected</p>
+              </div>
+            </div>
+            <div class="detail-box flex-bottom-row-sb">
+              <div class="list-box">
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/account.png" alt="list" />
+                  <p>Sleep 3</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_bed.png" alt="list" />
+                  <p>1 double bed 1 single bed</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_breakfast.png" alt="list" />
+                  <p>Free breakfast</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_noise.png" alt="list" />
+                  <p>Noise Making</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/room_researve.png" alt="list" />
+                  <p>Researve now, pay later</p>
+                </div>
+              </div>
+              <div class="mobile-selected-button flex-css">
+                <div class="selected-box flex-css-row">
+                  <img src="./assets/image/white_tick.png" alt="tick" />
+                  <p>Selected</p>
+                </div>
+              </div>
+              <div class="rate-box">
+                <div class="cost-text flex-css-row-end">
+                  <h1>Rs. 3, 627</h1>
+                </div>
+                <p>per night</p>
+                <h5>Rs. 3850 total</h5>
+                <p>Includes taxes & fees</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="payment-modal esewa-modal flex-css hidden" id="esewaPayModal">
       <div class="modal-box">
         <div class="modal-heading pb-3">
@@ -787,7 +1257,7 @@
             <input type="password" placeholder="Enter Password/Pin" />
           </div>
           <div class="btn-container pt-3">
-            <button>Confirm</button>
+            <button class="payment-confirm-btn">Confirm</button>
           </div>
         </div>
       </div>
@@ -818,7 +1288,7 @@
             <input type="password" placeholder="Enter Password/Pin" />
           </div>
           <div class="btn-container pt-3">
-            <button>Confirm</button>
+            <button class="payment-confirm-btn">Confirm</button>
           </div>
         </div>
       </div>

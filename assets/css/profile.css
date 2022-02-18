@@ -70,6 +70,10 @@ body.fixed-body {
   text-decoration: none;
 }
 
+.nav-bar .link-container a:nth-child(1) {
+  padding-left: 0 !important;
+}
+
 .nav-bar .link-container a .img-link {
   height: 16px;
   width: 16px;
@@ -94,6 +98,64 @@ body.fixed-body {
   object-fit: cover;
 }
 
+.nav-tab {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-tab span {
+  width: 28px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #565656;
+  margin: 5px 0 !important;
+  pointer-events: none;
+}
+
+/* mobile nav  */
+.mobile-nav {
+  width: 200px;
+  max-width: 200px;
+  min-width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 999;
+  padding: 30px 20px !important;
+  left: -100%;
+  opacity: 0;
+  box-shadow: 10px 0px 100px 1px #d6d6d6;
+}
+
+.mobile-nav .mobile-logo img {
+  height: 20px;
+}
+
+.mobile-nav .mobile-links {
+  padding: 20px 0 !important;
+}
+
+.mobile-nav .mobile-links a {
+  color: #000000;
+  margin: 12px 0 !important;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  font-size: 12px;
+}
+
+.mobile-nav .mobile-links a.nav-lang img {
+  height: 16px;
+  width: 16px;
+  object-fit: contain;
+}
+
+.mobile-nav .mobile-links a:active {
+  transform: scale(0.99);
+}
+
 /* tab container  */
 .tab-container {
   margin-bottom: 40px !important;
@@ -104,9 +166,13 @@ body.fixed-body {
   color: #959595;
   font-weight: normal;
   position: relative;
-  margin-right: 50px !important;
+  margin-right: 46px !important;
   text-decoration: none;
   padding-bottom: 10px !important;
+}
+
+.tab-container .tab-link:nth-last-child(1) {
+  margin-right: 0 !important;
 }
 
 .tab-container .tab-link::after {
@@ -280,12 +346,677 @@ body.fixed-body {
   font-weight: 500;
 }
 
-.main-container .account-box .inner-account-box .box .list-box .account-link {
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .title {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.main-container .account-box .inner-account-box .box .list-box .info-box {
+  margin-bottom: 15px !important;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .title {
+  transition: all 0.1s ease;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .title
+  p {
   font-size: 12px;
   font-weight: normal;
-  color: #000000;
-  text-decoration: none;
+  transition: all 0.1s ease;
 }
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .title.active
+  p {
+  color: #006ce6;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* drop box  */
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .info-wrapper {
+  display: none;
+}
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box {
+  margin-top: 8px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid #d1d1d1;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .check-input
+  .circle-box {
+  max-width: 16px;
+  max-height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px !important;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .check-input
+  .circle-box
+  .inner-box {
+  background-color: #ffffff;
+  max-width: 8px;
+  max-height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  display: none;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .check-input
+  .circle-box.active {
+  background-color: #006ce6;
+  border: 1px solid #006ce6;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .check-input
+  .circle-box.active
+  .inner-box {
+  display: block;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .check-input
+  p {
+  font-size: 12px;
+  color: #000000;
+  font-weight: 600;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .form-list {
+  margin-bottom: 12px !important;
+  width: 100%;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .form-list
+  label {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .form-list
+  input {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  padding: 10px 20px !important;
+  border-radius: 100px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .form-list
+  .select-box {
+  width: 100%;
+  position: relative;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .form-list
+  .select-box.date-input {
+  width: 120px;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .form-list
+  .select-box.date-input:nth-child(1) {
+  margin-right: 10px !important;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .form-list
+  .select-box
+  select {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  padding: 8px 30px 8px 20px !important;
+  border-radius: 100px;
+  font-size: 12px;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .form-list
+  .select-box
+  img {
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 10px;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .wallet-box
+  .wallet-list {
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  padding: 10px 20px !important;
+  border-radius: 100px;
+  font-size: 12px;
+  width: 100%;
+  margin-bottom: 12px !important;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .wallet-list.active
+  .check-input
+  .circle-box {
+  background-color: #006ce6;
+  border: 1px solid #006ce6;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .payment-form-box
+  .form-container
+  .wallet-list.active
+  .check-input
+  .circle-box
+  .inner-box {
+  display: block;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .payment-btn-container
+  a {
+  padding: 10px 30px !important;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 12px;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .payment-btn-container
+  a.save-btn {
+  background-color: #ff5a10;
+  color: #ffffff;
+  margin-right: 10px !important;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .payment-btn-container
+  a.cancel-btn {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #ff5a10;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .preference-list {
+  margin-bottom: 15px !important;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .preference-list
+  .circle {
+  min-width: 16px;
+  min-height: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  border: 1px solid #d1d1d1;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px !important;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .preference-list
+  .circle.active {
+  background-color: #006ce6;
+  border: none;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .preference-list
+  .circle
+  .inner-circle {
+  min-width: 8px;
+  min-height: 8px;
+  max-width: 8px;
+  min-height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .preference-list
+  .input-text
+  h5 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px !important;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .preference-list
+  .input-text
+  p {
+  font-size: 12px;
+  color: #959595;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .preference-btn-container
+  a {
+  padding: 10px 30px !important;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 12px;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .preference-btn-container
+  a.save-btn {
+  background-color: #ff5a10;
+  color: #ffffff;
+  margin-right: 10px !important;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .preference-btn-container
+  a.cancel-btn {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #ff5a10;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .add-phone
+  p {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .sms-input-box
+  label {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .sms-input-box
+  input {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  padding: 8px 20px !important;
+  border-radius: 100px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .sms-btn-container
+  a {
+  padding: 10px 30px !important;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 12px;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .sms-btn-container
+  a.save-btn {
+  background-color: #ff5a10;
+  color: #ffffff;
+  margin-right: 10px !important;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .sms-btn-container
+  a.cancel-btn {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #ff5a10;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .connect-box
+  .img-container {
+  min-width: 84px;
+  max-width: 84px;
+  min-height: 84px;
+  max-height: 84px;
+  width: 84px;
+  height: 84px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .connect-box
+  .img-container
+  img {
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .connect-box
+  .google-info
+  h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.main-container
+  .account-box
+  .inner-account-box
+  .box
+  .list-box
+  .info-box
+  .drop-box
+  .connect-box
+  .google-info
+  p {
+  color: #959595;
+  font-size: 14px;
+}
+
+/* drop box ends  */
 
 .main-container .account-box .inner-edit-box .box {
   background-color: #ffffff;
@@ -580,6 +1311,7 @@ body.fixed-body {
   font-size: 12px;
   padding: 8px 20px !important;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .main-container .review-box .box .date-text p {
@@ -600,6 +1332,7 @@ body.fixed-body {
 .main-container .review-box .box .detail-text p {
   font-size: 14px;
   color: #959595;
+  text-align: justify;
 }
 
 .main-container .review-box .like-icon img {
@@ -611,6 +1344,17 @@ body.fixed-body {
 .main-container .review-box .like-icon p {
   color: #006ce6;
   font-size: 14px;
+}
+
+.main-container .review-box .react-container a {
+  background-color: #feede6;
+  border-radius: 100px;
+  color: #ff5a10;
+  font-size: 12px;
+  padding: 8px 20px !important;
+  font-weight: 500;
+  text-decoration: none;
+  display: none;
 }
 
 /* privacy box  */
@@ -781,6 +1525,31 @@ body.fixed-body {
   font-weight: bold;
 }
 
+.main-container .booking-box .box .booking-details .cost-box .list.total-list {
+  display: none;
+}
+
+.main-container
+  .booking-box
+  .box
+  .booking-details
+  .cost-box
+  .list.total-list
+  p {
+  font-weight: 700;
+}
+
+.main-container
+  .booking-box
+  .box
+  .booking-details
+  .cost-box
+  .list.total-list
+  h1 {
+  font-size: 16px;
+  color: #006ce6;
+}
+
 .main-container .booking-box .box .btn-container .delete-history-link {
   font-size: 12px;
   color: #006ce6;
@@ -806,6 +1575,166 @@ body.fixed-body {
   color: #000000;
   border: 1px solid #ff5a10;
   margin-left: 10px !important;
+}
+
+/* modal  */
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999999;
+  padding: 10px !important;
+}
+
+.modal-wrapper.hidden {
+  display: none;
+}
+
+.modal-wrapper .modal-box {
+  background-color: #ffffff;
+  border-radius: 18px;
+}
+
+.modal-wrapper .modal-box.verification-modal {
+  width: 500px;
+}
+
+.modal-wrapper .modal-box.verification-modal .modal-heading {
+  padding: 20px 30px !important;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.modal-wrapper .modal-box.verification-modal .modal-heading h1 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal-wrapper .modal-box.verification-modal .modal-form {
+  padding: 20px 30px !important;
+}
+
+.modal-wrapper .modal-box.verification-modal .modal-form .input-box label {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.modal-wrapper .modal-box.verification-modal .modal-form .input-box input {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  padding: 8px 20px !important;
+  border-radius: 100px;
+  font-size: 12px;
+  width: 100%;
+  margin-bottom: 10px !important;
+}
+
+.modal-wrapper .modal-box.verification-modal .modal-form .btn-container button {
+  border: none;
+  outline: none;
+  font-size: 12px;
+  border-radius: 100px;
+  padding: 10px 30px !important;
+  font-weight: 600;
+}
+
+.modal-wrapper
+  .modal-box.verification-modal
+  .modal-form
+  .btn-container
+  button.save-modal-btn {
+  background-color: #ff5a10;
+  color: #ffffff;
+  margin-right: 10px !important;
+}
+
+.modal-wrapper
+  .modal-box.verification-modal
+  .modal-form
+  .btn-container
+  button.cancel-modal-btn {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #ff5a10;
+}
+
+/* payment modal  */
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999999;
+  padding: 10px !important;
+}
+
+.payment-modal.hidden {
+  display: none;
+}
+
+.payment-modal .modal-box {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 40px !important;
+  min-width: 600px;
+}
+
+.payment-modal .modal-box .modal-heading {
+  border-bottom: 2px solid #9595953b;
+}
+
+.payment-modal .modal-box .modal-heading h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.payment-modal .modal-box .modal-form .form-list {
+  margin-bottom: 20px !important;
+  width: 50%;
+}
+
+.payment-modal .modal-box .modal-form .form-list.form-full {
+  width: 100%;
+}
+
+.payment-modal .modal-box .modal-form .form-list .input-list {
+  width: 100%;
+}
+
+.payment-modal .modal-box .modal-form .form-list label {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.payment-modal .modal-box .modal-form .form-list input {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  padding: 10px 20px !important;
+  border-radius: 100px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.payment-modal .modal-box .modal-form .btn-container button {
+  border: none;
+  outline: none;
+  background-color: #ff5a10;
+  color: #ffffff;
+  padding: 10px 40px !important;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 100px;
 }
 
 /* footer container  */
@@ -837,13 +1766,345 @@ body.fixed-body {
   margin-bottom: 20px !important;
 }
 
+/* responsive  */
+@media (max-width: 1300px) {
+  .nav-bar .input-container input {
+    width: 340px;
+  }
+  .nav-bar .link-container a {
+    padding-left: 35px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-bar .input-container input {
+    width: 250px;
+    font-size: 14px;
+  }
+  .nav-bar .link-container a {
+    padding-left: 30px !important;
+  }
+  .content-container {
+    padding-left: 70px !important;
+    padding-right: 70px !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav-bar .link-container a {
+    padding-left: 20px !important;
+  }
+  .content-container {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+  .tab-container .tab-link {
+    margin-right: 40px !important;
+  }
+  .nav-bar {
+    padding: 20px 0 !important;
+  }
+  .nav-bar .link-container {
+    display: none;
+  }
+  .nav-tab {
+    display: flex;
+  }
+  .main-container .profile-banner {
+    flex-direction: column;
+  }
+  .main-container .profile-banner .image-container {
+    margin-right: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .main-container .account-box .inner-account-box {
+    flex-direction: column;
+  }
+  .main-container .account-box .inner-account-box .box {
+    width: 100%;
+  }
+  .main-container .account-box .inner-account-box .box:nth-child(1) {
+    margin-bottom: 20px !important;
+  }
+  .tab-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px !important;
+  }
+  .tab-container .tab-link {
+    margin: 0 !important;
+    margin-bottom: 10px !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-list {
+    flex-direction: column;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-list
+    input {
+    margin-bottom: 15px !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-list
+    input:nth-last-child(1) {
+    margin-bottom: 0 !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-list
+    .select-box {
+    margin-bottom: 15px !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-list
+    .select-box:nth-last-child(1) {
+    margin-bottom: 0 !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-list
+    .select-wrapper {
+    margin-bottom: 15px !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-box
+    input.phone-code-input {
+    margin-bottom: 0 !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-list
+    .input-wrapper {
+    margin-bottom: 15px !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-list
+    .input-wrapper:nth-last-child(1) {
+    margin-bottom: 0 !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-box.postal-code-input-box {
+    width: 500px;
+  }
+}
+
 @media (max-width: 991px) {
   .footer-container .footer-box {
     margin-bottom: 30px !important;
   }
 }
 
+@media (max-width: 767px) {
+  .content-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .nav-bar .input-container .icon-container {
+    padding: 6px !important;
+  }
+  .nav-bar .input-container .icon-container img {
+    height: 14px;
+    width: 14px;
+  }
+  .nav-bar .input-container {
+    padding: 6px 6px 6px 20px !important;
+  }
+  .main-container .profile-banner .profile-details .intro-box p {
+    margin: 0 !important;
+  }
+  .main-container .profile-banner .profile-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-container .profile-banner .profile-details > div {
+    margin: 0 !important;
+    text-align: center;
+    margin-bottom: 20px !important;
+  }
+  .main-container .profile-banner .profile-details div:nth-last-child(1) {
+    margin-bottom: 0 !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-box.postal-code-input-box {
+    width: 300px;
+  }
+  .main-container .review-box .box .heading-text h1 {
+    font-size: 14px;
+  }
+  .main-container .review-box .box .date-text p {
+    font-size: 14px;
+  }
+  .main-container .review-box .box .detail-text p {
+    font-size: 12px;
+  }
+  .main-container .review-box .like-icon img {
+    width: 16px;
+    height: 16px;
+  }
+  .main-container .review-box .like-icon p {
+    font-size: 12px;
+  }
+  .main-container .review-box .box .heading-text a {
+    display: none;
+  }
+  .main-container .review-box .react-container a {
+    display: block;
+  }
+  .main-container .privacy-box .box .form-box .input-box {
+    flex-direction: column;
+  }
+  .main-container .privacy-box .box .form-box .input-box .input-list {
+    margin-right: 0 !important;
+  }
+  .main-container
+    .privacy-box
+    .box
+    .form-box
+    .input-box
+    .input-list:nth-child(1) {
+    margin-bottom: 10px !important;
+  }
+  .main-container .privacy-box {
+    padding: 30px !important;
+  }
+  .main-container .booking-box .box .booking-details {
+    flex-direction: column;
+  }
+  .main-container .booking-box .box {
+    padding: 30px !important;
+  }
+  .main-container .booking-box .box .booking-details .date-text {
+    margin-bottom: 30px !important;
+    width: 100%;
+  }
+  .main-container .booking-box .box .booking-details .date-text .list {
+    justify-content: space-between;
+  }
+  .main-container .booking-box .box .booking-details .date-text .list p {
+    min-width: auto;
+  }
+  .main-container .booking-box .box .booking-details .cost-box {
+    width: 100%;
+  }
+  .main-container .booking-box .box .booking-details .cost-box .list {
+    margin-bottom: 10px !important;
+  }
+  .main-container .booking-box .box .booking-details .cost-box .list p {
+    min-width: auto;
+    padding-right: 0 !important;
+  }
+  .main-container .booking-box .box .heading-text h1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-container .booking-box .box .heading-text p {
+    display: none;
+  }
+  .main-container .booking-box .box .heading-text h1 a {
+    margin-top: 10px !important;
+  }
+  .main-container .booking-box .box .btn-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-container .booking-box .box .btn-container .btn-list {
+    width: 100%;
+    flex-direction: column;
+  }
+  .main-container .booking-box .box .btn-container .delete-history-link {
+    margin-bottom: 1rem !important;
+  }
+  .main-container .booking-box .box .btn-container .btn-list a.rate-link {
+    margin: 0 !important;
+    margin-top: 10px !important;
+  }
+  .main-container .booking-box .box .btn-container .btn-list a {
+    width: 100%;
+    text-align: center;
+  }
+  .main-container .booking-box .box .booking-details .date-text .list p {
+    font-size: 12px;
+  }
+  .main-container .booking-box .box .booking-details .date-text .list h1 {
+    font-size: 12px;
+  }
+  .main-container
+    .booking-box
+    .box
+    .booking-details
+    .cost-box
+    .list.total-list {
+    display: flex;
+  }
+  .payment-modal .modal-box {
+    min-width: 100%;
+    padding: 30px !important;
+  }
+}
+
 @media (max-width: 575px) {
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-box.postal-code-input-box {
+    width: 200px;
+  }
   .footer-container .footer-box {
     display: flex;
     justify-content: center;
@@ -852,5 +2113,216 @@ body.fixed-body {
   }
   .footer-container .footer-links .link-list {
     align-items: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .content-container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .nav-bar .input-container {
+    padding: 4px 4px 4px 16px !important;
+  }
+  .nav-bar .input-container input {
+    width: 200px;
+    font-size: 12px;
+  }
+  .nav-bar .logo-container img {
+    height: 16px;
+  }
+  .nav-tab span {
+    width: 24px;
+    height: 2px;
+  }
+  .main-container .account-box .inner-account-box .box {
+    padding: 20px !important;
+  }
+  .main-container .account-box .inner-account-box .box .heading-text h1 {
+    font-size: 14px;
+  }
+  .main-container .account-box .inner-edit-box .box {
+    padding: 20px !important;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-box.postal-code-input-box {
+    width: 140px;
+  }
+  .main-container
+    .account-box
+    .inner-account-box
+    .box
+    .list-box
+    .info-box
+    .drop-box
+    .connect-box
+    .img-container {
+    min-width: 78px;
+    max-width: 78px;
+    min-height: 78px;
+    max-height: 78px;
+    width: 78px;
+    height: 78px;
+  }
+  .main-container .review-box {
+    padding: 20px !important;
+  }
+  .main-container .privacy-box {
+    padding: 20px !important;
+  }
+  .main-container .privacy-box .box .heading-text h1 {
+    font-size: 14px;
+  }
+  .main-container .privacy-box .box .heading-text p {
+    font-size: 10px;
+  }
+  .main-container .privacy-box .box .form-box .btn-container button {
+    font-size: 10px;
+    padding: 8px 20px !important;
+  }
+  .main-container .privacy-box .box .form-box .btn-container button.cancel-btn {
+    margin-left: 5px !important;
+  }
+  .main-container .booking-box .box {
+    padding: 20px !important;
+  }
+  .main-container .booking-box .box .heading-text h1 {
+    font-size: 18px;
+  }
+  .main-container .coupon-box .coupon-details h1 {
+    font-size: 18px;
+  }
+  .main-container .coupon-box {
+    padding: 20px !important;
+  }
+  .modal-wrapper .modal-box.verification-modal .modal-heading {
+    padding: 20px !important;
+  }
+  .modal-wrapper .modal-box.verification-modal .modal-form {
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-bar .input-container input {
+    width: 150px;
+    font-size: 12px;
+  }
+  .main-container .account-box .inner-account-box .box .heading-text h1 {
+    font-size: 12px;
+  }
+  .main-container .account-box .inner-account-box .box .heading-text a {
+    font-size: 10px;
+  }
+  .main-container
+    .account-box
+    .inner-edit-box
+    .box
+    .form-container
+    .form-list
+    .input-box.postal-code-input-box {
+    min-width: 100px;
+    width: 100px;
+  }
+  .main-container
+    .account-box
+    .inner-account-box
+    .box
+    .list-box
+    .info-box
+    .drop-box
+    .payment-btn-container
+    a {
+    padding: 10px 20px !important;
+  }
+  .main-container
+    .account-box
+    .inner-account-box
+    .box
+    .list-box
+    .info-box
+    .drop-box
+    .payment-btn-container
+    a.save-btn {
+    margin-right: 5px !important;
+  }
+  .main-container
+    .account-box
+    .inner-account-box
+    .box
+    .list-box
+    .info-box
+    .drop-box
+    .preference-btn-container
+    a {
+    padding: 10px 20px !important;
+  }
+  .main-container
+    .account-box
+    .inner-account-box
+    .box
+    .list-box
+    .info-box
+    .drop-box
+    .preference-btn-container
+    a.save-btn {
+    margin-right: 5px !important;
+  }
+  .main-container
+    .account-box
+    .inner-account-box
+    .box
+    .list-box
+    .info-box
+    .drop-box
+    .sms-btn-container
+    a {
+    padding: 10px 20px !important;
+  }
+  .main-container
+    .account-box
+    .inner-account-box
+    .box
+    .list-box
+    .info-box
+    .drop-box
+    .sms-btn-container
+    a.save-btn {
+    margin-right: 5px !important;
+  }
+  .payment-modal .modal-box .modal-form .form-list {
+    width: 100%;
+  }
+  .payment-modal .modal-box .modal-form .form-list.form-full {
+    flex-direction: column;
+  }
+  .payment-modal .modal-box .modal-form .form-list .input-list {
+    margin-right: 0 !important;
+  }
+  .payment-modal .modal-box .modal-form .form-list .input-list:nth-child(1) {
+    margin-bottom: 20px !important;
+  }
+  .payment-modal .modal-box {
+    padding: 20px !important;
+  }
+  .modal-wrapper
+    .modal-box.verification-modal
+    .modal-form
+    .btn-container
+    button.save-modal-btn {
+    margin-right: 5px !important;
+  }
+  .modal-wrapper
+    .modal-box.verification-modal
+    .modal-form
+    .btn-container
+    button {
+    font-size: 10px;
+    padding: 8px 20px !important;
   }
 }

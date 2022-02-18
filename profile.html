@@ -24,18 +24,39 @@
     ></script>
   </head>
   <body class="profile-body" id="profileBody">
+    <!-- mobile nav  -->
+    <div class="mobile-nav">
+      <div class="mobile-logo">
+        <img
+          src="./assets/image/new_logo-blue.png"
+          class="mb-link"
+          alt="logo"
+        />
+      </div>
+      <div class="mobile-links flex-top-column-start">
+        <a href="#" class="mb-link">Explore</a>
+        <a href="#" class="mb-link">About Us</a>
+        <a href="#" class="mb-link">Log In</a>
+        <a href="#" class="mb-link nav-lang">
+          <img src="./assets/image/lang-icon-dark.png" alt="lang" />
+          English
+        </a>
+      </div>
+    </div>
     <!-- nav bar  -->
     <div class="content-container nav-container">
       <div class="nav-bar flex-css-row-sb">
         <div class="logo-container">
           <img src="./assets/image/new_logo-blue.png" alt="logo" />
         </div>
+
         <div class="input-container flex-css-row-sb">
           <input type="text" placeholder="Where are you going ?" />
           <div class="icon-container flex-css">
             <img src="./assets/image/search_icon.png" alt="icon" />
           </div>
         </div>
+
         <div class="link-container flex-css-row">
           <a href="#" class="nav-lang">
             <img
@@ -59,6 +80,11 @@
               <img src="./assets/image/profile1.png" alt="profile" />
             </div>
           </a>
+        </div>
+
+        <div class="nav-tab flex-css-column" data-value="open">
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>
@@ -95,10 +121,12 @@
       <div class="tab-container">
         <a href="#" class="tab-link active" id="accountTabLink">My Account</a>
         <a href="#" class="tab-link" id="tokenTabLink">Tokens</a>
-        <a href="#" class="tab-link" id="couponTabLink">Coupons and Rewards</a>
+        <a href="#" class="tab-link" id="couponTabLink"
+          >Coupons&nbsp;and&nbsp;Rewards</a
+        >
         <a href="#" class="tab-link" id="reviewTabLink">Reviews</a>
         <a href="#" class="tab-link" id="privacyTabLink"
-          >Privacy and Security</a
+          >Privacy&nbsp;and&nbsp;Security</a
         >
         <a href="#" class="tab-link" id="bookingTabLink">Bookings</a>
       </div>
@@ -138,20 +166,262 @@
               <h1>My Account Information</h1>
             </div>
             <div class="list-box pt-3">
-              <div class="list">
-                <a href="#" class="account-link"> Email and Password </a>
+              <div class="info-box">
+                <div class="title info-title-link">
+                  <p>Email and Password</p>
+                </div>
               </div>
-              <div class="list">
-                <a href="#" class="account-link"> Add / Payment Methods </a>
+              <div class="info-box">
+                <div class="title info-title-link">
+                  <p>Add / Payment Methods</p>
+                </div>
+                <div class="info-wrapper">
+                  <div class="drop-box">
+                    <div class="payment-form-box">
+                      <div class="form-container mb-4">
+                        <div class="check-input flex-css-row-start mb-2">
+                          <div
+                            class="circle-box payment-check-box flex-css"
+                            id="cardPay"
+                            data-status="inactive"
+                          >
+                            <div class="inner-box"></div>
+                          </div>
+                          <p>Credit card</p>
+                        </div>
+                        <div class="form-list">
+                          <label for="card">Card number</label> <br />
+                          <input type="text" placeholder="Card number" />
+                        </div>
+                        <div class="form-list">
+                          <div class="input-list">
+                            <label for="card">Card holder</label> <br />
+                            <input type="text" placeholder="Card holder" />
+                          </div>
+                        </div>
+                        <div class="form-list">
+                          <label for="expirationDate">Expiration Date</label>
+                          <div class="select-wrapper flex-css-row-start">
+                            <div class="select-box date-input">
+                              <select>
+                                <option
+                                  value="placeholder"
+                                  disabled=""
+                                  selected=""
+                                  hidden=""
+                                >
+                                  MM
+                                </option>
+                                <option value="01">01</option>
+                                <option value="01">01</option>
+                                <option value="01">01</option>
+                                <option value="01">01</option>
+                                <option value="01">01</option>
+                              </select>
+                              <img
+                                src="./assets/image/blue_arrow.png"
+                                alt="arrow"
+                              />
+                            </div>
+                            <div class="select-box date-input">
+                              <select>
+                                <option
+                                  value="placeholder"
+                                  disabled=""
+                                  selected=""
+                                  hidden=""
+                                >
+                                  YYYY
+                                </option>
+                                <option value="1995">1995</option>
+                                <option value="1996">1996</option>
+                                <option value="1997">1997</option>
+                                <option value="1998">1998</option>
+                                <option value="1999">1999</option>
+                              </select>
+                              <img
+                                src="./assets/image/blue_arrow.png"
+                                alt="arrow"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-container">
+                        <div class="check-input flex-css-row-start mb-2">
+                          <div
+                            class="circle-box payment-check-box active flex-css"
+                            id="walletPay"
+                            data-status="active"
+                          >
+                            <div class="inner-box"></div>
+                          </div>
+                          <p>Other Payment Options</p>
+                        </div>
+                        <div class="wallet-box">
+                          <div
+                            class="wallet-list active"
+                            id="esewaPay"
+                            data-status="active"
+                          >
+                            <div class="check-input flex-css-row-start">
+                              <div class="circle-box flex-css">
+                                <div class="inner-box"></div>
+                              </div>
+                              <p>Esewa</p>
+                            </div>
+                          </div>
+                          <div
+                            class="wallet-list"
+                            id="fonePay"
+                            data-status="inactive"
+                          >
+                            <div class="check-input flex-css-row-start">
+                              <div class="circle-box flex-css">
+                                <div class="inner-box"></div>
+                              </div>
+                              <p>Fonepay</p>
+                            </div>
+                          </div>
+                          <div
+                            class="wallet-list"
+                            id="khaltiPay"
+                            data-status="inactive"
+                          >
+                            <div class="check-input flex-css-row-start">
+                              <div class="circle-box flex-css">
+                                <div class="inner-box"></div>
+                              </div>
+                              <p>Khalti</p>
+                            </div>
+                          </div>
+                          <div
+                            class="wallet-list"
+                            id="bankPay"
+                            data-status="inactive"
+                          >
+                            <div class="check-input flex-css-row-start">
+                              <div class="circle-box flex-css">
+                                <div class="inner-box"></div>
+                              </div>
+                              <p>Bank Transfer</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="payment-btn-container pt-3 pb-3">
+                        <a href="#" class="save-btn" id="paymentSaveBtn"
+                          >Save Information</a
+                        >
+                        <a href="#" class="cancel-btn">Cancel</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="list">
-                <a href="#" class="account-link"> Email Preferences </a>
+              <div class="info-box">
+                <div class="title info-title-link">
+                  <p>Email Preferences</p>
+                </div>
+                <div class="info-wrapper">
+                  <div class="drop-box">
+                    <div class="preference-list flex-top-row-start">
+                      <div class="circle active flex-css">
+                        <div class="inner-circle"></div>
+                      </div>
+                      <div class="input-text">
+                        <h5>Deals& Promotions</h5>
+                        <p>Stay updated on deals & Promotions.</p>
+                      </div>
+                    </div>
+                    <div class="preference-list flex-top-row-start">
+                      <div class="circle active flex-css">
+                        <div class="inner-circle"></div>
+                      </div>
+                      <div class="input-text">
+                        <h5>Rewards</h5>
+                        <p>Stay updated on Rewards..</p>
+                      </div>
+                    </div>
+                    <div class="preference-list flex-top-row-start">
+                      <div class="circle active flex-css">
+                        <div class="inner-circle"></div>
+                      </div>
+                      <div class="input-text">
+                        <h5>Reviews</h5>
+                        <p>Stay updated on Reviews.</p>
+                      </div>
+                    </div>
+                    <div class="preference-list flex-top-row-start">
+                      <div class="circle active flex-css">
+                        <div class="inner-circle"></div>
+                      </div>
+                      <div class="input-text">
+                        <h5>Surveys</h5>
+                        <p>Stay updated on Surveys.</p>
+                      </div>
+                    </div>
+                    <div class="preference-list flex-top-row-start">
+                      <div class="circle active flex-css">
+                        <div class="inner-circle"></div>
+                      </div>
+                      <div class="input-text">
+                        <h5>
+                          Please unsubscribe me from all of the emails listed
+                          above.
+                        </h5>
+                        <p>
+                          Unsubscribe from all marketing emails. You will still
+                          receive service emails for your bookings, account
+                          updates. Please note that this may take up to 10
+                          business days to be effective.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="preference-btn-container pt-2 pb-3">
+                      <a href="#" class="save-btn">Save Information</a>
+                      <a href="#" class="cancel-btn">Cancel</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="list">
-                <a href="#" class="account-link"> SMS Preferences </a>
+              <div class="info-box">
+                <div class="title info-title-link">
+                  <p>SMS Preferences</p>
+                </div>
+                <div class="info-wrapper">
+                  <div class="drop-box">
+                    <div class="add-phone mb-2">
+                      <p>+ Add Phone Number</p>
+                    </div>
+                    <div class="sms-input-box mb-3">
+                      <label for="phone" class="mb-1">Phone Number</label>
+                      <input type="text" placeholder="Phone Number" />
+                    </div>
+                    <div class="sms-btn-container pt-2 pb-3">
+                      <a href="#" class="save-btn">Save Information</a>
+                      <a href="#" class="cancel-btn">Cancel</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="list">
-                <a href="#" class="account-link"> Connected Accounts </a>
+              <div class="info-box">
+                <div class="title info-title-link">
+                  <p>Connected Accounts</p>
+                </div>
+                <div class="info-wrapper">
+                  <div class="drop-box">
+                    <div class="connect-box flex-css-row-start pt-2">
+                      <div class="img-container flex-css mr-3">
+                        <img src="./assets/image/google.png" alt="google" />
+                      </div>
+                      <div class="google-info">
+                        <h1>Anish Pokharel</h1>
+                        <p>Anish.21@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -308,7 +578,7 @@
           <div class="heading-text">
             <h1>Want to upgrade from Level Basic 1 to Higher ?</h1>
           </div>
-          <div class="coupon-bar my-4">
+          <div class="coupon-bar mt-4 mb-4">
             <div class="bar flex-css-row-start">
               <div class="middle-line"></div>
               <div class="range-bar flex-css"></div>
@@ -362,9 +632,12 @@
               soon!
             </p>
           </div>
-          <div class="like-icon flex-css-row-start">
-            <img src="./assets/image/like.png" alt="like" />
-            <p>5 Likes</p>
+          <div class="react-container flex-css-row-sb">
+            <div class="like-icon flex-css-row-start">
+              <img src="./assets/image/like.png" alt="like" />
+              <p>5 Likes</p>
+            </div>
+            <a href="#">Delete</a>
           </div>
         </div>
         <div class="box">
@@ -390,9 +663,12 @@
               soon!
             </p>
           </div>
-          <div class="like-icon flex-css-row-start">
-            <img src="./assets/image/like.png" alt="like" />
-            <p>5 Likes</p>
+          <div class="react-container flex-css-row-sb">
+            <div class="like-icon flex-css-row-start">
+              <img src="./assets/image/like.png" alt="like" />
+              <p>5 Likes</p>
+            </div>
+            <a href="#">Delete</a>
           </div>
         </div>
         <div class="box">
@@ -418,9 +694,12 @@
               soon!
             </p>
           </div>
-          <div class="like-icon flex-css-row-start">
-            <img src="./assets/image/like.png" alt="like" />
-            <p>5 Likes</p>
+          <div class="react-container flex-css-row-sb">
+            <div class="like-icon flex-css-row-start">
+              <img src="./assets/image/like.png" alt="like" />
+              <p>5 Likes</p>
+            </div>
+            <a href="#">Delete</a>
           </div>
         </div>
       </div>
@@ -473,7 +752,10 @@
               </div>
             </div>
             <div class="btn-container mt-3">
-              <button class="email-verification-btn">
+              <button
+                class="verification-btn email-verification-btn"
+                id="emailVerificationBtn"
+              >
                 Send Verification Code
               </button>
             </div>
@@ -500,7 +782,10 @@
               </div>
             </div>
             <div class="btn-container mt-3">
-              <button class="email-verification-btn">
+              <button
+                class="verification-btn password-verification-btn"
+                id="passwordVerificationBtn"
+              >
                 Send Verification Code
               </button>
             </div>
@@ -513,7 +798,7 @@
         <div class="box">
           <div class="heading-text flex-bottom-row-sb">
             <h1 class="flex-bottom-row-start">
-              <span class="mr-1">1. </span>Arushi Boutique Hotel
+              <span> <span class="mr-1">1. </span>Arushi Boutique Hotel </span>
               <a href="#">VIP Access</a>
             </h1>
             <p>Rs. 3,627</p>
@@ -546,6 +831,10 @@
                 <p>Property service charges</p>
                 <h1>Rs. 100</h1>
               </div>
+              <div class="list total-list flex-css-row-sb pt-1">
+                <p>Total</p>
+                <h1>Rs. 3,627</h1>
+              </div>
             </div>
           </div>
           <div class="btn-container flex-css-row-sb pt-3">
@@ -559,9 +848,10 @@
         <div class="box">
           <div class="heading-text flex-bottom-row-sb">
             <h1 class="flex-bottom-row-start">
-              <span class="mr-1">2. </span>Hotel Yeti
+              <span> <span class="mr-1">2. </span>Hotel Yeti</span>
+              <a href="#">VIP Access</a>
             </h1>
-            <p>Rs. 3,627</p>
+            <p>Rs. 2,725</p>
           </div>
           <div class="booking-details flex-top-row-sb pt-3 pb-4">
             <div class="date-text">
@@ -591,6 +881,10 @@
                 <p>Property service charges</p>
                 <h1>Rs. 100</h1>
               </div>
+              <div class="list total-list flex-css-row-sb pt-1">
+                <p>Total</p>
+                <h1>Rs. 2,725</h1>
+              </div>
             </div>
           </div>
           <div class="btn-container flex-css-row-sb pt-3">
@@ -604,9 +898,10 @@
         <div class="box">
           <div class="heading-text flex-bottom-row-sb">
             <h1 class="flex-bottom-row-start">
-              <span class="mr-1">3. </span>Hotel Yak
+              <span> <span class="mr-1">3. </span>Hotel Yak</span>
+              <a href="#">VIP Access</a>
             </h1>
-            <p>Rs. 3,627</p>
+            <p>Rs. 5,627</p>
           </div>
           <div class="booking-details flex-top-row-sb pt-3 pb-4">
             <div class="date-text">
@@ -636,6 +931,10 @@
                 <p>Property service charges</p>
                 <h1>Rs. 100</h1>
               </div>
+              <div class="list total-list flex-css-row-sb pt-1">
+                <p>Total</p>
+                <h1>Rs. 5,627</h1>
+              </div>
             </div>
           </div>
           <div class="btn-container flex-css-row-sb pt-3">
@@ -645,6 +944,125 @@
               <a href="#" class="rate-link">Rate It</a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- pop up modal -->
+    <div class="modal-wrapper flex-css hidden" id="emailChangeModal">
+      <div class="modal-box verification-modal">
+        <div class="modal-heading">
+          <h1>Change Email</h1>
+        </div>
+        <div class="modal-form">
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input type="email" placeholder="New Email Address" />
+            <input type="email" placeholder="Retype Email Address" />
+          </div>
+          <div class="btn-container pt-3">
+            <button class="save-modal-btn">Save Information</button>
+            <button class="cancel-modal-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-wrapper flex-css hidden" id="passwordChangeModal">
+      <div class="modal-box verification-modal">
+        <div class="modal-heading">
+          <h1>Change Password</h1>
+        </div>
+        <div class="modal-form">
+          <div class="input-box">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Current Password" />
+            <input type="password" placeholder="New Password" />
+            <input type="password" placeholder="Re-Type Password" />
+          </div>
+          <div class="btn-container pt-3">
+            <button class="save-modal-btn">Save Information</button>
+            <button class="cancel-modal-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- payment pop up modal  -->
+    <div class="payment-modal esewa-modal flex-css hidden" id="esewaPayModal">
+      <div class="modal-box">
+        <div class="modal-heading pb-3">
+          <h1>Esewa details</h1>
+        </div>
+        <div class="modal-form pt-3">
+          <div class="form-list form-full flex-css-row">
+            <div class="input-list mr-3">
+              <label for="name">First name</label> <br />
+              <input type="text" placeholder="First name" />
+            </div>
+            <div class="input-list">
+              <label for="name">Last name</label> <br />
+              <input type="text" placeholder="Last name" />
+            </div>
+          </div>
+          <div class="form-list">
+            <label for="id">Esewa ID No.</label> <br />
+            <input type="text" placeholder="Esewa ID" />
+          </div>
+          <div class="form-list">
+            <label for="id">Password</label> <br />
+            <input type="password" placeholder="Enter Password/Pin" />
+          </div>
+          <div class="btn-container pt-3">
+            <button class="payment-confirm-btn">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-modal khalti-modal flex-css hidden" id="khaltiPayModal">
+      <div class="modal-box">
+        <div class="modal-heading pb-3">
+          <h1>Khalti details</h1>
+        </div>
+        <div class="modal-form pt-3">
+          <div class="form-list form-full flex-css-row">
+            <div class="input-list mr-3">
+              <label for="name">First name</label> <br />
+              <input type="text" placeholder="First name" />
+            </div>
+            <div class="input-list">
+              <label for="name">Last name</label> <br />
+              <input type="text" placeholder="Last name" />
+            </div>
+          </div>
+          <div class="form-list">
+            <label for="id">Khalti ID No.</label> <br />
+            <input type="text" placeholder="Khalti ID" />
+          </div>
+          <div class="form-list">
+            <label for="id">Password</label> <br />
+            <input type="password" placeholder="Enter Password/Pin" />
+          </div>
+          <div class="btn-container pt-3">
+            <button class="payment-confirm-btn">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-modal fonepay-modal flex-css hidden" id="fonePayModal">
+      <div class="modal-box">
+        <div class="modal-heading pb-3">
+          <h1>Fonepay details</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-modal bank-modal flex-css hidden" id="bankPayModal">
+      <div class="modal-box">
+        <div class="modal-heading pb-3">
+          <h1>Bank details</h1>
         </div>
       </div>
     </div>

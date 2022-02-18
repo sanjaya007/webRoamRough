@@ -137,11 +137,22 @@ $(".travel-check-box").on("click", function () {
 
 // booking action
 $("#completeBookingBtn").on("click", function (e) {
+  e.preventDefault();
   if (allowWallet) {
-    e.preventDefault();
     $(".payment-modal").addClass("hidden");
     $(`#${currentWallet}Modal`).removeClass("hidden");
+  } else {
+    $(".checkout-wrapper").addClass("hidden");
+    $("#checkoutFinalBox").removeClass("hidden");
+    $(window).scrollTop(0);
   }
+});
+
+$(".payment-confirm-btn").on("click", function () {
+  $(".payment-modal").addClass("hidden");
+  $(".checkout-wrapper").addClass("hidden");
+  $("#checkoutFinalBox").removeClass("hidden");
+  $(window).scrollTop(0);
 });
 
 // modal
@@ -150,6 +161,48 @@ $(".payment-modal").on("click", function (e) {
   const className = $(targetEl).attr("class")?.split(" ")[0];
   if (className === "payment-modal") {
     $(this).addClass("hidden");
+    $("#checkoutBody").removeClass("fixed-body");
+  }
+});
+
+// change room
+$(".change-room-link").on("click", function (e) {
+  e.preventDefault();
+  $("#roomModal").removeClass("hidden");
+  $("#checkoutBody").addClass("fixed-body");
+});
+
+$("#roomModal").on("click", function (e) {
+  const targetEl = e.target;
+  const className = $(targetEl).attr("class")?.split(" ")[0];
+  if (className === "room-modal") {
+    $(this).addClass("hidden");
+    $("#checkoutBody").removeClass("fixed-body");
+  }
+});
+
+// mobile nav
+$(".nav-tab").on("click", function () {
+  $(".mobile-nav").animate({
+    left: "0px",
+    opacity: "1",
+  });
+  $(this).attr("data-value", "close");
+  $("#checkoutBody").addClass("fixed-body");
+});
+
+$("#checkoutBody").on("click", function (e) {
+  const targetEl = e.target;
+  const className = $(targetEl).attr("class")?.split(" ")[0];
+  if (
+    className !== "nav-tab" &&
+    className !== "mobile-nav" &&
+    className !== "mb-link"
+  ) {
+    $(".mobile-nav").animate({
+      left: "-100%",
+      opacity: "0",
+    });
     $("#checkoutBody").removeClass("fixed-body");
   }
 });
