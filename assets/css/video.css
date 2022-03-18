@@ -25,3 +25,14 @@
   width: 100%;
   object-fit: cover;
 }
+
+.video-modal .logo-container {
+  position: relative;
+}
+
+.video-modal .logo-container .gif-img {
+  position: absolute;
+  height: 70px;
+  left: 47px;
+  bottom: 32px;
+}
