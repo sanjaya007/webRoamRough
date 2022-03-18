@@ -66,6 +66,10 @@ body {
   text-decoration: none;
 }
 
+.nav-bar .link-container a:nth-child(1) {
+  padding-left: 0 !important;
+}
+
 .nav-bar .link-container a .img-link {
   height: 16px;
   width: 16px;
@@ -88,6 +92,64 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.nav-tab {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-tab span {
+  width: 28px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #565656;
+  margin: 5px 0 !important;
+  pointer-events: none;
+}
+
+/* mobile nav  */
+.mobile-nav {
+  width: 200px;
+  max-width: 200px;
+  min-width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 999;
+  padding: 30px 20px !important;
+  left: -100%;
+  opacity: 0;
+  box-shadow: 10px 0px 100px 1px #d6d6d6;
+}
+
+.mobile-nav .mobile-logo img {
+  height: 20px;
+}
+
+.mobile-nav .mobile-links {
+  padding: 20px 0 !important;
+}
+
+.mobile-nav .mobile-links a {
+  color: #000000;
+  margin: 12px 0 !important;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  font-size: 12px;
+}
+
+.mobile-nav .mobile-links a.nav-lang img {
+  height: 16px;
+  width: 16px;
+  object-fit: contain;
+}
+
+.mobile-nav .mobile-links a:active {
+  transform: scale(0.99);
 }
 
 /* main container  */
@@ -456,7 +518,7 @@ body {
   background-color: #006ce6;
   border-radius: 18px;
   box-shadow: 55px 154px 145px rgba(0, 0, 0, 0.1);
-  padding: 40px 30px !important;
+  padding: 36px 26px !important;
 }
 
 .main-container .about-container .right-container .box .rate h1 {
@@ -516,7 +578,7 @@ body {
   .right-container
   .box
   .detail-box
-  .list.custome-list
+  .list.customer-list
   p {
   font-size: 14px;
   margin: 0 4px !important;
@@ -551,6 +613,10 @@ body {
 
 .main-container .room-container .box:hover {
   transform: scale(1.03);
+}
+
+.main-container .room-container .room-card-col:nth-child(3n + 3) .box {
+  margin-right: 0 !important;
 }
 
 .main-container .room-container .box .image-container {
@@ -939,13 +1005,344 @@ body {
   margin-bottom: 20px !important;
 }
 
+/* responsive  */
+@media (max-width: 1300px) {
+  .nav-bar .input-container input {
+    width: 340px;
+  }
+  .nav-bar .link-container a {
+    padding-left: 35px !important;
+  }
+  .main-container .about-container .left-container {
+    width: 65%;
+  }
+  .main-container .about-container .right-container {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-bar .input-container input {
+    width: 250px;
+    font-size: 14px;
+  }
+  .nav-bar .link-container a {
+    padding-left: 30px !important;
+  }
+  .content-container {
+    padding-left: 70px !important;
+    padding-right: 70px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .main-container .room-container .room-card-col:nth-child(3n + 3) .box {
+    margin-right: 20px !important;
+  }
+  .main-container .room-container .room-card-col:nth-child(2n + 2) .box {
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-container .about-container .left-container {
+    width: 62%;
+  }
+  .main-container .about-container .right-container {
+    width: 38%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav-bar .link-container a {
+    padding-left: 20px !important;
+  }
+  .content-container {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+  .nav-bar {
+    padding: 20px 0 !important;
+  }
+  .nav-bar .link-container {
+    display: none;
+  }
+  .nav-tab {
+    display: flex;
+  }
+  .main-container .gallery-container .image-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .main-container .gallery-container .image-container .cover-image {
+    width: 100%;
+    padding-right: 0 !important;
+    margin-bottom: 20px !important;
+    height: auto;
+  }
+  .main-container .gallery-container .image-container .other-image {
+    width: 100%;
+    flex-direction: row;
+  }
+  .main-container .gallery-container .image-container .other-image .img-box {
+    width: 50%;
+  }
+  .main-container
+    .gallery-container
+    .image-container
+    .other-image
+    .img-box:nth-child(1) {
+    margin-right: 10px !important;
+  }
+  .main-container
+    .gallery-container
+    .image-container
+    .other-image
+    .img-box:nth-child(2) {
+    margin-left: 10px !important;
+  }
+  .main-container .about-container {
+    flex-direction: column;
+  }
+  .main-container .about-container .left-container {
+    width: 100%;
+    padding-right: 0 !important;
+  }
+  .main-container .about-container .right-container {
+    width: 100%;
+    position: relative;
+    padding-top: 30px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-container .about-container .right-container .box {
+    width: 380px;
+  }
+}
+
 @media (max-width: 991px) {
+  .main-container .room-container .box {
+    margin-right: 0 !important;
+  }
+  .main-container .location-container .box {
+    margin-bottom: 30px !important;
+  }
+  .main-container .review-container .box {
+    margin-top: 20px !important;
+  }
   .footer-container .footer-box {
     margin-bottom: 30px !important;
   }
 }
 
+@media (max-width: 767px) {
+  .content-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .nav-bar .input-container .icon-container {
+    padding: 6px !important;
+  }
+  .nav-bar .input-container .icon-container img {
+    height: 14px;
+    width: 14px;
+  }
+  .nav-bar .input-container {
+    padding: 6px 6px 6px 20px !important;
+  }
+  .main-container .gallery-container .title-text h1 {
+    font-size: 26px;
+  }
+  .main-container .gallery-container .title-text a {
+    font-size: 10px;
+  }
+  .main-container .about-container .left-container .box {
+    padding: 30px !important;
+  }
+  .main-container .about-container .right-container .box {
+    padding: 30px 20px !important;
+  }
+  .main-container .about-container .right-container .box .rate h1 {
+    font-size: 20px;
+  }
+  .main-container .about-container .right-container .box .rate p {
+    font-size: 14px;
+  }
+  .main-container .about-container .right-container .box .detail-box .list {
+    padding: 16px 24px !important;
+  }
+  .main-container .about-container .right-container .box .btn-container a {
+    padding: 16px 24px !important;
+  }
+  .main-container .location-container {
+    padding: 30px !important;
+  }
+  .main-container .review-container {
+    padding: 30px !important;
+  }
+  .main-container .policy-container {
+    padding: 30px !important;
+  }
+  .main-container .important-container {
+    padding: 30px !important;
+  }
+  .main-container .faq-container {
+    padding: 30px !important;
+  }
+  .main-container
+    .about-container
+    .left-container
+    .box.schedule-box
+    .schedule-header {
+    flex-direction: column;
+  }
+  .main-container
+    .about-container
+    .left-container
+    .box.schedule-box
+    .schedule-heading {
+    margin-bottom: 30px !important;
+  }
+  .main-container
+    .about-container
+    .left-container
+    .box.schedule-box
+    .schedule-heading
+    h1 {
+    text-align: center;
+  }
+  .main-container
+    .about-container
+    .left-container
+    .box.schedule-box
+    .schedule-heading
+    p {
+    text-align: center;
+  }
+  .main-container
+    .about-container
+    .left-container
+    .box.schedule-box
+    .schedule-btn
+    a {
+    padding: 14px 30px !important;
+  }
+  .main-container .room-container .box {
+    margin-right: 0 !important;
+  }
+  .main-container .room-container .room-card-col:nth-child(3n + 3) .box {
+    margin-right: 20px !important;
+  }
+  .main-container .room-container .room-card-col:nth-child(2n + 2) .box {
+    margin-right: 0 !important;
+  }
+}
+
 @media (max-width: 575px) {
+  .main-container .gallery-container .title-text h1 {
+    font-size: 22px;
+  }
+  .main-container .tab-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .main-container .tab-container .tab-link {
+    font-size: 14px;
+  }
+  .main-container .about-container .left-container .box .box-content h1 {
+    font-size: 16px;
+  }
+  .main-container .about-container .left-container .box .box-content p {
+    font-size: 14px;
+  }
+  .main-container .room-container .box .room-btns .reserve-btn {
+    padding: 12px 38px !important;
+    font-size: 14px;
+  }
+  .main-container .about-container .right-container .box .btn-container {
+    margin-top: 2.5rem !important;
+  }
+  .main-container .location-container .location-heading h1 {
+    font-size: 16px;
+  }
+  .main-container .location-container .box h1 {
+    font-size: 14px;
+  }
+  .main-container .location-container .box .list-box p {
+    font-size: 12px;
+  }
+  .main-container .policy-container .policy-heading h1 {
+    font-size: 16px;
+  }
+  .main-container .important-container .important-heading h1 {
+    font-size: 16px;
+  }
+  .main-container .review-container .review-heading h1 {
+    font-size: 16px;
+  }
+  .main-container .review-container .box.rate-box h1 {
+    font-size: 50px;
+  }
+  .main-container .faq-container .box h5 {
+    font-size: 12px;
+  }
+  .main-container .faq-container .box p {
+    font-size: 12px;
+  }
+  .main-container .about-container .left-container .box {
+    padding: 20px !important;
+  }
+  .main-container .location-container {
+    padding: 20px !important;
+  }
+  .main-container .review-container {
+    padding: 20px !important;
+  }
+  .main-container .policy-container {
+    padding: 20px !important;
+  }
+  .main-container .important-container {
+    padding: 20px !important;
+  }
+  .main-container .faq-container {
+    padding: 20px !important;
+  }
+  .main-container
+    .about-container
+    .left-container
+    .box
+    .box-content
+    .list-box
+    .list
+    img {
+    min-width: 18px;
+    min-height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+  }
+  .main-container
+    .about-container
+    .left-container
+    .box.schedule-box
+    .weather-box
+    .weather-details
+    h1 {
+    font-size: 16px;
+  }
+  .main-container .about-container .left-container .box .box-content .vip-link {
+    font-size: 12px;
+    padding: 8px 24px !important;
+  }
+  .main-container
+    .about-container
+    .left-container
+    .box.schedule-box
+    .schedule-heading
+    h1 {
+    font-size: 16px;
+  }
   .footer-container .footer-box {
     display: flex;
     justify-content: center;
@@ -954,5 +1351,110 @@ body {
   }
   .footer-container .footer-links .link-list {
     align-items: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .content-container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .nav-bar .input-container {
+    padding: 4px 4px 4px 16px !important;
+  }
+  .nav-bar .input-container input {
+    width: 200px;
+    font-size: 12px;
+  }
+  .nav-bar .logo-container img {
+    height: 16px;
+  }
+  .nav-tab span {
+    width: 24px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-bar .input-container input {
+    width: 150px;
+    font-size: 12px;
+  }
+  .main-container .about-container .right-container .box {
+    width: 100%;
+  }
+  .main-container .gallery-container .title-text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-container .gallery-container .title-text h1 {
+    margin-bottom: 6px !important;
+  }
+  .main-container .gallery-container .title-text a {
+    margin-left: 2px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-container .about-container .left-container .box .box-content p {
+    font-size: 12px;
+  }
+  .main-container .about-container .left-container .box .box-content {
+    margin-bottom: 30px !important;
+  }
+  .main-container .room-container .box .room-btns .reserve-btn {
+    padding: 10px 30px !important;
+    font-size: 12px;
+  }
+  .main-container .location-container .map-container h1 {
+    font-size: 12px;
+  }
+  .main-container .location-container .box h1 {
+    font-size: 12px;
+  }
+  .main-container .policy-container .box h1 {
+    font-size: 12px;
+  }
+  .main-container .policy-container .box p {
+    font-size: 12px;
+  }
+  .main-container .important-container .box p {
+    font-size: 12px;
+  }
+  .main-container .review-container .box.rate-box h1 {
+    font-size: 40px;
+  }
+  .main-container
+    .about-container
+    .right-container
+    .box
+    .detail-box
+    .list
+    .check-list
+    p {
+    font-size: 12px;
+  }
+  .main-container
+    .about-container
+    .right-container
+    .box
+    .detail-box
+    .list
+    .check-list
+    img {
+    height: 16px;
+  }
+  .main-container
+    .about-container
+    .right-container
+    .box
+    .detail-box
+    .list.customer-list
+    p {
+    font-size: 12px;
+  }
+  .main-container .about-container .right-container .box .btn-container a {
+    padding: 14px 20px !important;
+    font-size: 16px;
   }
 }

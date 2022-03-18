@@ -1798,9 +1798,6 @@ body.fixed-body {
     padding-left: 50px !important;
     padding-right: 50px !important;
   }
-  .tab-container .tab-link {
-    margin-right: 40px !important;
-  }
   .nav-bar {
     padding: 20px 0 !important;
   }
@@ -1809,6 +1806,9 @@ body.fixed-body {
   }
   .nav-tab {
     display: flex;
+  }
+  .tab-container .tab-link {
+    margin-right: 40px !important;
   }
   .main-container .profile-banner {
     flex-direction: column;

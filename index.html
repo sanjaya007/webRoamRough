@@ -27,19 +27,40 @@
     <script src="https://cdn.jsdelivr.net/npm/litepicker-polyfills-ie11/dist/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
   </head>
-  <body>
+  <body id="propertyBody">
+    <!-- mobile nav  -->
+    <div class="mobile-nav">
+      <div class="mobile-logo">
+        <img
+          src="./assets/image/new_logo-blue.png"
+          class="mb-link"
+          alt="logo"
+        />
+      </div>
+      <div class="mobile-links flex-top-column-start">
+        <a href="#" class="mb-link">Explore</a>
+        <a href="#" class="mb-link">About Us</a>
+        <a href="#" class="mb-link">Log In</a>
+        <a href="#" class="mb-link nav-lang">
+          <img src="./assets/image/lang-icon-dark.png" alt="lang" />
+          English
+        </a>
+      </div>
+    </div>
     <!-- nav bar  -->
     <div class="content-container nav-container">
       <div class="nav-bar flex-css-row-sb">
         <div class="logo-container">
           <img src="./assets/image/new_logo-blue.png" alt="logo" />
         </div>
+
         <div class="input-container flex-css-row-sb">
           <input type="text" placeholder="Where are you going ?" />
           <div class="icon-container flex-css">
             <img src="./assets/image/search_icon.png" alt="icon" />
           </div>
         </div>
+
         <div class="link-container flex-css-row">
           <a href="#" class="nav-lang">
             <img
@@ -63,6 +84,11 @@
               <img src="./assets/image/profile1.png" alt="profile" />
             </div>
           </a>
+        </div>
+
+        <div class="nav-tab flex-css-column" data-value="open">
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>
@@ -220,7 +246,7 @@
                 <a href="#">Check Rates</a>
               </div>
             </div>
-            <div id="litepicker"></div>
+            <div id="litepicker" class="flex-css"></div>
             <div class="weather-box pt-5">
               <div class="weather-details flex-css-row-start">
                 <img
@@ -228,7 +254,7 @@
                   id="weatherImage"
                   alt="icon"
                 />
-                <h1 class="flex-css-row-start">
+                <h1 class="flex-css-row-start-wrap">
                   Todays weather is &nbsp;
                   <p id="weatherTemp">...</p>
                   &nbsp; and &nbsp;
@@ -276,7 +302,7 @@
           <h1>Rooms</h1>
         </div>
         <div class="row">
-          <div class="col-xl-4 col-lg-6">
+          <div class="col-xl-4 col-lg-6 room-card-col">
             <div class="box">
               <div class="image-container">
                 <img src="./assets/image/room1.png" alt="room" />
@@ -328,7 +354,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-4 col-lg-6">
+          <div class="col-xl-4 col-lg-6 room-card-col">
             <div class="box">
               <div class="image-container">
                 <img src="./assets/image/room2.png" alt="room" />
@@ -380,7 +406,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-4 col-lg-6">
+          <div class="col-xl-4 col-lg-6 room-card-col">
             <div class="box">
               <div class="image-container">
                 <img src="./assets/image/room1.png" alt="room" />
@@ -432,7 +458,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-4 col-lg-6">
+          <div class="col-xl-4 col-lg-6 room-card-col">
             <div class="box">
               <div class="image-container">
                 <img src="./assets/image/room2.png" alt="room" />
@@ -484,7 +510,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-4 col-lg-6">
+          <div class="col-xl-4 col-lg-6 room-card-col">
             <div class="box">
               <div class="image-container">
                 <img src="./assets/image/room1.png" alt="room" />
@@ -536,7 +562,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-4 col-lg-6">
+          <div class="col-xl-4 col-lg-6 room-card-col">
             <div class="box">
               <div class="image-container">
                 <img src="./assets/image/room2.png" alt="room" />
@@ -602,18 +628,18 @@
           <a href="#">View in map</a>
         </div>
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div class="box">
               <h1>Restaurant near by</h1>
               <div class="list-box">
                 <p>Shoney's — 6 min walk</p>
-                <p>arfons Restaurant & Lounge — 7 min walk</p>
+                <p>Restaurant & Lounge — 7 min walk</p>
                 <p>Waffle House — 7 min walk</p>
                 <p>Ruby Tuesday — 7 min walk</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div class="box">
               <h1>Top attractions</h1>
               <div class="list-box">
@@ -624,7 +650,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div class="box">
               <h1>Roam party</h1>
               <div class="list-box">
@@ -735,7 +761,7 @@
         <div class="policy-heading">
           <h1>Policies</h1>
         </div>
-        <div class="checkout-box flex-css-row-start">
+        <div class="checkout-box flex-top-row-start">
           <div class="box mr-5">
             <h1>Check in</h1>
             <p>Check-in from 4 PM - 2 AM</p>
