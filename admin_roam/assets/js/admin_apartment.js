@@ -28,7 +28,7 @@ $(window).on("load", function () {
     });
   });
 
-  $("#adminHotelBody").on("click", function (e) {
+  $("#adminApartmentBody").on("click", function (e) {
     if (allowToggle) {
       const targetEl = e.target;
       const className = $(targetEl).attr("class")?.split(" ")[0];
@@ -98,5 +98,8 @@ $(window).on("load", function () {
     },
   };
 
-  const hotelChart = new Chart(document.getElementById("hotelChart"), config);
+  const apartmentChart = new Chart(
+    document.getElementById("apartmentChart"),
+    config
+  );
 });

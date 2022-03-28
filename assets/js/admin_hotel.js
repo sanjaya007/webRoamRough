@@ -32,7 +32,6 @@ $(window).on("load", function () {
     if (allowToggle) {
       const targetEl = e.target;
       const className = $(targetEl).attr("class")?.split(" ")[0];
-      console.log(className);
       if (
         className !== "left-container" &&
         className !== "box" &&
@@ -73,6 +72,11 @@ $(window).on("load", function () {
   $(".month-list").on("click", function () {
     $(".month-list").removeClass("active");
     $(this).addClass("active");
+  });
+
+  $(".view-link").on("click", function (e) {
+    e.preventDefault();
+    console.log("hello");
   });
 
   // chart
