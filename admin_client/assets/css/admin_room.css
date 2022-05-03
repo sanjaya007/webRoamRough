@@ -630,12 +630,17 @@ body {
   font-weight: 600;
 }
 
-.table td .status-text.paid-status {
+.table td .status-text.booked-status {
   color: #27ae60;
   border: 1px solid #27ae60;
 }
 
-.table td .status-text.unpaid-status {
+.table td .status-text.open-status {
+  color: #006ce6;
+  border: 1px solid #006ce6;
+}
+
+.table td .status-text.inactive-status {
   color: #ff1010;
   border: 1px solid #ff1010;
 }
@@ -739,9 +744,7 @@ tr:hover {
   width: 100%;
   appearance: none;
   -webkit-appearance: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #959595;
+  color: #000000;
 }
 
 .main-container .form-container .upload-input-box {

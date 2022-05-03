@@ -92,13 +92,13 @@ $(window).on("load", function () {
   });
 
   // toggle container
-  $(".booking-link").on("click", function (e) {
+  $(".room-link").on("click", function (e) {
     e.preventDefault();
     const elId = $(this).attr("data-toggle");
     const title = $(this).attr("data-title");
 
     $(".toggle-container").hide();
-    $("#bookingTitle").text(title);
+    $("#roomTitle").text(title);
     $(`#${elId}`).fadeIn(200);
     $(window).scrollTop(0);
   });

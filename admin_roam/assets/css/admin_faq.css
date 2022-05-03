@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap");
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-roam-body.fixed-body {
+  overflow: hidden;
+}
+
+/* main container  */
+/* mobile nav  tab*/
+.nav-tab {
+  cursor: pointer;
+  display: none;
+  width: fit-content;
+}
+
+.nav-tab .box {
+  background-color: #ececec;
+  border-radius: 10px;
+  padding: 10px !important;
+}
+
+.nav-tab span {
+  width: 28px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #006ce6;
+  margin: 5px 0 !important;
+  pointer-events: none;
+}
+/* left container  */
+.main-container .left-container {
+  min-width: 260px;
+  max-width: 260px;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #006ce6;
+  height: 100vh;
+  z-index: 999999;
+}
+
+.main-container .left-container .heading-text {
+  pointer-events: none;
+  padding: 40px 0 !important;
+}
+
+.main-container .left-container .heading-text h1 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  pointer-events: none;
+}
+
+.main-container .left-container .side-nav .list {
+  padding: 16px 20px 16px 30px !important;
+  text-decoration: none;
+}
+
+.main-container .left-container .side-nav .list.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 5px solid #ff5a10;
+}
+
+.main-container .left-container .side-nav .list img {
+  pointer-events: none;
+}
+
+.main-container .left-container .side-nav .list p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  padding-left: 14px !important;
+  pointer-events: none;
+}
+
+.main-container .left-container .side-nav .drop-list {
+  padding: 10px 0 !important;
+  padding-left: 88px !important;
+}
+
+.main-container .left-container .side-nav .drop-list ul {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.main-container .left-container .side-nav .drop-list ul li a {
+  color: #ffffff;
+  display: block;
+  padding: 8px 0 !important;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.main-container .left-container .logout-box {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+
+.main-container .left-container .logout-box .list {
+  cursor: pointer;
+}
+
+.main-container .left-container .logout-box img {
+  pointer-events: none;
+}
+
+.main-container .left-container .logout-box p {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-left: 15px !important;
+  pointer-events: none;
+}
+
+/* right container  */
+.main-container .right-container {
+  padding-left: 260px !important;
+  background-color: #f5faff;
+  min-height: 100vh;
+}
+
+.main-container .right-container .primary-container .nav-banner {
+  background-color: #ffffff;
+  padding: 20px 28px !important;
+}
+
+.main-container
+  .right-container
+  .primary-container
+  .nav-banner
+  .profile
+  .title
+  p {
+  font-size: 10px;
+}
+
+.main-container
+  .right-container
+  .primary-container
+  .nav-banner
+  .profile
+  .title
+  h1 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.main-container
+  .right-container
+  .primary-container
+  .nav-banner
+  .profile
+  .image-container {
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #dfe0eb;
+  padding: 2px !important;
+  margin-left: 15px !important;
+}
+
+.main-container
+  .right-container
+  .primary-container
+  .nav-banner
+  .profile
+  .image-container
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* heading title  */
+.main-container .right-container .primary-container .heading-title h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px !important;
+}
+
+.main-container .right-container .primary-container .heading-title p {
+  font-size: 12px;
+}
+
+/* question container */
+.main-container .right-container .question-container .faq-box {
+  background-color: #ffffff;
+  border: 1px solid #dfe0eb;
+  border-radius: 100px;
+  margin-bottom: 10px !important;
+}
+
+.main-container .right-container .question-container .faq-box.active {
+  border-radius: 18px;
+}
+
+.main-container .right-container .question-container .faq-box .question-box {
+  padding: 16px 24px !important;
+  cursor: pointer;
+}
+
+.main-container .right-container .question-container .faq-box .question-box p {
+  font-size: 14px;
+}
+
+.main-container
+  .right-container
+  .question-container
+  .faq-box.active
+  .question-box
+  p {
+  font-weight: 700;
+}
+
+.main-container .right-container .question-container .faq-box .answer-box {
+  display: none;
+}
+
+.main-container
+  .right-container
+  .question-container
+  .faq-box
+  .answer-box
+  .info {
+  padding: 0 24px 16px 24px !important;
+}
+
+.main-container .right-container .question-container .faq-box .answer-box p {
+  color: #6d6d6d;
+  font-size: 14px;
+}
+
+.main-container
+  .right-container
+  .question-container
+  .faq-box
+  .answer-box
+  .btn-container
+  a {
+  background-color: #006ce6;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 6px 20px !important;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 1px solid #006ce6;
+}
+
+.main-container
+  .right-container
+  .question-container
+  .faq-box
+  .answer-box
+  .btn-container
+  a.cancel-btn {
+  background-color: #ffffff;
+  color: #006ce6;
+  border: 1px solid #006ce6;
+  margin-left: 10px !important;
+}
+
+/* form container  */
+.main-container .form-container {
+  background-color: #ffffff;
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+  padding: 30px 20px !important;
+  display: none;
+}
+
+.main-container .form-container .input-box {
+  margin-bottom: 12px !important;
+  width: 100%;
+}
+
+.main-container .form-container .input-box label {
+  color: #959595;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px !important;
+}
+
+.main-container .form-container .input-box input {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #dfe0eb;
+  padding: 8px 20px !important;
+  border-radius: 100px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.main-container .form-container .input-box textarea {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #dfe0eb;
+  padding: 10px 20px !important;
+  border-radius: 18px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.main-container .form-container .btn-container a {
+  background-color: #006ce6;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 6px 20px !important;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 1px solid #006ce6;
+}
+
+.main-container .form-container .btn-container a.cancel-btn {
+  background-color: #ffffff;
+  color: #006ce6;
+  border: 1px solid #006ce6;
+  margin-left: 10px !important;
+}
+
+/* responsive  */
+@media (max-width: 1200px) {
+  .main-container .left-container {
+    left: -100%;
+  }
+  .main-container .right-container {
+    padding-left: 0 !important;
+  }
+  .nav-tab {
+    display: flex;
+  }
+}
+
+@media (max-width: 1100px) {
+}
+
+@media (max-width: 1023px) {
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 767px) {
+  .nav-tab {
+    padding-left: 0.5rem !important;
+  }
+  .main-container .right-container .primary-container .nav-banner {
+    padding: 20px 12px !important;
+  }
+  .main-container .right-container .primary-container .container-wrapper {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .main-container .right-container .primary-container .heading-title h1 {
+    text-align: center;
+  }
+  .main-container .right-container .primary-container .heading-title p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 550px) {
+  .main-container
+    .right-container
+    .question-container
+    .faq-box
+    .question-box
+    p {
+    font-size: 12px;
+  }
+  .main-container .right-container .question-container .faq-box .answer-box p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+}
+
+@media (max-width: 400px) {
+}

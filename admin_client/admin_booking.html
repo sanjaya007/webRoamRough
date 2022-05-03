@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Booking</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sanjaya007/flex-library@master/dist/css/sanjaya.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/admin_booking.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+      integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body class="admin-client-body" id="adminClientBody">
+    <div class="main-container">
+      <div class="left-container">
+        <div class="heading-text">
+          <h1>Admin Panel</h1>
+        </div>
+        <div class="side-nav">
+          <a href="./admin_home.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Dashboard</p>
+          </a>
+          <a href="./admin_booking.html" class="list flex-css-row-start active">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Bookings</p>
+          </a>
+          <div class="drop-list">
+            <ul>
+              <li>
+                <a
+                  href="#"
+                  class="booking-link all-booking-link"
+                  data-toggle="tableContainer"
+                  data-title="Bookings"
+                  >All Bookings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="booking-link add-booking-link"
+                  data-toggle="addBookingContainer"
+                  data-title="Add Room Booking"
+                  >Add Bookings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="booking-link edit-booking-link"
+                  data-toggle="editBookingContainer"
+                  data-title="Edit Room Booking"
+                  >Edit Bookings</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href="./admin_room.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Rooms</p>
+          </a>
+          <a href="./admin_faq.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>FAQ</p>
+          </a>
+        </div>
+        <div class="logout-box flex-css">
+          <div class="list flex-css-row">
+            <img src="./assets/image/logout.png" alt="logout" />
+            <p>Log out</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="primary-container">
+          <!-- mobile  -->
+          <div class="nav-tab flex-css-row-start p-4">
+            <div class="box flex-css-column">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <!-- nav banner  -->
+          <div class="nav-banner flex-css-row-sb-reverse">
+            <div class="profile flex-css-row">
+              <div class="title">
+                <h1>Paradise Hotel</h1>
+              </div>
+              <div class="image-container">
+                <img src="./assets/image/man.png" alt="profile" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container-wrapper px-4">
+            <!-- heading-title -->
+            <div class="heading-title py-4">
+              <h1 id="bookingTitle">Bookings</h1>
+            </div>
+
+            <!-- table container  -->
+            <div class="toggle-container table-container" id="tableContainer">
+              <div class="head-box flex-css-row-sb p-4">
+                <div class="input-container flex-css-row-start">
+                  <div class="title">
+                    <h1>All Bookings</h1>
+                  </div>
+                  <div class="input-box flex-css-row-start">
+                    <img
+                      src="./assets/image/search_icon_black.png"
+                      alt="search"
+                    />
+                    <input type="text" placeholder="Search" />
+                  </div>
+                </div>
+                <div class="tool-wrapper flex-css-row-start">
+                  <div class="btn-container flex-css">
+                    <a
+                      href="#"
+                      class="booking-link add-booking-link"
+                      data-toggle="addBookingContainer"
+                      data-title="Add Room Booking"
+                    >
+                      New Booking
+                    </a>
+                  </div>
+                  <div class="icons-container flex-css-row">
+                    <div class="icon flex-css-row pr-3" id="sortIcon">
+                      <img src="./assets/image/sort_grey.png" alt="icon" />
+                      <p>Sort</p>
+                    </div>
+                    <div class="icon flex-css-row" id="filterIcon">
+                      <img src="./assets/image/filter.png" alt="icon" />
+                      <p>Filter</p>
+                    </div>
+                    <div class="sort-box" id="sortBox">
+                      <div class="sort-list flex-css-row-start active">
+                        <a href="#">Sort Rooms By</a>
+                      </div>
+                      <div class="sort-list flex-css-row-start">
+                        <img
+                          src="./assets/image/filter_arrow_up.png"
+                          alt="filter"
+                        />
+                        <a href="#">By Ascending Order</a>
+                      </div>
+                      <div class="sort-list flex-css-row-start">
+                        <img
+                          src="./assets/image/filter_arrow_down.png"
+                          alt="filter"
+                        />
+                        <a href="#">By Descending Order</a>
+                      </div>
+                      <div class="sort-list flex-css-row-start">
+                        <a href="#">Reset Filter</a>
+                      </div>
+                    </div>
+                    <div class="filter-box" id="filterBox">
+                      <div class="filter-title px-4 py-3">
+                        <h1>Filter Bookings By</h1>
+                      </div>
+                      <div class="form-box px-4 py-3">
+                        <div class="input-wrapper flex-css-row-start">
+                          <div class="select-box pr-2">
+                            <label for="time date">Status</label>
+                            <div class="select-wrapper">
+                              <img
+                                src="./assets/image/select_arrow.png"
+                                alt="arrow"
+                              />
+                              <select class="select-input">
+                                <option value="paid" selected>Paid</option>
+                                <option value="unpaid">Unpaid</option>
+                                <option value="Pending">Pending</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="select-box pl-2">
+                            <label for="time date">Type</label>
+                            <div class="select-wrapper">
+                              <img
+                                src="./assets/image/select_arrow.png"
+                                alt="arrow"
+                              />
+                              <select class="select-input">
+                                <option value="vip" selected>VIP</option>
+                                <option value="normal">Normal</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="btn-container pt-3">
+                          <a href="#" id="filterBtn">Filter</a>
+                        </div>
+                      </div>
+                      <div class="reset-filter px-4 py-3" id="resetFilterBtn">
+                        <h1>Reset Filter</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-borderless">
+                  <thead>
+                    <tr>
+                      <th scope="col">SNo</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Mobile</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">CheckIn</th>
+                      <th scope="col">CheckOut</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text paid-status">Paid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text unpaid-status">unpaid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text pending-status">pending</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text paid-status">Paid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text unpaid-status">unpaid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text pending-status">pending</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text paid-status">Paid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text unpaid-status">unpaid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text pending-status">pending</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="pagination-box flex-css-row-end py-4 px-4">
+                <div class="box flex-css-row">
+                  <div class="text-box flex-css-row">
+                    <p>
+                      Row per page: <span class="page-number mr-4"> 7 </span>
+                    </p>
+                    <p><span>1</span> - <span>7</span> of <span>05</span></p>
+                  </div>
+                  <div class="icon-box">
+                    <a href="#">
+                      <img src="./assets/image/left_arrow.png" alt="arrow" />
+                    </a>
+                    <a href="#">
+                      <img src="./assets/image/right_arrow.png" alt="arrow" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- form add container  -->
+            <div
+              class="toggle-container form-container"
+              id="addBookingContainer"
+            >
+              <div class="head-title pb-3">
+                <h1>Add Room Booking</h1>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="name">Full Name</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="type">Room Type</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="vip" selected>VIP</option>
+                      <option value="normal">Normal</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="phone">Phone Number</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="phone">Email Address</label>
+                  <input type="email" />
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="location">Location</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="person">Total Person</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="check">Check In</label>
+                  <input type="date" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="check">Check Out</label>
+                  <input type="date" />
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb pr-3">
+                <div class="input-box">
+                  <label for="status">Status</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="paid" selected>Paid</option>
+                      <option value="unpaid">Unpaid</option>
+                      <option value="pending">Pending</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-box upload-input-box">
+                  <label for="image">Upload the Images of Room</label>
+                  <div class="upload-wrapper flex-css-column">
+                    <p>Upload the Picture</p>
+                    <a href="#" class="flex-css-row">
+                      <img src="./assets/image/gallery.png" alt="gallery" />
+                      Upload a Logo
+                      <input type="file" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box textarea-input-box">
+                  <label for="note">Additional Notes</label>
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    placeholder="Have anything to say"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="btn-container flex-css-row-start pt-2">
+                <a href="#" class="add-booking-btn">Add Booking</a>
+                <a href="#" class="cancel-booking-btn">Cancel</a>
+              </div>
+            </div>
+
+            <!-- form edit container  -->
+            <div
+              class="toggle-container form-container"
+              id="editBookingContainer"
+            >
+              <div class="head-title pb-3">
+                <h1>Edit Room Booking</h1>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="name">Full Name</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="type">Room Type</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="vip" selected>VIP</option>
+                      <option value="normal">Normal</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="phone">Phone Number</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="phone">Email Address</label>
+                  <input type="email" />
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="location">Location</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="person">Total Person</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="check">Check In</label>
+                  <input type="date" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="check">Check Out</label>
+                  <input type="date" />
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb pr-3">
+                <div class="input-box">
+                  <label for="status">Status</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="paid" selected>Paid</option>
+                      <option value="unpaid">Unpaid</option>
+                      <option value="pending">Pending</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-box upload-input-box">
+                  <label for="image">Upload the Images of Room</label>
+                  <div class="upload-wrapper flex-css-column">
+                    <p>Upload the Picture</p>
+                    <a href="#" class="flex-css-row">
+                      <img src="./assets/image/gallery.png" alt="gallery" />
+                      Upload a Logo
+                      <input type="file" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box textarea-input-box">
+                  <label for="note">Additional Notes</label>
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    placeholder="Have anything to say"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="btn-container flex-css-row-start pt-2">
+                <a href="#" class="edit-booking-btn">Edit Booking</a>
+                <a href="#" class="cancel-booking-btn">Cancel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/admin_booking.js"></script>
+  </body>
+</html>

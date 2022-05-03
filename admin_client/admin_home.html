@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sanjaya007/flex-library@master/dist/css/sanjaya.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/admin_home.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+      integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body class="admin-client-body" id="adminClientBody">
+    <div class="main-container">
+      <div class="left-container">
+        <div class="heading-text">
+          <h1>Admin Panel</h1>
+        </div>
+        <div class="side-nav">
+          <a href="./admin_home.html" class="list flex-css-row-start active">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Dashboard</p>
+          </a>
+          <a href="./admin_booking.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Bookings</p>
+          </a>
+          <a href="./admin_room.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Rooms</p>
+          </a>
+          <a href="./admin_faq.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>FAQ</p>
+          </a>
+        </div>
+        <div class="logout-box flex-css">
+          <div class="list flex-css-row">
+            <img src="./assets/image/logout.png" alt="logout" />
+            <p>Log out</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="primary-container">
+          <!-- mobile  -->
+          <div class="nav-tab flex-css-row-start p-4">
+            <div class="box flex-css-column">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <!-- nav banner  -->
+          <div class="nav-banner flex-css-row-sb-reverse">
+            <div class="profile flex-css-row">
+              <div class="title">
+                <h1>Paradise Hotel</h1>
+              </div>
+              <div class="image-container">
+                <img src="./assets/image/man.png" alt="profile" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container-wrapper px-4">
+            <!-- heading-title -->
+            <div class="heading-title py-4">
+              <h1>Dashboard Overview</h1>
+              <p>Welcome to Hotel Dashboard</p>
+            </div>
+
+            <!-- card container  -->
+            <div class="card-container flex-css-row-sb-wrap pt-2">
+              <div class="card-box">
+                <div class="info-box">
+                  <div class="info">
+                    <p>Total Hotels</p>
+                    <h1>11,067</h1>
+                  </div>
+                  <div class="list-row flex-css-row-sb">
+                    <div class="list">
+                      <h5>BOOKED (MONTH)</h5>
+                      <h1>500</h1>
+                    </div>
+                    <div class="list">
+                      <h5>BOOKED (WEEK)</h5>
+                      <h1>215</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-box">
+                <div class="info-box">
+                  <div class="info">
+                    <p>Total Resorts</p>
+                    <h1>770</h1>
+                  </div>
+                  <div class="list-row flex-css-row-sb">
+                    <div class="list">
+                      <h5>BOOKED (MONTH)</h5>
+                      <h1>500</h1>
+                    </div>
+                    <div class="list">
+                      <h5>BOOKED (WEEK)</h5>
+                      <h1>215</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-box">
+                <div class="info-box">
+                  <div class="info">
+                    <p>Total Service Apartments</p>
+                    <h1>12,244</h1>
+                  </div>
+                  <div class="list-row flex-css-row-sb">
+                    <div class="list">
+                      <h5>BOOKED (MONTH)</h5>
+                      <h1>500</h1>
+                    </div>
+                    <div class="list">
+                      <h5>BOOKED (WEEK)</h5>
+                      <h1>215</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-box">
+                <div class="info-box">
+                  <div class="info">
+                    <p>Others</p>
+                    <h1>19,067</h1>
+                  </div>
+                  <div class="list-row flex-css-row-sb">
+                    <div class="list">
+                      <h5>BOOKED (MONTH)</h5>
+                      <h1>500</h1>
+                    </div>
+                    <div class="list">
+                      <h5>BOOKED (WEEK)</h5>
+                      <h1>215</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- review banner  -->
+            <div class="review-banner flex-top-row-sb">
+              <div class="box piechart-box mr-3">
+                <div class="title-wrapper flex-top-row-sb">
+                  <div class="title">
+                    <h1>Room Booking Stastistics</h1>
+                    <p>Revenue in last 30 days</p>
+                  </div>
+                  <div class="input-wrapper">
+                    <div class="input-box flex-css-row" id="monthInputBox">
+                      <p>This Month</p>
+                      <img
+                        src="./assets/image/circle_arrow_down.png"
+                        alt="arrow"
+                      />
+                    </div>
+                    <div class="month-wrapper" id="monthBox">
+                      <div class="month-box flex-css-row-wrap">
+                        <div class="month-list active">
+                          <a href="#">Jan</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">Feb</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">Mar</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">Apr</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">May</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">Jun</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">Jul</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">Aug</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">Sep</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">Oct</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">Nov</a>
+                        </div>
+                        <div class="month-list">
+                          <a href="#">Dec</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chart flex-css py-5">
+                  <canvas class="pie-chart" id="pieChart"></canvas>
+                </div>
+                <div class="index-box">
+                  <div class="list-row flex-css-row-sb mb-4">
+                    <div class="list flex-top-row-start">
+                      <div class="dot darkblue-dot"></div>
+                      <div class="info">
+                        <p>Double Room</p>
+                        <h1>30</h1>
+                      </div>
+                    </div>
+                    <div class="list flex-top-row-start">
+                      <div class="dot purple-dot"></div>
+                      <div class="info">
+                        <p>King Room</p>
+                        <h1>60</h1>
+                      </div>
+                    </div>
+                    <div class="list flex-top-row-start">
+                      <div class="dot yellow-dot"></div>
+                      <div class="info">
+                        <p>Normal Room</p>
+                        <h1>80</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-row flex-css-row-sb">
+                    <div class="list flex-top-row-start">
+                      <div class="dot green-dot"></div>
+                      <div class="info">
+                        <p>Single Room</p>
+                        <h1>50</h1>
+                      </div>
+                    </div>
+                    <div class="list flex-top-row-start">
+                      <div class="dot red-dot"></div>
+                      <div class="info">
+                        <p>VIP Room</p>
+                        <h1>70</h1>
+                      </div>
+                    </div>
+                    <div class="list flex-top-row-start">
+                      <div class="dot blue-dot"></div>
+                      <div class="info">
+                        <p>Apartments</p>
+                        <h1>40</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box review-box ml-3">
+                <div class="title">
+                  <h1>Room Reviews</h1>
+                </div>
+                <div class="list-wrapper">
+                  <div class="list">
+                    <div class="profile flex-css-row-start">
+                      <div class="img-container">
+                        <img src="./assets/image/woman.png" alt="woman" />
+                      </div>
+                      <div class="info">
+                        <div class="name-text">
+                          <h1>Laura Octavian</h1>
+                        </div>
+                        <div class="star-box">
+                          <i class="fa-solid fa-star active"></i>
+                          <i class="fa-solid fa-star active"></i>
+                          <i class="fa-solid fa-star active"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="description-text">
+                      <p>
+                        This is really amazing room, i liked the room, I hope to
+                        come here again! Eu sint laborum in cillum consequat
+                        aliquip tempor adipisicing sit veniam enim. Qui deserunt
+                        et anim aute esse enim occaecat fugiat.
+                      </p>
+                    </div>
+                    <div class="date-text">
+                      <p>a Week ago</p>
+                    </div>
+                  </div>
+                  <div class="list">
+                    <div class="profile flex-css-row-start">
+                      <div class="img-container">
+                        <img src="./assets/image/woman.png" alt="woman" />
+                      </div>
+                      <div class="info">
+                        <div class="name-text">
+                          <h1>Laura Octavian</h1>
+                        </div>
+                        <div class="star-box">
+                          <i class="fa-solid fa-star active"></i>
+                          <i class="fa-solid fa-star active"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="description-text">
+                      <p>
+                        This is really amazing room, i liked the room, I hope to
+                        come here again! Eu sint laborum in cillum consequat
+                        aliquip tempor adipisicing sit veniam enim. Qui deserunt
+                        et anim aute esse enim occaecat fugiat.
+                      </p>
+                    </div>
+                    <div class="date-text">
+                      <p>December 10, 2016</p>
+                    </div>
+                  </div>
+                  <div class="list">
+                    <div class="profile flex-css-row-start">
+                      <div class="img-container">
+                        <img src="./assets/image/woman.png" alt="woman" />
+                      </div>
+                      <div class="info">
+                        <div class="name-text">
+                          <h1>Laura Octavian</h1>
+                        </div>
+                        <div class="star-box">
+                          <i class="fa-solid fa-star active"></i>
+                          <i class="fa-solid fa-star active"></i>
+                          <i class="fa-solid fa-star active"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="description-text">
+                      <p>
+                        This is really amazing room, i liked the room, I hope to
+                        come here again! Eu sint laborum in cillum consequat
+                        aliquip tempor adipisicing sit veniam enim. Qui deserunt
+                        et anim aute esse enim occaecat fugiat.
+                      </p>
+                    </div>
+                    <div class="date-text">
+                      <p>a Week ago</p>
+                    </div>
+                  </div>
+                  <div class="list">
+                    <div class="profile flex-css-row-start">
+                      <div class="img-container">
+                        <img src="./assets/image/woman.png" alt="woman" />
+                      </div>
+                      <div class="info">
+                        <div class="name-text">
+                          <h1>Laura Octavian</h1>
+                        </div>
+                        <div class="star-box">
+                          <i class="fa-solid fa-star active"></i>
+                          <i class="fa-solid fa-star active"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="description-text">
+                      <p>
+                        This is really amazing room, i liked the room, I hope to
+                        come here again! Eu sint laborum in cillum consequat
+                        aliquip tempor adipisicing sit veniam enim. Qui deserunt
+                        et anim aute esse enim occaecat fugiat.
+                      </p>
+                    </div>
+                    <div class="date-text">
+                      <p>December 10, 2016</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- line-chart container  -->
+            <div class="line-chart-container flex-top-row-sb">
+              <div class="left-chart">
+                <div class="info-box">
+                  <div class="title pb-3">
+                    <h1>Booking Statistics</h1>
+                  </div>
+                  <div class="list-box">
+                    <div class="list flex-top-row-sb">
+                      <div class="list-title">
+                        <h1>Today Booking</h1>
+                      </div>
+                      <div class="list-count flex-css-column">
+                        <h5>112</h5>
+                        <p>+120</p>
+                      </div>
+                    </div>
+                    <div class="list flex-css-row-sb">
+                      <div class="list-title">
+                        <h1>This Week Booking</h1>
+                      </div>
+                      <div class="list-count flex-css-column">
+                        <h5>112</h5>
+                        <p class="increment-text">+320</p>
+                      </div>
+                    </div>
+                    <div class="list flex-css-row-sb">
+                      <div class="list-title">
+                        <h1>This Month Booking</h1>
+                      </div>
+                      <div class="list-count flex-css-column">
+                        <h5>112</h5>
+                        <p class="decrement-text">+120</p>
+                      </div>
+                    </div>
+                    <div class="list flex-css-row-sb">
+                      <div class="list-title">
+                        <h1>This Year Booking</h1>
+                      </div>
+                      <div class="list-count flex-css-column">
+                        <h5>112</h5>
+                        <p class="">+120</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right-chart">
+                <div class="chart-box">
+                  <div class="header-text flex-css-row-sb mb-4">
+                    <div class="title">
+                      <h1>Todays Booking</h1>
+                      <p>Visitor statistics</p>
+                    </div>
+                    <div class="status flex-css-row">
+                      <div class="list flex-top-row-start mr-3">
+                        <div class="dot red-dot"></div>
+                        <div class="info">
+                          <p>Check In</p>
+                          <h1>273</h1>
+                        </div>
+                      </div>
+                      <div class="list flex-top-row-start ml-3">
+                        <div class="dot green-dot"></div>
+                        <div class="info">
+                          <p>Check Out</p>
+                          <h1>112</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="graph-box">
+                    <canvas
+                      class="line-chart"
+                      id="lineChart"
+                      width="662"
+                      height="331"
+                    ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- table container  -->
+            <div class="table-container" id="tableContainer">
+              <div class="head-box p-3">
+                <div class="title">
+                  <h1>Bookings Details</h1>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-borderless">
+                  <thead>
+                    <tr>
+                      <th scope="col">SNo</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Mobile</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">CheckIn</th>
+                      <th scope="col">CheckOut</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text paid-status">Paid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text unpaid-status">unpaid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text pending-status">pending</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text paid-status">Paid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text unpaid-status">unpaid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text pending-status">pending</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text paid-status">Paid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text unpaid-status">unpaid</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">01</td>
+                      <td class="td-bold">Arushi Hotel</td>
+                      <td class="td-bold">98046000</td>
+                      <td class="td-bold">info@contact.com</td>
+                      <td>2022/02/12</td>
+                      <td>2022/02/20</td>
+                      <td>VIP</td>
+                      <td>
+                        <p class="status-text pending-status">pending</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link booking-link"
+                            id="editLink"
+                            data-toggle="editBookingContainer"
+                            data-title="Edit Room Booking"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/admin_home.js"></script>
+  </body>
+</html>

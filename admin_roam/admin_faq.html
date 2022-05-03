@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin FAQ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sanjaya007/flex-library@master/dist/css/sanjaya.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/admin_faq.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+      integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body class="admin-client-body" id="adminClientBody">
+    <div class="main-container">
+      <div class="left-container">
+        <div class="heading-text">
+          <h1>Admin Panel</h1>
+        </div>
+        <div class="side-nav">
+          <a href="./admin_home.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Dashboard</p>
+          </a>
+          <a href="./admin_booking.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Bookings</p>
+          </a>
+          <a href="./admin_room.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Rooms</p>
+          </a>
+          <a href="./admin_faq.html" class="list flex-css-row-start active">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>FAQ</p>
+          </a>
+          <div class="drop-list">
+            <ul>
+              <li>
+                <a
+                  href="#"
+                  class="faq-link all-faq-link"
+                  data-toggle="formContainer"
+                  >Add FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="logout-box flex-css">
+          <div class="list flex-css-row">
+            <img src="./assets/image/logout.png" alt="logout" />
+            <p>Log out</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="primary-container">
+          <!-- mobile  -->
+          <div class="nav-tab flex-css-row-start p-4">
+            <div class="box flex-css-column">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <!-- nav banner  -->
+          <div class="nav-banner flex-css-row-sb-reverse">
+            <div class="profile flex-css-row">
+              <div class="title">
+                <h1>Paradise Hotel</h1>
+              </div>
+              <div class="image-container">
+                <img src="./assets/image/man.png" alt="profile" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container-wrapper px-4">
+            <!-- heading-title -->
+            <div class="heading-title py-4">
+              <h1>FAQ (Frequently Asked Question)</h1>
+              <p>Find your solutions from here.</p>
+            </div>
+
+            <!-- question container  -->
+            <div
+              class="question-container toggle-container"
+              id="questionContainer"
+            >
+              <div class="faq-box" active-status="false">
+                <div class="question-box flex-css-row-sb">
+                  <p>Does Arushi Boutique Hotel have a pool?</p>
+                  <img src="./assets/image/select_arrow.png" alt="arrow" />
+                </div>
+                <div class="answer-box">
+                  <div class="info">
+                    <p>
+                      Descrition Donec ultrices faucibus rutrum. Phasellus
+                      sodales vulputate urna, vel accumsan augue egestas ac.
+                      Donec vitae leo at sem lobortis porttitor eu consequat
+                      risus. Mauris sed congue orci. Donec ultrices faucibus
+                      rutrum. Phasellus sodales vulputate urna, vel accumsan
+                      augue egestas ac. Donec vitae leo at sem lobortis
+                      porttitor eu consequat risus. Mauris sed congue orci.
+                      Donec ultrices faucibus rutrum. Phasellus sodales
+                      vulputate urna, vel accumsan augue egestas ac. Donec vitae
+                      leo at sem lobortis porttitor eu consequat risus. Mauris
+                      sed congue orci.
+                    </p>
+                    <div class="btn-container flex-css-row-start pt-4">
+                      <a href="#">Edit Question</a>
+                      <a href="#" class="cancel-btn">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="faq-box" active-status="false">
+                <div class="question-box flex-css-row-sb">
+                  <p>Is Arushi Boutique Hotel pet-friendly?</p>
+                  <img src="./assets/image/select_arrow.png" alt="arrow" />
+                </div>
+                <div class="answer-box">
+                  <div class="info">
+                    <p>
+                      Descrition Donec ultrices faucibus rutrum. Phasellus
+                      sodales vulputate urna, vel accumsan augue egestas ac.
+                      Donec vitae leo at sem lobortis porttitor eu consequat
+                      risus. Mauris sed congue orci. Donec ultrices faucibus
+                      rutrum. Phasellus sodales vulputate urna, vel accumsan
+                      augue egestas ac. Donec vitae leo at sem lobortis
+                      porttitor eu consequat risus. Mauris sed congue orci.
+                      Donec ultrices faucibus rutrum. Phasellus sodales
+                      vulputate urna, vel accumsan augue egestas ac. Donec vitae
+                      leo at sem lobortis porttitor eu consequat risus. Mauris
+                      sed congue orci.
+                    </p>
+                    <div class="btn-container flex-css-row-start pt-4">
+                      <a href="#">Edit Question</a>
+                      <a href="#" class="cancel-btn">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="faq-box" active-status="false">
+                <div class="question-box flex-css-row-sb">
+                  <p>How much is parking at Arushi Boutique Hotel?</p>
+                  <img src="./assets/image/select_arrow.png" alt="arrow" />
+                </div>
+                <div class="answer-box">
+                  <div class="info">
+                    <p>
+                      Descrition Donec ultrices faucibus rutrum. Phasellus
+                      sodales vulputate urna, vel accumsan augue egestas ac.
+                      Donec vitae leo at sem lobortis porttitor eu consequat
+                      risus. Mauris sed congue orci. Donec ultrices faucibus
+                      rutrum. Phasellus sodales vulputate urna, vel accumsan
+                      augue egestas ac. Donec vitae leo at sem lobortis
+                      porttitor eu consequat risus. Mauris sed congue orci.
+                      Donec ultrices faucibus rutrum. Phasellus sodales
+                      vulputate urna, vel accumsan augue egestas ac. Donec vitae
+                      leo at sem lobortis porttitor eu consequat risus. Mauris
+                      sed congue orci.
+                    </p>
+                    <div class="btn-container flex-css-row-start pt-4">
+                      <a href="#">Edit Question</a>
+                      <a href="#" class="cancel-btn">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="faq-box" active-status="false">
+                <div class="question-box flex-css-row-sb">
+                  <p>
+                    Can I cancel my reservation for free at JArushi Boutique
+                    Hotel receive a full refund?
+                  </p>
+                  <img src="./assets/image/select_arrow.png" alt="arrow" />
+                </div>
+                <div class="answer-box">
+                  <div class="info">
+                    <p>
+                      Descrition Donec ultrices faucibus rutrum. Phasellus
+                      sodales vulputate urna, vel accumsan augue egestas ac.
+                      Donec vitae leo at sem lobortis porttitor eu consequat
+                      risus. Mauris sed congue orci. Donec ultrices faucibus
+                      rutrum. Phasellus sodales vulputate urna, vel accumsan
+                      augue egestas ac. Donec vitae leo at sem lobortis
+                      porttitor eu consequat risus. Mauris sed congue orci.
+                      Donec ultrices faucibus rutrum. Phasellus sodales
+                      vulputate urna, vel accumsan augue egestas ac. Donec vitae
+                      leo at sem lobortis porttitor eu consequat risus. Mauris
+                      sed congue orci.
+                    </p>
+                    <div class="btn-container flex-css-row-start pt-4">
+                      <a href="#">Edit Question</a>
+                      <a href="#" class="cancel-btn">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="faq-box" active-status="false">
+                <div class="question-box flex-css-row-sb">
+                  <p>Does Arushi Boutique Hotel have a pool?</p>
+                  <img src="./assets/image/select_arrow.png" alt="arrow" />
+                </div>
+                <div class="answer-box">
+                  <div class="info">
+                    <p>
+                      Descrition Donec ultrices faucibus rutrum. Phasellus
+                      sodales vulputate urna, vel accumsan augue egestas ac.
+                      Donec vitae leo at sem lobortis porttitor eu consequat
+                      risus. Mauris sed congue orci. Donec ultrices faucibus
+                      rutrum. Phasellus sodales vulputate urna, vel accumsan
+                      augue egestas ac. Donec vitae leo at sem lobortis
+                      porttitor eu consequat risus. Mauris sed congue orci.
+                      Donec ultrices faucibus rutrum. Phasellus sodales
+                      vulputate urna, vel accumsan augue egestas ac. Donec vitae
+                      leo at sem lobortis porttitor eu consequat risus. Mauris
+                      sed congue orci.
+                    </p>
+                    <div class="btn-container flex-css-row-start pt-4">
+                      <a href="#">Edit Question</a>
+                      <a href="#" class="cancel-btn">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="faq-box" active-status="false">
+                <div class="question-box flex-css-row-sb">
+                  <p>Is Arushi Boutique Hotel pet-friendly?</p>
+                  <img src="./assets/image/select_arrow.png" alt="arrow" />
+                </div>
+                <div class="answer-box">
+                  <div class="info">
+                    <p>
+                      Descrition Donec ultrices faucibus rutrum. Phasellus
+                      sodales vulputate urna, vel accumsan augue egestas ac.
+                      Donec vitae leo at sem lobortis porttitor eu consequat
+                      risus. Mauris sed congue orci. Donec ultrices faucibus
+                      rutrum. Phasellus sodales vulputate urna, vel accumsan
+                      augue egestas ac. Donec vitae leo at sem lobortis
+                      porttitor eu consequat risus. Mauris sed congue orci.
+                      Donec ultrices faucibus rutrum. Phasellus sodales
+                      vulputate urna, vel accumsan augue egestas ac. Donec vitae
+                      leo at sem lobortis porttitor eu consequat risus. Mauris
+                      sed congue orci.
+                    </p>
+                    <div class="btn-container flex-css-row-start pt-4">
+                      <a href="#">Edit Question</a>
+                      <a href="#" class="cancel-btn">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="faq-box" active-status="false">
+                <div class="question-box flex-css-row-sb">
+                  <p>How much is parking at Arushi Boutique Hotel?</p>
+                  <img src="./assets/image/select_arrow.png" alt="arrow" />
+                </div>
+                <div class="answer-box">
+                  <div class="info">
+                    <p>
+                      Descrition Donec ultrices faucibus rutrum. Phasellus
+                      sodales vulputate urna, vel accumsan augue egestas ac.
+                      Donec vitae leo at sem lobortis porttitor eu consequat
+                      risus. Mauris sed congue orci. Donec ultrices faucibus
+                      rutrum. Phasellus sodales vulputate urna, vel accumsan
+                      augue egestas ac. Donec vitae leo at sem lobortis
+                      porttitor eu consequat risus. Mauris sed congue orci.
+                      Donec ultrices faucibus rutrum. Phasellus sodales
+                      vulputate urna, vel accumsan augue egestas ac. Donec vitae
+                      leo at sem lobortis porttitor eu consequat risus. Mauris
+                      sed congue orci.
+                    </p>
+                    <div class="btn-container flex-css-row-start pt-4">
+                      <a href="#">Edit Question</a>
+                      <a href="#" class="cancel-btn">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="faq-box" active-status="false">
+                <div class="question-box flex-css-row-sb">
+                  <p>
+                    Can I cancel my reservation for free at JArushi Boutique
+                    Hotel receive a full refund?
+                  </p>
+                  <img src="./assets/image/select_arrow.png" alt="arrow" />
+                </div>
+                <div class="answer-box">
+                  <div class="info">
+                    <p>
+                      Descrition Donec ultrices faucibus rutrum. Phasellus
+                      sodales vulputate urna, vel accumsan augue egestas ac.
+                      Donec vitae leo at sem lobortis porttitor eu consequat
+                      risus. Mauris sed congue orci. Donec ultrices faucibus
+                      rutrum. Phasellus sodales vulputate urna, vel accumsan
+                      augue egestas ac. Donec vitae leo at sem lobortis
+                      porttitor eu consequat risus. Mauris sed congue orci.
+                      Donec ultrices faucibus rutrum. Phasellus sodales
+                      vulputate urna, vel accumsan augue egestas ac. Donec vitae
+                      leo at sem lobortis porttitor eu consequat risus. Mauris
+                      sed congue orci.
+                    </p>
+                    <div class="btn-container flex-css-row-start pt-4">
+                      <a href="#">Edit Question</a>
+                      <a href="#" class="cancel-btn">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- form container -->
+            <div class="form-container toggle-container" id="formContainer">
+              <div class="input-row">
+                <div class="input-box">
+                  <label for="name">Type your Question</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-box">
+                  <label for="name">Details about the Roam</label>
+                  <textarea rows="10"></textarea>
+                </div>
+              </div>
+              <div class="btn-container flex-css-row-start pt-2">
+                <a href="#">Save</a>
+                <a href="#" class="cancel-btn">Cancel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/admin_faq.js"></script>
+  </body>
+</html>

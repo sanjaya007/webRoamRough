@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Rooms</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sanjaya007/flex-library@master/dist/css/sanjaya.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/admin_room.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+      integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body class="admin-client-body" id="adminClientBody">
+    <div class="main-container">
+      <div class="left-container">
+        <div class="heading-text">
+          <h1>Admin Panel</h1>
+        </div>
+        <div class="side-nav">
+          <a href="./admin_home.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Dashboard</p>
+          </a>
+          <a href="./admin_booking.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Bookings</p>
+          </a>
+          <a href="./admin_room.html" class="list flex-css-row-start active">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>Rooms</p>
+          </a>
+          <div class="drop-list">
+            <ul>
+              <li>
+                <a
+                  href="#"
+                  class="room-link all-room-link"
+                  data-toggle="tableContainer"
+                  data-title="Rooms"
+                  >All Rooms</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="room-link add-room-link"
+                  data-toggle="addRoomContainer"
+                  data-title="Add Room"
+                  >Add Rooms</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="room-link edit-room-link"
+                  data-toggle="editRoomContainer"
+                  data-title="Edit Room"
+                  >Edit Rooms</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href="./admin_faq.html" class="list flex-css-row-start">
+            <img src="./assets/image/clubs.png" alt="clubs" />
+            <p>FAQ</p>
+          </a>
+        </div>
+        <div class="logout-box flex-css">
+          <div class="list flex-css-row">
+            <img src="./assets/image/logout.png" alt="logout" />
+            <p>Log out</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="primary-container">
+          <!-- mobile  -->
+          <div class="nav-tab flex-css-row-start p-4">
+            <div class="box flex-css-column">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <!-- nav banner  -->
+          <div class="nav-banner flex-css-row-sb-reverse">
+            <div class="profile flex-css-row">
+              <div class="title">
+                <h1>Paradise Hotel</h1>
+              </div>
+              <div class="image-container">
+                <img src="./assets/image/man.png" alt="profile" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container-wrapper px-4">
+            <!-- heading-title -->
+            <div class="heading-title py-4">
+              <h1 id="roomTitle">Rooms</h1>
+            </div>
+
+            <!-- table container  -->
+            <div class="toggle-container table-container" id="tableContainer">
+              <div class="head-box flex-css-row-sb p-4">
+                <div class="input-container flex-css-row-start">
+                  <div class="title">
+                    <h1>All Rooms</h1>
+                  </div>
+                  <div class="input-box flex-css-row-start">
+                    <img
+                      src="./assets/image/search_icon_black.png"
+                      alt="search"
+                    />
+                    <input type="text" placeholder="Search" />
+                  </div>
+                </div>
+                <div class="tool-wrapper flex-css-row-start">
+                  <div class="btn-container flex-css">
+                    <a
+                      href="#"
+                      class="room-link add-room-link"
+                      data-toggle="addRoomContainer"
+                      data-title="Add Room"
+                    >
+                      Add Room
+                    </a>
+                  </div>
+                  <div class="icons-container flex-css-row">
+                    <div class="icon flex-css-row pr-3" id="sortIcon">
+                      <img src="./assets/image/sort_grey.png" alt="icon" />
+                      <p>Sort</p>
+                    </div>
+                    <div class="icon flex-css-row" id="filterIcon">
+                      <img src="./assets/image/filter.png" alt="icon" />
+                      <p>Filter</p>
+                    </div>
+                    <div class="sort-box" id="sortBox">
+                      <div class="sort-list flex-css-row-start active">
+                        <a href="#">Sort Rooms By</a>
+                      </div>
+                      <div class="sort-list flex-css-row-start">
+                        <img
+                          src="./assets/image/filter_arrow_up.png"
+                          alt="filter"
+                        />
+                        <a href="#">By Ascending Order</a>
+                      </div>
+                      <div class="sort-list flex-css-row-start">
+                        <img
+                          src="./assets/image/filter_arrow_down.png"
+                          alt="filter"
+                        />
+                        <a href="#">By Descending Order</a>
+                      </div>
+                      <div class="sort-list flex-css-row-start">
+                        <a href="#">Reset Filter</a>
+                      </div>
+                    </div>
+                    <div class="filter-box" id="filterBox">
+                      <div class="filter-title px-4 py-3">
+                        <h1>Filter Bookings By</h1>
+                      </div>
+                      <div class="form-box px-4 py-3">
+                        <div class="input-wrapper flex-css-row-start">
+                          <div class="select-box pr-2">
+                            <label for="time date">Status</label>
+                            <div class="select-wrapper">
+                              <img
+                                src="./assets/image/select_arrow.png"
+                                alt="arrow"
+                              />
+                              <select class="select-input">
+                                <option value="booked" selected>Booked</option>
+                                <option value="open">Open</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="pending">Pending</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="select-box pl-2">
+                            <label for="time date">Type</label>
+                            <div class="select-wrapper">
+                              <img
+                                src="./assets/image/select_arrow.png"
+                                alt="arrow"
+                              />
+                              <select class="select-input">
+                                <option value="single" selected>Single</option>
+                                <option value="double">Double</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="btn-container pt-3">
+                          <a href="#" id="filterBtn">Filter</a>
+                        </div>
+                      </div>
+                      <div class="reset-filter px-4 py-3" id="resetFilterBtn">
+                        <h1>Reset Filter</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-borderless">
+                  <thead>
+                    <tr>
+                      <th scope="col">Room No</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Bed Capacity</th>
+                      <th scope="col">Meal</th>
+                      <th scope="col">Rent/Night</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="td-bold">101</td>
+                      <td class="td-bold">VIP</td>
+                      <td class="td-bold">2</td>
+                      <td>Free Breakfast</td>
+                      <td>Free Breakfast</td>
+                      <td>
+                        <p class="status-text booked-status">Booked</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link room-link"
+                            id="editLink"
+                            data-toggle="editRoomContainer"
+                            data-title="Edit Room"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">101</td>
+                      <td class="td-bold">VIP</td>
+                      <td class="td-bold">2</td>
+                      <td>Free Breakfast</td>
+                      <td>Free Breakfast</td>
+                      <td>
+                        <p class="status-text open-status">Open</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link room-link"
+                            id="editLink"
+                            data-toggle="editRoomContainer"
+                            data-title="Edit Room"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">101</td>
+                      <td class="td-bold">VIP</td>
+                      <td class="td-bold">2</td>
+                      <td>Free Breakfast</td>
+                      <td>Free Breakfast</td>
+                      <td>
+                        <p class="status-text inactive-status">Inactive</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link room-link"
+                            id="editLink"
+                            data-toggle="editRoomContainer"
+                            data-title="Edit Room"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">101</td>
+                      <td class="td-bold">VIP</td>
+                      <td class="td-bold">2</td>
+                      <td>Free Breakfast</td>
+                      <td>Free Breakfast</td>
+                      <td>
+                        <p class="status-text pending-status">pending</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link room-link"
+                            id="editLink"
+                            data-toggle="editRoomContainer"
+                            data-title="Edit Room"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">101</td>
+                      <td class="td-bold">VIP</td>
+                      <td class="td-bold">2</td>
+                      <td>Free Breakfast</td>
+                      <td>Free Breakfast</td>
+                      <td>
+                        <p class="status-text booked-status">Booked</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link room-link"
+                            id="editLink"
+                            data-toggle="editRoomContainer"
+                            data-title="Edit Room"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">101</td>
+                      <td class="td-bold">VIP</td>
+                      <td class="td-bold">2</td>
+                      <td>Free Breakfast</td>
+                      <td>Free Breakfast</td>
+                      <td>
+                        <p class="status-text open-status">Open</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link room-link"
+                            id="editLink"
+                            data-toggle="editRoomContainer"
+                            data-title="Edit Room"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">101</td>
+                      <td class="td-bold">VIP</td>
+                      <td class="td-bold">2</td>
+                      <td>Free Breakfast</td>
+                      <td>Free Breakfast</td>
+                      <td>
+                        <p class="status-text inactive-status">Inactive</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link room-link"
+                            id="editLink"
+                            data-toggle="editRoomContainer"
+                            data-title="Edit Room"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-bold">101</td>
+                      <td class="td-bold">VIP</td>
+                      <td class="td-bold">2</td>
+                      <td>Free Breakfast</td>
+                      <td>Free Breakfast</td>
+                      <td>
+                        <p class="status-text pending-status">pending</p>
+                      </td>
+                      <td>
+                        <div class="action-container">
+                          <a
+                            href="#"
+                            class="action-link edit-link room-link"
+                            id="editLink"
+                            data-toggle="editRoomContainer"
+                            data-title="Edit Room"
+                            >Edit</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link delete-link"
+                            id="deleteLink"
+                            >Delete</a
+                          >
+                          |
+                          <a
+                            href="#"
+                            class="action-link view-link"
+                            id="viewLink"
+                            >View</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="pagination-box flex-css-row-end py-4 px-4">
+                <div class="box flex-css-row">
+                  <div class="text-box flex-css-row">
+                    <p>
+                      Row per page: <span class="page-number mr-4"> 7 </span>
+                    </p>
+                    <p><span>1</span> - <span>7</span> of <span>05</span></p>
+                  </div>
+                  <div class="icon-box">
+                    <a href="#">
+                      <img src="./assets/image/left_arrow.png" alt="arrow" />
+                    </a>
+                    <a href="#">
+                      <img src="./assets/image/right_arrow.png" alt="arrow" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- form add container  -->
+            <div class="toggle-container form-container" id="addRoomContainer">
+              <div class="head-title pb-3">
+                <h1>Add Room</h1>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="name">Room Name</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="type">Room Type</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="vip" selected>VIP</option>
+                      <option value="normal">Normal</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="name">Bed Capacity</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="meal">Meal</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="free" selected>Free Breakfast</option>
+                      <option value="special">Special</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="rent">Rent/Night</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="type">Status</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="open" selected>Open</option>
+                      <option value="booked" selected>Booked</option>
+                      <option value="inactive" selected>Inactive</option>
+                      <option value="pending" selected>Pending</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-box upload-input-box">
+                  <label for="image">Upload the Images of Room</label>
+                  <div class="upload-wrapper flex-css-column">
+                    <p>
+                      Drop files here or click to upload. <br />
+                      (Multiple files can be uploaded.)
+                    </p>
+                    <a href="#" class="flex-css-row">
+                      <img src="./assets/image/gallery.png" alt="gallery" />
+                      Upload
+                      <input type="file" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box textarea-input-box">
+                  <label for="note">Details about the room</label>
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    placeholder="Description"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="btn-container flex-css-row-start pt-2">
+                <a href="#" class="add-booking-btn">Add Room</a>
+                <a href="#" class="cancel-booking-btn">Cancel</a>
+              </div>
+            </div>
+
+            <!-- form add container  -->
+            <div class="toggle-container form-container" id="editRoomContainer">
+              <div class="head-title pb-3">
+                <h1>Edit Room</h1>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="name">Room Name</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="type">Room Type</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="vip" selected>VIP</option>
+                      <option value="normal">Normal</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="name">Bed Capacity</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="meal">Meal</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="free" selected>Free Breakfast</option>
+                      <option value="special">Special</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box pr-3">
+                  <label for="rent">Rent/Night</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box pl-3">
+                  <label for="type">Status</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="open" selected>Open</option>
+                      <option value="booked" selected>Booked</option>
+                      <option value="inactive" selected>Inactive</option>
+                      <option value="pending" selected>Pending</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-box upload-input-box">
+                  <label for="image">Upload the Images of Room</label>
+                  <div class="upload-wrapper flex-css-column">
+                    <p>
+                      Drop files here or click to upload. <br />
+                      (Multiple files can be uploaded.)
+                    </p>
+                    <a href="#" class="flex-css-row">
+                      <img src="./assets/image/gallery.png" alt="gallery" />
+                      Upload
+                      <input type="file" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box textarea-input-box">
+                  <label for="note">Details about the room</label>
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    placeholder="Description"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="btn-container flex-css-row-start pt-2">
+                <a href="#" class="add-booking-btn">Edit Room</a>
+                <a href="#" class="cancel-booking-btn">Cancel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/admin_room.js"></script>
+  </body>
+</html>
