@@ -22,6 +22,7 @@ body.fixed-body {
 .content-container {
   padding-left: 100px !important;
   padding-right: 100px !important;
+  overflow-x: hidden;
 }
 
 /* nav bar  */
@@ -338,6 +339,7 @@ body.fixed-body {
   width: auto;
   border-radius: 10px;
   box-shadow: 55px 154px 145px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px #ddd;
   z-index: 1000;
 }
 

@@ -5,7 +5,7 @@ $(".nav-tab").on("click", function () {
     opacity: "1",
   });
   $(this).attr("data-value", "close");
-  $("#homeBody").addClass("fixed-body");
+  $("#propertyListBody").addClass("fixed-body");
 });
 
 // room,users selector
@@ -122,7 +122,7 @@ $(".date-wrapper").on("click", function () {
 });
 
 // close when click outside
-$("#homeBody").on("click", function (e) {
+$("#propertyListBody").on("click", function (e) {
   const targetEl = e.target;
   const className = $(targetEl).attr("class")?.split(" ")[0];
   if (
@@ -134,7 +134,7 @@ $("#homeBody").on("click", function (e) {
       left: "-100%",
       opacity: "0",
     });
-    $("#homeBody").removeClass("fixed-body");
+    $("#propertyListBody").removeClass("fixed-body");
   }
 
   console.log(className);
