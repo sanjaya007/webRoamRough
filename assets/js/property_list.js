@@ -137,8 +137,6 @@ $("#propertyListBody").on("click", function (e) {
     $("#propertyListBody").removeClass("fixed-body");
   }
 
-  console.log(className);
-
   if (
     className !== "right" &&
     className !== "room-text-wrapper" &&
@@ -160,4 +158,95 @@ $("#propertyListBody").on("click", function (e) {
   ) {
     calendarInit.close();
   }
+});
+
+// custom check box
+$(".property-box").on("click", function () {
+  $(this).toggleClass("active");
+});
+
+$(".payment-box").on("click", function () {
+  $(this).toggleClass("active");
+});
+
+$(".cleaning-box").on("click", function () {
+  $(this).toggleClass("active");
+});
+
+$(".meal-box").on("click", function () {
+  const isAll = $(this).attr("data-value") === "all" ? true : false;
+  if (isAll) {
+    $(".meal-box").removeClass("active");
+    $(this).toggleClass("active");
+  } else {
+    $(this).toggleClass("active");
+  }
+});
+
+$(".neighborhood-box").on("click", function () {
+  $(this).toggleClass("active");
+});
+
+$(".facility-box").on("click", function () {
+  $(this).toggleClass("active");
+});
+
+$(".room-facility-box").on("click", function () {
+  $(this).toggleClass("active");
+});
+
+// rating
+$(".star-box").on("click", function () {
+  $(".star-box").removeClass("active");
+  $(this).toggleClass("active");
+});
+
+$(".guest-box").on("click", function () {
+  $(".guest-box").removeClass("active");
+  $(this).toggleClass("active");
+});
+
+// list toggle
+$(".tab-link").on("click", function (e) {
+  e.preventDefault();
+  const targetEl = $(this).attr("data-target");
+
+  $(".tab-link").removeClass("active");
+  $(this).addClass("active");
+
+  $(".list-container").hide();
+  $(`#${targetEl}`).fadeIn();
+});
+
+// like
+$(".like-icon").on("click", function () {
+  const likeStatus =
+    $(this).attr("data-status") === "inactive" ? "active" : "inactive";
+
+  $(this).attr("data-status", likeStatus);
+
+  if (likeStatus === "active") {
+    $(this).children("img").attr("src", "./assets/image/heart2.png");
+  } else {
+    $(this).children("img").attr("src", "./assets/image/heart1.png");
+  }
+});
+
+// slider
+$(function () {
+  $("#slider-range").slider({
+    range: true,
+    min: 0,
+    max: 500,
+    values: [75, 300],
+    slide: function (event, ui) {
+      $("#amount").val("Rs." + ui.values[0] + " - Rs." + ui.values[1]);
+    },
+  });
+  $("#amount").val(
+    "Rs." +
+      $("#slider-range").slider("values", 0) +
+      " - Rs." +
+      $("#slider-range").slider("values", 1)
+  );
 });

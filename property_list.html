@@ -20,12 +20,18 @@
     />
     <!-- custom css  -->
     <link rel="stylesheet" href="./assets/css/property_list.css" />
+    <!-- j query ui css  -->
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
     <!-- jquery  -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <!-- litepicker date picker lib  -->
     <script src="https://cdn.jsdelivr.net/npm/litepicker-polyfills-ie11/dist/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
@@ -158,10 +164,1597 @@
       </div>
     </div>
 
+    <div class="btn-container flex-css-row pb-5">
+      <a href="#" class="mr-2">View on map</a>
+      <a href="#" class="ml-2">Filter</a>
+    </div>
+
     <!-- main-container -->
-    <div class="content-container main-container flex-top-row-start">
-      <div class="left-container"></div>
-      <div class="right-container"></div>
+    <div class="content-container main-container flex-top-row-start mb-5 pb-5">
+      <div class="left-container">
+        <div class="box-col">
+          <!-- map  -->
+          <div class="map-wrapper mb-3">
+            <img src="/assets/image/map1.png" alt="map" />
+            <div class="view-btn flex-css">
+              <a href="#">View in map</a>
+            </div>
+          </div>
+
+          <!-- filter  -->
+          <div class="filter-wrapper">
+            <div class="close-icon flex-css-end pb-4">
+              <div class="icon-box flex-css">
+                <img src="./assets/image/close.png" alt="close" />
+              </div>
+            </div>
+            <div class="filter-search">
+              <input
+                type="text"
+                name=""
+                class="filter-search-input"
+                placeholder="Search by property name"
+              />
+              <img src="/assets/image/search_icon_black.png" />
+            </div>
+
+            <div class="title">
+              <h1>Filter by</h1>
+            </div>
+
+            <!-- property type  -->
+            <div class="filter-heading">
+              <h1>Property type</h1>
+              <div class="filter-details">
+                <div class="property-type-checkbox">
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box property-box active flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Hotels & cabins</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box property-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Guest houses</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box property-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Service apartments</label>
+                  </div>
+                  <a href="#">See more</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- star rating  -->
+            <div class="filter-heading">
+              <h1>Star rating</h1>
+              <div class="filter-details">
+                <div class="rating-box flex-css-row-start">
+                  <div class="box active star-box flex-css-row" data-value="">
+                    <p>1</p>
+                    <img
+                      src="/assets/image/star1.png"
+                      class="inactive-star"
+                      alt="star"
+                    />
+                    <img
+                      src="/assets/image/star2.png"
+                      class="active-star"
+                      alt="star"
+                    />
+                  </div>
+                  <div class="box star-box flex-css-row" data-value="">
+                    <p>2</p>
+                    <img
+                      src="/assets/image/star1.png"
+                      class="inactive-star"
+                      alt="star"
+                    />
+                    <img
+                      src="/assets/image/star2.png"
+                      class="active-star"
+                      alt="star"
+                    />
+                  </div>
+                  <div class="box star-box flex-css-row" data-value="">
+                    <p>3</p>
+                    <img
+                      src="/assets/image/star1.png"
+                      class="inactive-star"
+                      alt="star"
+                    />
+                    <img
+                      src="/assets/image/star2.png"
+                      class="active-star"
+                      alt="star"
+                    />
+                  </div>
+                  <div class="box star-box flex-css-row" data-value="">
+                    <p>4</p>
+                    <img
+                      src="/assets/image/star1.png"
+                      class="inactive-star"
+                      alt="star"
+                    />
+                    <img
+                      src="/assets/image/star2.png"
+                      class="active-star"
+                      alt="star"
+                    />
+                  </div>
+                  <div class="box star-box flex-css-row" data-value="">
+                    <p>5</p>
+                    <img
+                      src="/assets/image/star1.png"
+                      class="inactive-star"
+                      alt="star"
+                    />
+                    <img
+                      src="/assets/image/star2.png"
+                      class="active-star"
+                      alt="star"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- payment type  -->
+            <div class="filter-heading">
+              <h1>Payment type</h1>
+              <div class="filter-details">
+                <div class="payment-type-checkbox">
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box payment-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Fully refundable</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box payment-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Reserve now, pay later</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- price range  -->
+            <div class="filter-heading">
+              <h1>Price range</h1>
+              <div class="filter-details">
+                <div class="slider-box mt-5">
+                  <div id="slider-range"></div>
+                  <div class="label-input flex-css-row-start mt-4">
+                    <input type="text" id="amount" readonly />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- guest rating  -->
+            <div class="filter-heading">
+              <h1>Guest rating</h1>
+              <div class="filter-details">
+                <div class="rating-radio">
+                  <div class="radio-input flex-css-row-start">
+                    <div class="box guest-box active flex-css" data-value="">
+                      <div class="inner-box"></div>
+                    </div>
+                    <label for="checkbox">Any</label>
+                  </div>
+                  <div class="radio-input flex-css-row-start">
+                    <div class="box guest-box flex-css" data-value="">
+                      <div class="inner-box"></div>
+                    </div>
+                    <label for="checkbox">Wonderful 4.5+</label>
+                  </div>
+                  <div class="radio-input flex-css-row-start">
+                    <div class="box guest-box flex-css" data-value="">
+                      <div class="inner-box"></div>
+                    </div>
+                    <label for="checkbox">Very good 4+</label>
+                  </div>
+                  <div class="radio-input flex-css-row-start">
+                    <div class="box guest-box flex-css" data-value="">
+                      <div class="inner-box"></div>
+                    </div>
+                    <label for="checkbox">Good 3.5+</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- cleaning type  -->
+            <div class="filter-heading">
+              <h1>Cleaning and safety practices</h1>
+              <div class="filter-details">
+                <div class="cleaning-type-checkbox">
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box cleaning-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Enhanced cleaning</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- meal type  -->
+            <div class="filter-heading">
+              <h1>Meal plans available</h1>
+              <div class="filter-details">
+                <div class="meal-type-checkbox">
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box meal-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Breakfast included</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box meal-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Lunch included</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box meal-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Dinner included</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box meal-box flex-css" data-value="all">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">All inclusive</label>
+                  </div>
+                  <a href="#">See less</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- neighborhood type  -->
+            <div class="filter-heading">
+              <h1>Neighborhood</h1>
+              <div class="filter-details">
+                <div class="neighborhood-type-checkbox">
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box neighborhood-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">New Baneshwor</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box neighborhood-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Sundhara</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box neighborhood-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">NAxal</label>
+                  </div>
+                  <a href="#">See more</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- facility type  -->
+            <div class="filter-heading">
+              <h1>Facilities</h1>
+              <div class="filter-details">
+                <div class="facility-type-checkbox">
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box facility-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Parking</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box facility-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Free Wi-Fi</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box facility-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Swimming pool</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box facility-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Spa</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box facility-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Fitness Center</label>
+                  </div>
+                  <a href="#">See more</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- facility type  -->
+            <div class="filter-heading">
+              <h1>Room Facilities</h1>
+              <div class="filter-details">
+                <div class="room-facility-type-checkbox">
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box room-facility-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Parking</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box room-facility-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Free Wi-Fi</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box room-facility-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Swimming pool</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box room-facility-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Spa</label>
+                  </div>
+                  <div class="checkbox-input flex-css-row-start">
+                    <div class="box room-facility-box flex-css" data-value="">
+                      <img src="/assets/image/tick.png" alt="tick" />
+                    </div>
+                    <label for="checkbox">Fitness Center</label>
+                  </div>
+                  <a href="#">See more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-container pl-3">
+        <div class="tab-box flex-css-row-start">
+          <a href="#" class="tab-link active" data-target="hotelListContainer"
+            >Hotels & resorts</a
+          >
+          <a href="#" class="tab-link" data-target="guestHouseListContainer"
+            >Guest houses</a
+          >
+          <a href="#" class="tab-link" data-target="apartmentListContainer"
+            >Service apartments</a
+          >
+          <a href="#" class="tab-link" data-target="moreListContainer">more</a>
+        </div>
+
+        <!-- hotel list  -->
+        <div
+          class="list-container hotel-list-container"
+          id="hotelListContainer"
+        >
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <!-- <div class="status-text">
+                <p>Reserve now, pay later</p>
+              </div> -->
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <div class="add-text">
+                  <p>Ad</p>
+                </div>
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Arushi Boutique Hotel</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="active"
+                >
+                  <img src="./assets/image/heart2.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Fully Refundable</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>DOM Himalaya Hotel</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box nonmember-list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Reserve now, pay later</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <div class="vip-text">
+                  <p>VIP Access</p>
+                </div>
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Solti Hotel</h1>
+                  <p>Kathmandu</p>
+                  <h2 class="note-text member-text">Member price available</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text member-text">Member price available</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+            <div class="signup-btn flex-css-end">
+              <a href="#">Sign up for membership</a>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <!-- <div class="status-text">
+                <p>Reserve now, pay later</p>
+              </div> -->
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <div class="add-text">
+                  <p>Ad</p>
+                </div>
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Arushi Boutique Hotel</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="active"
+                >
+                  <img src="./assets/image/heart2.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Fully Refundable</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>DOM Himalaya Hotel</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box nonmember-list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Reserve now, pay later</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <div class="vip-text">
+                  <p>VIP Access</p>
+                </div>
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Solti Hotel</h1>
+                  <p>Kathmandu</p>
+                  <h2 class="note-text member-text">Member price available</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text member-text">Member price available</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+            <div class="signup-btn flex-css-end">
+              <a href="#">Sign up for membership</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- guest house list  -->
+        <div
+          class="list-container guest-house-list-container"
+          id="guestHouseListContainer"
+          style="display: none"
+        >
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="active"
+                >
+                  <img src="./assets/image/heart2.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Fully Refundable</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+              <p>VIP Access</p>
+            </div> -->
+                <!-- <div class="add-text">
+              <p>Ad</p>
+            </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Himalaya Guest House</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box nonmember-list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Reserve now, pay later</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <div class="vip-text">
+                  <p>VIP Access</p>
+                </div>
+                <!-- <div class="add-text">
+              <p>Ad</p>
+            </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Gin Guest House</h1>
+                  <p>Kathmandu</p>
+                  <h2 class="note-text member-text">Member price available</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text member-text">Member price available</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+            <div class="signup-btn flex-css-end">
+              <a href="#">Sign up for membership</a>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <!-- <div class="status-text">
+              <p>Reserve now, pay later</p>
+            </div> -->
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+              <p>VIP Access</p>
+            </div> -->
+                <div class="add-text">
+                  <p>Ad</p>
+                </div>
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Family Guest House</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="active"
+                >
+                  <img src="./assets/image/heart2.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Fully Refundable</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+              <p>VIP Access</p>
+            </div> -->
+                <!-- <div class="add-text">
+              <p>Ad</p>
+            </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Himalaya Guest House</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box nonmember-list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Reserve now, pay later</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <div class="vip-text">
+                  <p>VIP Access</p>
+                </div>
+                <!-- <div class="add-text">
+              <p>Ad</p>
+            </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Gin Guest House</h1>
+                  <p>Kathmandu</p>
+                  <h2 class="note-text member-text">Member price available</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text member-text">Member price available</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+            <div class="signup-btn flex-css-end">
+              <a href="#">Sign up for membership</a>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <!-- <div class="status-text">
+              <p>Reserve now, pay later</p>
+            </div> -->
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+              <p>VIP Access</p>
+            </div> -->
+                <div class="add-text">
+                  <p>Ad</p>
+                </div>
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Family Guest House</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- apartment list  -->
+        <div
+          class="list-container apartment-list-container"
+          id="apartmentListContainer"
+          style="display: none"
+        >
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="active"
+                >
+                  <img src="./assets/image/heart2.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Fully Refundable</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Hamro Apartment</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <!-- <div class="status-text">
+                <p>Reserve now, pay later</p>
+              </div> -->
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <div class="add-text">
+                  <p>Ad</p>
+                </div>
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Kiwi Apartment</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box nonmember-list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Reserve now, pay later</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <div class="vip-text">
+                  <p>VIP Access</p>
+                </div>
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Fizz Apartment</h1>
+                  <p>Kathmandu</p>
+                  <h2 class="note-text member-text">Member price available</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text member-text">Member price available</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+            <div class="signup-btn flex-css-end">
+              <a href="#">Sign up for membership</a>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="active"
+                >
+                  <img src="./assets/image/heart2.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Fully Refundable</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Hamro Apartment</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <!-- <div class="status-text">
+                <p>Reserve now, pay later</p>
+              </div> -->
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <div class="add-text">
+                  <p>Ad</p>
+                </div>
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Kiwi Apartment</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box nonmember-list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Reserve now, pay later</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <div class="vip-text">
+                  <p>VIP Access</p>
+                </div>
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Fizz Apartment</h1>
+                  <p>Kathmandu</p>
+                  <h2 class="note-text member-text">Member price available</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text member-text">Member price available</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+            <div class="signup-btn flex-css-end">
+              <a href="#">Sign up for membership</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- more list  -->
+        <div
+          class="list-container more-list-container"
+          id="moreListContainer"
+          style="display: none"
+        >
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <!-- <div class="status-text">
+                <p>Reserve now, pay later</p>
+              </div> -->
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <div class="add-text">
+                  <p>Ad</p>
+                </div>
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Arena Housing</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="active"
+                >
+                  <img src="./assets/image/heart2.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Fully Refundable</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Lake Lodge</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box nonmember-list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Reserve now, pay later</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <div class="vip-text">
+                  <p>VIP Access</p>
+                </div>
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Nagarkot Resort</h1>
+                  <p>Kathmandu</p>
+                  <h2 class="note-text member-text">Member price available</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text member-text">Member price available</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+            <div class="signup-btn flex-css-end">
+              <a href="#">Sign up for membership</a>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <!-- <div class="status-text">
+                <p>Reserve now, pay later</p>
+              </div> -->
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <div class="add-text">
+                  <p>Ad</p>
+                </div>
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Arena Housing</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="active"
+                >
+                  <img src="./assets/image/heart2.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Fully Refundable</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <!-- <div class="vip-text">
+                <p>VIP Access</p>
+              </div> -->
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Lake Lodge</h1>
+                  <p>Thamel, Kathmandu</p>
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text">We have 6 left at 10% off at</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-box nonmember-list-box flex-top-row-sb">
+            <div class="img-container">
+              <img src="./assets/image/list1.png" class="bg-img" alt="list" />
+              <div class="img-wrapper">
+                <div
+                  class="like-icon flex-css"
+                  id="likeIcon"
+                  data-status="inactive"
+                >
+                  <img src="./assets/image/heart1.png" alt="heart" />
+                </div>
+                <div class="status-text">
+                  <p>Reserve now, pay later</p>
+                </div>
+                <div class="rate-text flex-css-row">
+                  <img src="./assets/image/star3.png" alt="star" />
+                  <p>4.5</p>
+                </div>
+                <div class="vip-text">
+                  <p>VIP Access</p>
+                </div>
+                <!-- <div class="add-text">
+                <p>Ad</p>
+              </div> -->
+              </div>
+            </div>
+            <div class="info pl-3 flex-css-column-sb">
+              <div class="heading-info pt-3">
+                <div class="title">
+                  <h1>Nagarkot Resort</h1>
+                  <p>Kathmandu</p>
+                  <h2 class="note-text member-text">Member price available</h2>
+                </div>
+              </div>
+              <div class="detail-info flex-css-end pb-2">
+                <div class="rate-text">
+                  <h2 class="note-text member-text">Member price available</h2>
+                  <h1>
+                    <span class="old-rate">Rs. 4,000</span>
+                    <span>Rs. 3,627</span>
+                  </h1>
+                  <p>per night</p>
+                  <h6>Rs. 3,850</h6>
+                  <p>Includes taxes & fees</p>
+                </div>
+              </div>
+            </div>
+            <div class="signup-btn flex-css-end">
+              <a href="#">Sign up for membership</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="view-btn flex-css pt-5">
+          <a href="#">View more</a>
+        </div>
+      </div>
     </div>
 
     <!-- footer container  -->
