@@ -232,6 +232,42 @@ $(".like-icon").on("click", function () {
   }
 });
 
+// mobile tab
+// view map
+$(".view-map-btn").on("click", function (e) {
+  e.preventDefault();
+  $("#mapModal").fadeIn();
+});
+
+$("#mapModal").on("click", function (e) {
+  const target = e.target;
+  const elID = $(target).attr("id");
+  console.log(elID);
+
+  if (elID === "mapModal") {
+    $("#mapModal").fadeOut();
+  }
+});
+
+// filter
+$("#filterBtn").on("click", function (e) {
+  e.preventDefault();
+
+  $("#filterContainer").fadeIn();
+});
+
+$("#filterClose").on("click", function () {
+  $("#filterContainer").fadeOut();
+});
+
+$(window).resize(function () {
+  if (window.innerWidth > 1200) {
+    $("#filterContainer").show();
+  } else {
+    $("#filterContainer").hide();
+  }
+});
+
 // slider
 $(function () {
   $("#slider-range").slider({

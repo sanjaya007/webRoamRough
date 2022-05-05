@@ -164,27 +164,32 @@
       </div>
     </div>
 
-    <div class="btn-container flex-css-row pb-5">
-      <a href="#" class="mr-2">View on map</a>
-      <a href="#" class="ml-2">Filter</a>
+    <!-- btn banner  -->
+    <div class="btn-banner flex-css-row pb-5 content-container">
+      <div class="btn-link flex-css pr-2">
+        <a href="#" class="view-map-btn" id="viewMapBtn">View on map</a>
+      </div>
+      <div class="btn-link flex-css pl-2">
+        <a href="#" class="filter-btn" id="filterBtn">Filter</a>
+      </div>
     </div>
 
     <!-- main-container -->
     <div class="content-container main-container flex-top-row-start mb-5 pb-5">
-      <div class="left-container">
+      <div class="left-container" id="filterContainer">
         <div class="box-col">
           <!-- map  -->
           <div class="map-wrapper mb-3">
             <img src="/assets/image/map1.png" alt="map" />
             <div class="view-btn flex-css">
-              <a href="#">View in map</a>
+              <a href="#" class="view-map-btn">View in map</a>
             </div>
           </div>
 
           <!-- filter  -->
           <div class="filter-wrapper">
             <div class="close-icon flex-css-end pb-4">
-              <div class="icon-box flex-css">
+              <div class="icon-box flex-css" id="filterClose">
                 <img src="./assets/image/close.png" alt="close" />
               </div>
             </div>
@@ -1802,6 +1807,15 @@
       </div>
       <div class="copyright-banner pt-5 text-center">
         <p>&#169; 2022 Roam Nepal, Inc. All rights reserved</p>
+      </div>
+    </div>
+
+    <!-- view map modal  -->
+    <div class="modal-wrapper flex-css" id="mapModal" style="display: none">
+      <div class="modal-box">
+        <div class="img-container">
+          <img src="./assets/image/map2.png" alt="map" />
+        </div>
       </div>
     </div>
 

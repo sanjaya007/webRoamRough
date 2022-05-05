@@ -202,6 +202,27 @@ body.fixed-body {
   height: 15px;
 }
 
+/* btn banner  */
+.btn-banner {
+  display: none;
+}
+
+.btn-banner .btn-link {
+  width: 100%;
+}
+
+.btn-banner .btn-link a {
+  background-color: #ffffff;
+  color: #006ce6;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 14px !important;
+  width: 100%;
+  text-align: center;
+  border-radius: 100px;
+}
+
 /* calendar picker  */
 #calendarPicker {
   position: absolute;
@@ -1088,6 +1109,39 @@ html .ui-button.ui-state-disabled:active {
   margin-bottom: 20px !important;
 }
 
+/* modal wrapper */
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px !important;
+  z-index: 999999;
+}
+
+.modal-wrapper .modal-box {
+  width: 700px;
+  min-width: 700px;
+  height: 500px;
+  max-height: 100%;
+  border-radius: 14px;
+}
+
+.modal-wrapper .modal-box .img-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+}
+
+.modal-wrapper .modal-box .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
 /* responsive  */
 @media (max-width: 1300px) {
   .nav-bar .input-container input {
@@ -1114,6 +1168,9 @@ html .ui-button.ui-state-disabled:active {
     padding-left: 70px !important;
     padding-right: 70px !important;
   }
+  .btn-banner {
+    display: flex;
+  }
   .main-container .left-container {
     position: fixed;
     top: 0;
@@ -1124,13 +1181,12 @@ html .ui-button.ui-state-disabled:active {
     background-color: rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     padding: 20px !important;
-    display: flex;
-    justify-content: center;
-    display: none;
     z-index: 999999;
+    display: none;
   }
   .main-container .left-container .box-col {
     width: 394px;
+    margin: 0 auto !important;
     height: fit-content;
   }
   .main-container .left-container .map-wrapper {
@@ -1207,6 +1263,7 @@ html .ui-button.ui-state-disabled:active {
   }
   .search-banner .search-bar .btn-bar {
     width: 100%;
+    padding-left: 0 !important;
   }
   .search-banner .search-bar .btn-bar a {
     width: 100%;
@@ -1328,6 +1385,11 @@ html .ui-button.ui-state-disabled:active {
     min-height: auto;
     height: auto;
   }
+  .modal-wrapper .modal-box {
+    min-width: 100%;
+    width: 100%;
+    height: 400px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -1363,6 +1425,12 @@ html .ui-button.ui-state-disabled:active {
   }
   .main-container .right-container .tab-box .tab-link {
     margin-right: 15px !important;
+  }
+  .modal-wrapper {
+    padding: 10px !important;
+  }
+  .modal-wrapper .modal-box {
+    height: 300px;
   }
 }
 
