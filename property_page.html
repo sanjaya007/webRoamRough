@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sanjaya007/flex-library@master/dist/css/sanjaya.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/property_page.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- litepicker date picker lib -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker-polyfills-ie11/dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+  </head>
+  <body id="propertyBody">
+    <!-- mobile nav  -->
+    <div class="mobile-nav">
+      <div class="mobile-logo">
+        <img
+          src="./assets/image/new_logo-blue.png"
+          class="mb-link"
+          alt="logo"
+        />
+      </div>
+      <div class="mobile-links flex-top-column-start">
+        <a href="#" class="mb-link">Explore</a>
+        <a href="#" class="mb-link">About Us</a>
+        <a href="#" class="mb-link">Log In</a>
+        <a href="#" class="mb-link nav-lang">
+          <img src="./assets/image/lang-icon-dark.png" alt="lang" />
+          English
+        </a>
+      </div>
+    </div>
+    <!-- nav bar  -->
+    <div class="content-container nav-container">
+      <div class="nav-bar flex-css-row-sb">
+        <div class="logo-container">
+          <img src="./assets/image/new_logo-blue.png" alt="logo" />
+        </div>
+
+        <div class="input-container flex-css-row-sb">
+          <input type="text" placeholder="Where are you going ?" />
+          <div class="icon-container flex-css">
+            <img src="./assets/image/search_icon.png" alt="icon" />
+          </div>
+        </div>
+
+        <div class="link-container flex-css-row">
+          <a href="#" class="nav-lang">
+            <img
+              src="./assets/image/lang-icon-dark.png"
+              class="img-link"
+              alt="lang"
+            />
+            English
+          </a>
+          <a href="#">Explore</a>
+          <a href="#">About Us</a>
+          <a href="#">
+            <img
+              src="./assets/image/bell_icon.png"
+              class="img-link"
+              alt="icon"
+            />
+          </a>
+          <a href="./profile.html">
+            <div class="profile-container">
+              <img src="./assets/image/profile1.png" alt="profile" />
+            </div>
+          </a>
+        </div>
+
+        <div class="nav-tab flex-css-column" data-value="open">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- main-container -->
+    <div class="content-container main-container">
+      <div class="gallery-container">
+        <div class="title-text flex-css-row-start mb-4">
+          <h1>Arushi Boutique Hotel</h1>
+          <a href="#">Vip Access</a>
+        </div>
+        <div class="image-container flex-css-row-sb">
+          <div class="cover-image first-image pr-3">
+            <img src="./assets/image/gallery1.png" alt="gallery" />
+          </div>
+          <div class="other-image flex-css-column-sb">
+            <div class="img-box second-image">
+              <img src="./assets/image/gallery1.png" alt="gallery" />
+            </div>
+            <div class="img-box third-image">
+              <img src="./assets/image/gallery1.png" alt="gallery" />
+              <div class="img-wrapper">
+                <a href="#">view all photos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-container py-4 mt-2 mb-4">
+        <a href="#overviewContainer" class="tab-link active"> Overview </a>
+        <a href="#amenitiesContainer" class="tab-link"> Amenities </a>
+        <a href="#roomContainer" class="tab-link"> Rooms </a>
+        <a href="#locationContainer" class="tab-link"> Locations </a>
+        <a href="#reviewContainer" class="tab-link"> Reviews </a>
+        <a href="#policyContainer" class="tab-link"> Policies </a>
+      </div>
+      <div class="rating-text flex-css-row-start mb-3">
+        <div class="rate-star flex-css-row-start mr-4">
+          <img src="./assets/image/orange_star.png" alt="star" />
+          <p>6.5</p>
+        </div>
+        <a href="#">See all 107 reviews</a>
+      </div>
+      <div class="about-container flex-top-row-sb">
+        <div class="left-container pr-3">
+          <div class="box">
+            <div class="box-content about-box" id="overviewContainer">
+              <h1>About this property</h1>
+              <p>
+                This smoke-free hotel features 15 restaurants, a full-service
+                spa, and a casino. Free WiFi in public areas and free valet
+                parking are also provided. Other amenities include a nightclub,
+                a fitness center, and a sauna. All 671 soundproofed rooms
+                feature free WiFi and iPads. Guests can enjoy deep soaking tubs,
+                and other standard amenities include pillowtop beds, sitting
+                areas, and 24-hour room service.
+              </p>
+            </div>
+            <div class="box-content award-box">
+              <h1>Awards and affiliations</h1>
+              <p>The property is a member of Preferred Hotels & Resorts.</p>
+            </div>
+            <div class="box-content amenities-box" id="amenitiesContainer">
+              <h1>Popular amenities</h1>
+              <div class="list-box flex-css-row-start-wrap">
+                <div class="list flex-css-row-start">
+                  <img
+                    src="./assets/image/amenities_parking.png"
+                    alt="amenities"
+                  />
+                  <p>Parking included</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img
+                    src="./assets/image/amenities_restaurant.png"
+                    alt="amenities"
+                  />
+                  <p>Restaurant</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img
+                    src="./assets/image/amenities_wifi.png"
+                    alt="amenities"
+                  />
+                  <p>Free WiFi</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/amenities_air.png" alt="amenities" />
+                  <p>Air conditioning</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/amenities_spa.png" alt="amenities" />
+                  <p>Spa</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/amenities_gym.png" alt="amenities" />
+                  <p>Gym</p>
+                </div>
+                <a href="#" class="see-all-link">See all</a>
+              </div>
+            </div>
+            <div class="box-content cleaning-box">
+              <h1>Cleaning and safety practices</h1>
+              <div class="list-box flex-css-row-start-wrap">
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/cleaning1.png" alt="amenities" />
+                  <p>Cleaned with disinfectant</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/cleaning2.png" alt="amenities" />
+                  <p>Personal protective equipment</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/cleaning3.png" alt="amenities" />
+                  <p>Hand sanitizer provided</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/cleaning4.png" alt="amenities" />
+                  <p>Social distancing</p>
+                </div>
+                <a href="#" class="see-all-link">See all</a>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-content vip-box">
+              <div class="vip-link-box mb-1">
+                <a href="#" class="vip-link"> VIP Access</a>
+              </div>
+              <div class="vip-note my-4">
+                <p>
+                  Every VIP Access stay receives consistently high guest reviews
+                  and is hand-selected for quality.
+                </p>
+              </div>
+              <div class="list-box flex-css-row-start-wrap">
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/cleaning1.png" alt="amenities" />
+                  <p>Cleaned with disinfectant</p>
+                </div>
+                <div class="list flex-css-row-start">
+                  <img src="./assets/image/cleaning2.png" alt="amenities" />
+                  <p>Personal protective equipment</p>
+                </div>
+                <a href="#" class="learn-link">Learn more about VIP Access</a>
+              </div>
+            </div>
+          </div>
+          <div class="box schedule-box">
+            <div class="schedule-header flex-css-row-sb mb-5">
+              <div class="schedule-heading">
+                <h1>Select check in - check out date</h1>
+                <p>Minimum stay: 3 nights</p>
+              </div>
+              <div class="schedule-btn">
+                <a href="#">Check Rates</a>
+              </div>
+            </div>
+            <div id="litepicker" class="flex-css"></div>
+            <div class="weather-box pt-5">
+              <div class="weather-details flex-css-row-start">
+                <img
+                  src="./assets/image/rainy_icon.png"
+                  id="weatherImage"
+                  alt="icon"
+                />
+                <h1 class="flex-css-row-start-wrap">
+                  Todays weather is &nbsp;
+                  <p id="weatherTemp">...</p>
+                  &nbsp; and &nbsp;
+                  <p id="weatherStatus">...</p>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="box">
+            <div class="rate flex-bottom-column-start mb-4">
+              <h1>Rs. 3,627</h1>
+              <p>per night</p>
+            </div>
+            <div class="detail-box">
+              <div class="list schedule-list flex-css-row-sb">
+                <div class="check-list flex-css-row">
+                  <p>Check in</p>
+                  <img src="./assets/image/calendar.png" alt="calendar" />
+                </div>
+                <p class="check-line">|</p>
+                <div class="check-list flex-css-row">
+                  <p>Check out</p>
+                  <img src="./assets/image/calendar.png" alt="calendar" />
+                </div>
+              </div>
+              <div class="list customer-list flex-css-row">
+                <p>2 adult</p>
+                <p>|</p>
+                <p>0 children</p>
+                <p>|</p>
+                <p>1 room</p>
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="btn-container flex-css mt-5">
+              <a href="./checkout.html">Reserve</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="room-container" id="roomContainer">
+        <div class="room-heading mb-4">
+          <h1>Rooms</h1>
+        </div>
+        <div class="row">
+          <div class="col-xl-4 col-lg-6 room-card-col">
+            <div class="box">
+              <div class="image-container">
+                <img src="./assets/image/room1.png" alt="room" />
+              </div>
+              <div class="room-status">
+                <p>We have 1 left</p>
+              </div>
+              <div class="room-details">
+                <h1>Suite, Multiple Beds (Two Doubles)</h1>
+                <div class="list-box mb-2">
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_sleep.png" alt="room" />
+                    <p>Sleep 3</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_bed.png" alt="room" />
+                    <p>1 double bed 1 single bed</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_breakfast.png" alt="room" />
+                    <p>Free breakfast</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_noise.png" alt="room" />
+                    <p>Noise making</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_researve.png" alt="room" />
+                    <p>Researve now, pay later</p>
+                  </div>
+                </div>
+                <div class="room-note mb-2">
+                  <h5>Fully refundable</h5>
+                  <p>Before Wed, Feb 23</p>
+                </div>
+                <div class="room-link mb-4">
+                  <a href="#">More details</a>
+                </div>
+              </div>
+              <div class="room-cost mb-3">
+                <h1>Rs. 3,627</h1>
+                <p>per night</p>
+                <h5>Rs. 3,850 total</h5>
+                <p>Includes taxes & fees</p>
+              </div>
+              <div class="room-btns flex-bottom-row-sb">
+                <a href="#" class="price-btn">Price details</a>
+                <a href="#" class="reserve-btn">Reserve</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 room-card-col">
+            <div class="box">
+              <div class="image-container">
+                <img src="./assets/image/room2.png" alt="room" />
+              </div>
+              <div class="room-status">
+                <p></p>
+              </div>
+              <div class="room-details">
+                <h1>Single Bed</h1>
+                <div class="list-box mb-2">
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_sleep.png" alt="room" />
+                    <p>Sleep 2</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_bed.png" alt="room" />
+                    <p>1 double bed</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_breakfast.png" alt="room" />
+                    <p>Free breakfast</p>
+                  </div>
+                  <div class="list flex-css-row-start no-noise">
+                    <img src="./assets/image/room_noise.png" alt="room" />
+                    <p>Noise making</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_researve.png" alt="room" />
+                    <p>Researve now, pay later</p>
+                  </div>
+                </div>
+                <div class="room-note mb-2">
+                  <h5>Fully refundable</h5>
+                  <p>Before Wed, Jun 12</p>
+                </div>
+                <div class="room-link mb-4">
+                  <a href="#">More details</a>
+                </div>
+              </div>
+              <div class="room-cost mb-3">
+                <h1>Rs. 4,927</h1>
+                <p>per night</p>
+                <h5>Rs. 4,550 total</h5>
+                <p>Includes taxes & fees</p>
+              </div>
+              <div class="room-btns flex-bottom-row-sb">
+                <a href="#" class="price-btn">Price details</a>
+                <a href="#" class="reserve-btn">Reserve</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 room-card-col">
+            <div class="box">
+              <div class="image-container">
+                <img src="./assets/image/room1.png" alt="room" />
+              </div>
+              <div class="room-status">
+                <p>We have 1 left</p>
+              </div>
+              <div class="room-details">
+                <h1>Suite, Multiple Beds (Two Doubles)</h1>
+                <div class="list-box mb-2">
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_sleep.png" alt="room" />
+                    <p>Sleep 3</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_bed.png" alt="room" />
+                    <p>1 double bed 1 single bed</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_breakfast.png" alt="room" />
+                    <p>Free breakfast</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_noise.png" alt="room" />
+                    <p>Noise making</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_researve.png" alt="room" />
+                    <p>Researve now, pay later</p>
+                  </div>
+                </div>
+                <div class="room-note mb-2">
+                  <h5>Fully refundable</h5>
+                  <p>Before Wed, Feb 23</p>
+                </div>
+                <div class="room-link mb-4">
+                  <a href="#">More details</a>
+                </div>
+              </div>
+              <div class="room-cost mb-3">
+                <h1>Rs. 3,627</h1>
+                <p>per night</p>
+                <h5>Rs. 3,850 total</h5>
+                <p>Includes taxes & fees</p>
+              </div>
+              <div class="room-btns flex-bottom-row-sb">
+                <a href="#" class="price-btn">Price details</a>
+                <a href="#" class="reserve-btn">Reserve</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 room-card-col">
+            <div class="box">
+              <div class="image-container">
+                <img src="./assets/image/room2.png" alt="room" />
+              </div>
+              <div class="room-status">
+                <p></p>
+              </div>
+              <div class="room-details">
+                <h1>Single Bed</h1>
+                <div class="list-box mb-2">
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_sleep.png" alt="room" />
+                    <p>Sleep 2</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_bed.png" alt="room" />
+                    <p>1 double bed</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_breakfast.png" alt="room" />
+                    <p>Free breakfast</p>
+                  </div>
+                  <div class="list flex-css-row-start no-noise">
+                    <img src="./assets/image/room_noise.png" alt="room" />
+                    <p>Noise making</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_researve.png" alt="room" />
+                    <p>Researve now, pay later</p>
+                  </div>
+                </div>
+                <div class="room-note mb-2">
+                  <h5>Fully refundable</h5>
+                  <p>Before Wed, Jun 12</p>
+                </div>
+                <div class="room-link mb-4">
+                  <a href="#">More details</a>
+                </div>
+              </div>
+              <div class="room-cost mb-3">
+                <h1>Rs. 4,927</h1>
+                <p>per night</p>
+                <h5>Rs. 4,550 total</h5>
+                <p>Includes taxes & fees</p>
+              </div>
+              <div class="room-btns flex-bottom-row-sb">
+                <a href="#" class="price-btn">Price details</a>
+                <a href="#" class="reserve-btn">Reserve</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 room-card-col">
+            <div class="box">
+              <div class="image-container">
+                <img src="./assets/image/room1.png" alt="room" />
+              </div>
+              <div class="room-status">
+                <p>We have 1 left</p>
+              </div>
+              <div class="room-details">
+                <h1>Suite, Multiple Beds (Two Doubles)</h1>
+                <div class="list-box mb-2">
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_sleep.png" alt="room" />
+                    <p>Sleep 3</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_bed.png" alt="room" />
+                    <p>1 double bed 1 single bed</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_breakfast.png" alt="room" />
+                    <p>Free breakfast</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_noise.png" alt="room" />
+                    <p>Noise making</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_researve.png" alt="room" />
+                    <p>Researve now, pay later</p>
+                  </div>
+                </div>
+                <div class="room-note mb-2">
+                  <h5>Fully refundable</h5>
+                  <p>Before Wed, Feb 23</p>
+                </div>
+                <div class="room-link mb-4">
+                  <a href="#">More details</a>
+                </div>
+              </div>
+              <div class="room-cost mb-3">
+                <h1>Rs. 3,627</h1>
+                <p>per night</p>
+                <h5>Rs. 3,850 total</h5>
+                <p>Includes taxes & fees</p>
+              </div>
+              <div class="room-btns flex-bottom-row-sb">
+                <a href="#" class="price-btn">Price details</a>
+                <a href="#" class="reserve-btn">Reserve</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 room-card-col">
+            <div class="box">
+              <div class="image-container">
+                <img src="./assets/image/room2.png" alt="room" />
+              </div>
+              <div class="room-status">
+                <p></p>
+              </div>
+              <div class="room-details">
+                <h1>Single Bed</h1>
+                <div class="list-box mb-2">
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_sleep.png" alt="room" />
+                    <p>Sleep 2</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_bed.png" alt="room" />
+                    <p>1 double bed</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_breakfast.png" alt="room" />
+                    <p>Free breakfast</p>
+                  </div>
+                  <div class="list flex-css-row-start no-noise">
+                    <img src="./assets/image/room_noise.png" alt="room" />
+                    <p>Noise making</p>
+                  </div>
+                  <div class="list flex-css-row-start">
+                    <img src="./assets/image/room_researve.png" alt="room" />
+                    <p>Researve now, pay later</p>
+                  </div>
+                </div>
+                <div class="room-note mb-2">
+                  <h5>Fully refundable</h5>
+                  <p>Before Wed, Jun 12</p>
+                </div>
+                <div class="room-link mb-4">
+                  <a href="#">More details</a>
+                </div>
+              </div>
+              <div class="room-cost mb-3">
+                <h1>Rs. 4,927</h1>
+                <p>per night</p>
+                <h5>Rs. 4,550 total</h5>
+                <p>Includes taxes & fees</p>
+              </div>
+              <div class="room-btns flex-bottom-row-sb">
+                <a href="#" class="price-btn">Price details</a>
+                <a href="#" class="reserve-btn">Reserve</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="location-container" id="locationContainer">
+        <div class="location-heading">
+          <h1>About this area</h1>
+        </div>
+        <div class="map-container">
+          <h1>Thamel, Kathmandu</h1>
+          <img src="./assets/image/map.png" alt="map" class="w-100" />
+        </div>
+        <div class="view-map-link flex-css my-4">
+          <a href="#">View in map</a>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <h1>Restaurant near by</h1>
+              <div class="list-box">
+                <p>Shoney's — 6 min walk</p>
+                <p>Restaurant & Lounge — 7 min walk</p>
+                <p>Waffle House — 7 min walk</p>
+                <p>Ruby Tuesday — 7 min walk</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <h1>Top attractions</h1>
+              <div class="list-box">
+                <p>National Stadium</p>
+                <p>Swayambhunath Temple</p>
+                <p>Pashupatinath</p>
+                <p>Patan Durbar Square</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <h1>Roam party</h1>
+              <div class="list-box">
+                <p>National Stadium</p>
+                <p>Swayambhunath Temple</p>
+                <p>Pashupatinath</p>
+                <p>Patan Durbar Square</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="review-container" id="reviewContainer">
+        <div class="review-heading">
+          <h1>Review</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 flex-bottom-row-start">
+            <div class="box rate-box">
+              <div class="flex-bottom-row-start">
+                <h1>4.5</h1>
+                <span>Wonderful</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="box range-box px-xl-5 px-lg-4">
+              <div class="progress-box">
+                <div class="progress-text flex-css-row-sb">
+                  <p>Cleanliness</p>
+                  <span>4.5/5</span>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    valuemin="0"
+                    valuemax="5"
+                    valuenow="4.5"
+                  >
+                    <span class="sr-only"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-box">
+                <div class="progress-text flex-css-row-sb">
+                  <p>Staff & service</p>
+                  <span>3/5</span>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    valuemin="0"
+                    valuemax="5"
+                    valuenow="3"
+                  >
+                    <span class="sr-only"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-box">
+                <div class="progress-text flex-css-row-sb">
+                  <p>Amenities</p>
+                  <span>3.5/5</span>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    valuemin="0"
+                    valuemax="5"
+                    valuenow="3.5"
+                  >
+                    <span class="sr-only"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="box range-box px-xl-5 px-lg-4">
+              <div class="progress-box">
+                <div class="progress-text flex-css-row-sb">
+                  <p>Amenities</p>
+                  <span>2/5</span>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    valuemin="0"
+                    valuemax="5"
+                    valuenow="2"
+                  >
+                    <span class="sr-only"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rate-link flex-css pt-5">
+          <a href="#">Rate yourself</a>
+        </div>
+      </div>
+      <div class="policy-container" id="policyContainer">
+        <div class="policy-heading">
+          <h1>Policies</h1>
+        </div>
+        <div class="checkout-box flex-top-row-start">
+          <div class="box mr-5">
+            <h1>Check in</h1>
+            <p>Check-in from 4 PM - 2 AM</p>
+          </div>
+          <div class="box">
+            <h1>Check out</h1>
+            <p>Check-in from 4 PM - 2 AM</p>
+          </div>
+        </div>
+        <div class="box">
+          <h1>Special check-in instructions</h1>
+          <p>Front desk staff will greet guests on arrival</p>
+        </div>
+        <div class="box">
+          <h1>Access methods</h1>
+          <p>Staffed front desk</p>
+        </div>
+        <div class="box">
+          <h1>Pets</h1>
+          <p>
+            Pets allowed for an extra charge of USD 125 per accommodation, per
+            stay
+          </p>
+          <p>2 per room (up to 25 lbs)</p>
+          <p>Service animals are exempt from fees</p>
+        </div>
+        <div class="box">
+          <h1>Children and extra beds</h1>
+          <p>Children are welcome</p>
+          <p>Rollaway/extra beds are available for USD 35.0 per night</p>
+          <p>Free cribs (infant beds)</p>
+        </div>
+        <div class="box">
+          <h1>Property payment types</h1>
+          <div class="image-container flex-css-row-start">
+            <img src="./assets/image/esewa.png" alt="payment" />
+            <img src="./assets/image/imepay.png" alt="payment" />
+            <img src="./assets/image/khalti.png" alt="payment" />
+          </div>
+        </div>
+      </div>
+      <div class="important-container">
+        <div class="important-heading">
+          <h1>Important information</h1>
+        </div>
+        <div class="box">
+          <h1>Fees</h1>
+          <p class="mb-3">
+            You'll be asked to pay the following charges at the property:
+          </p>
+          <ul class="pl-4">
+            <li>Breakage deposit: USD 200 per day</li>
+            <li>Resort fee: USD 53.11 per accommodation, per night</li>
+          </ul>
+          <p>We have included all charges provided to us by the property.</p>
+        </div>
+        <div class="box">
+          <h1>Optional extras</h1>
+          <p class="mb-3">
+            The following fees and deposits are charged by the property at time
+            of service, check-in, or check-out.
+          </p>
+          <ul class="pl-4">
+            <li>
+              Fee for cooked-to-order breakfast: USD 30 per person
+              (approximately)
+            </li>
+            <li>Valet parking fee: USD 42 per night (in/out privileges)</li>
+            <li>Pet fee: USD 125 per accommodation, per stay</li>
+            <li>Service animals are exempt from fees</li>
+            <li>Rollaway bed fee: USD 35.0 per night</li>
+          </ul>
+          <p>
+            The above list may not be comprehensive. Fees and deposits may not
+            include tax and are subject to change.
+          </p>
+        </div>
+        <div class="box">
+          <h1>You need to know</h1>
+          <p>This property is managed by a professional host</p>
+          <p>
+            Extra-person charges may apply and vary depending on property policy
+          </p>
+          <p>
+            Government-issued photo identification and a credit card, debit
+            card, or cash deposit may be required at check-in for incidental
+            charges
+          </p>
+          <p>
+            Special requests are subject to availability upon check-in and may
+            incur additional charges; special requests cannot be guaranteed
+          </p>
+          <p>This property accepts credit cards; cash is not accepted</p>
+          <p>
+            Please note that cultural norms and guest policies may differ by
+            country and by property; the policies listed are provided by the
+            property
+          </p>
+        </div>
+        <div class="box">
+          <h1>We should mention</h1>
+          <p>
+            Reservations are required for massage services and spa treatments;
+            reservations can be made by contacting the property prior to
+            arrival, using the contact information on the booking confirmation
+          </p>
+          <p>
+            The property has connecting/adjoining rooms, which are subject to
+            availability and can be requested by contacting the property using
+            the number on the booking confirmation
+          </p>
+          <p>
+            This property welcomes guests of all sexual orientations and gender
+            identities (LGBTQ friendly)
+          </p>
+        </div>
+      </div>
+      <div class="faq-container">
+        <h1>Frequently asked questions</h1>
+        <div class="box">
+          <div class="list flex-top-row-start">
+            <div class="icon-container flex-top">
+              <img src="./assets/image/arrow_down.png" alt="arrow" />
+            </div>
+            <div class="question-answer-list">
+              <h5 class="question-text">
+                Does Arushi Boutique Hotel have a pool?
+              </h5>
+              <p class="answer-text">
+                Yes, this resort allows pets (limit 2 per room) with a maximum
+                weight of up to 25 lbs per pet. There's a fee of USD 125 per
+                accommodation, per stay.
+              </p>
+            </div>
+          </div>
+          <div class="list flex-top-row-start">
+            <div class="icon-container flex-top">
+              <img src="./assets/image/arrow_down.png" alt="arrow" />
+            </div>
+            <div class="question-answer-list">
+              <h5 class="question-text">
+                Is Arushi Boutique Hotel pet-friendly?
+              </h5>
+              <p class="answer-text">
+                Yes, this resort allows pets (limit 2 per room) with a maximum
+                weight of up to 25 lbs per pet. There's a fee of USD 125 per
+                accommodation, per stay.
+              </p>
+            </div>
+          </div>
+          <div class="list flex-top-row-start">
+            <div class="icon-container flex-top">
+              <img src="./assets/image/arrow_down.png" alt="arrow" />
+            </div>
+            <div class="question-answer-list">
+              <h5 class="question-text">
+                How much is parking at Arushi Boutique Hotel?
+              </h5>
+              <p class="answer-text">
+                Yes, this resort allows pets (limit 2 per room) with a maximum
+                weight of up to 25 lbs per pet. There's a fee of USD 125 per
+                accommodation, per stay.
+              </p>
+            </div>
+          </div>
+          <div class="list flex-top-row-start">
+            <div class="icon-container flex-top">
+              <img src="./assets/image/arrow_down.png" alt="arrow" />
+            </div>
+            <div class="question-answer-list">
+              <h5 class="question-text">
+                Can I cancel my reservation for free at JArushi Boutique Hotel
+                receive a full refund?
+              </h5>
+              <p class="answer-text">
+                Yes, this resort allows pets (limit 2 per room) with a maximum
+                weight of up to 25 lbs per pet. There's a fee of USD 125 per
+                accommodation, per stay.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer container  -->
+    <div class="content-container footer-container" id="footerContainer">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-logo">
+            <img src="./assets/image/new_logo-blue.png" alt="logo" />
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-links">
+            <p>Company</p>
+            <div class="link-list flex-top-column">
+              <a href="#">About</a>
+              <a href="#">Contact Us</a>
+              <a href="#">List your property</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-links">
+            <p>Terms and Policies</p>
+            <div class="link-list flex-top-column">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms of use</a>
+              <a href="#">Room Rewards Terms</a>
+              <a href="#"> Accessibility</a>
+              <a href="#"> Do not sell my personal information</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 footer-box">
+          <div class="footer-links">
+            <p>Help</p>
+            <div class="link-list flex-top-column">
+              <a href="#"> Support </a>
+              <a href="#"> Cancel your hotel or vacation rental booking </a>
+              <a href="#"> Refund timelines, policies & processes </a>
+              <a href="#"> Use an Expedia coupon </a>
+              <a href="#"> International travel documents </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-banner pt-5 text-center">
+        <p>&#169; 2022 Roam Nepal, Inc. All rights reserved</p>
+      </div>
+    </div>
+    <script src="./assets/js/property_page.js"></script>
+  </body>
+</html>

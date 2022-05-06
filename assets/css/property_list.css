@@ -80,6 +80,10 @@ body.fixed-body {
   object-fit: contain;
 }
 
+.nav-bar .link-container a.profile-link {
+  position: relative;
+}
+
 .nav-bar .link-container a .profile-container {
   height: 50px;
   width: 50px;
@@ -96,6 +100,50 @@ body.fixed-body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.nav-bar .link-container a.profile-link .profile-dropdown {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  background-color: #ffffff;
+  /* box-shadow: 55px 154px 145px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 13px;
+  padding: 10px 0 !important;
+  z-index: 999999;
+  display: none;
+}
+
+.nav-bar .link-container a.profile-link .profile-dropdown .list {
+  white-space: nowrap;
+  padding: 8px 20px !important;
+}
+
+.nav-bar .link-container a.profile-link .profile-dropdown .list:hover {
+  background-color: #f3f3f3;
+}
+
+.nav-bar .link-container a.profile-link .profile-dropdown .list .img-container {
+  min-width: 25px;
+  max-width: 25px;
+  width: 25px;
+  pointer-events: none;
+}
+
+.nav-bar .link-container a.profile-link .profile-dropdown .list img {
+  height: 16px;
+  margin-right: 10px !important;
+}
+
+.nav-bar .link-container a.profile-link .profile-dropdown .list p {
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.nav-bar .link-container a.profile-link:hover .profile-dropdown {
+  display: block;
 }
 
 .nav-tab {

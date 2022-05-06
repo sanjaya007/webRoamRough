@@ -242,7 +242,6 @@ $(".view-map-btn").on("click", function (e) {
 $("#mapModal").on("click", function (e) {
   const target = e.target;
   const elID = $(target).attr("id");
-  console.log(elID);
 
   if (elID === "mapModal") {
     $("#mapModal").fadeOut();
@@ -258,6 +257,15 @@ $("#filterBtn").on("click", function (e) {
 
 $("#filterClose").on("click", function () {
   $("#filterContainer").fadeOut();
+});
+
+$("#filterContainer").on("click", function (e) {
+  const target = e.target;
+  const elID = $(target).attr("id");
+
+  if (elID === "filterContainer") {
+    $("#filterContainer").fadeOut();
+  }
 });
 
 $(window).resize(function () {
