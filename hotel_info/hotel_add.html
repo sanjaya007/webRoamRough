@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Add</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sanjaya007/flex-library@master/dist/css/sanjaya.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/hotel_add.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+      integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body class="hotel-info-body" id="hotelInfoBody">
+    <div class="head-box pt-2">
+      <div class="logo-container flex-css py-3">
+        <img src="./assets/image/logo.png" alt="logo" />
+      </div>
+    </div>
+
+    <div class="main-container py-5">
+      <div class="add-container">
+        <div class="box flex-top-row-sb">
+          <div class="left-box pr-5">
+            <div class="form-box">
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box full-input">
+                  <label for="name">Room Name</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box mr-2">
+                  <label for="name">Rate of Room/Night</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box ml-2">
+                  <label for="type">Room Type</label>
+                  <div class="select-wrapper">
+                    <img src="./assets/image/select_arrow.png" alt="arrow" />
+                    <select class="select-input">
+                      <option value="VIP">VIP</option>
+                      <option value="VIP">Normal</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box mr-2">
+                  <label for="name">No of Single Beds</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box ml-2">
+                  <label for="name">No of Double Beds</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="input-row flex-css-row-sb">
+                <div class="input-box mr-2">
+                  <label for="name">Check in Time</label>
+                  <input type="text" />
+                </div>
+                <div class="input-box ml-2">
+                  <label for="name">Check out Time</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="upload-box">
+                <div class="input-box file-input-box">
+                  <label for="name">Owner of Hotel</label>
+                  <div class="input-wrapper flex-css">
+                    <div class="input-text flex-css-row">
+                      <img src="./assets/image/gallery.png" alt="gallery" />
+                      <p>Upload a Logo</p>
+                    </div>
+                    <input type="file" />
+                  </div>
+                </div>
+                <div class="img-wrapper flex-css-row-start-wrap">
+                  <div class="img-box">
+                    <img src="./assets/image/hotel1.png" alt="hotel" />
+                    <div class="icon-box flex-css">
+                      <img src="./assets/image/close.png" alt="close" />
+                    </div>
+                  </div>
+                  <div class="img-box">
+                    <img src="./assets/image/hotel2.png" alt="hotel" />
+                    <div class="icon-box flex-css">
+                      <img src="./assets/image/close.png" alt="close" />
+                    </div>
+                  </div>
+                  <div class="img-box">
+                    <img src="./assets/image/hotel1.png" alt="hotel" />
+                    <div class="icon-box flex-css">
+                      <img src="./assets/image/close.png" alt="close" />
+                    </div>
+                  </div>
+                  <div class="img-box">
+                    <img src="./assets/image/hotel2.png" alt="hotel" />
+                    <div class="icon-box flex-css">
+                      <img src="./assets/image/close.png" alt="close" />
+                    </div>
+                  </div>
+                  <div class="img-box">
+                    <img src="./assets/image/hotel1.png" alt="hotel" />
+                    <div class="icon-box flex-css">
+                      <img src="./assets/image/close.png" alt="close" />
+                    </div>
+                  </div>
+                  <div class="img-box">
+                    <img src="./assets/image/hotel2.png" alt="hotel" />
+                    <div class="icon-box flex-css">
+                      <img src="./assets/image/close.png" alt="close" />
+                    </div>
+                  </div>
+                  <div class="img-box">
+                    <img src="./assets/image/hotel1.png" alt="hotel" />
+                    <div class="icon-box flex-css">
+                      <img src="./assets/image/close.png" alt="close" />
+                    </div>
+                  </div>
+                  <div class="img-box">
+                    <img src="./assets/image/hotel2.png" alt="hotel" />
+                    <div class="icon-box flex-css">
+                      <img src="./assets/image/close.png" alt="close" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-container lg-btn flex-css-row-start pt-4">
+                <a href="#" class="add-btn">Add Room</a>
+                <a href="#" class="add-another-btn">Add Another Room</a>
+              </div>
+            </div>
+          </div>
+          <div class="right-box pl-5">
+            <div class="question-box pt-3 pb-2">
+              <div class="list flex-css-row-sb">
+                <div class="title">
+                  <h1>Free Breakfast ?</h1>
+                </div>
+                <div class="btn-box flex-css-row">
+                  <a href="#" class="yes-btn">Yes</a>
+                  <a href="#" class="no-btn">No</a>
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="title">
+                  <h1>Are Pets Allowed?</h1>
+                </div>
+                <div class="btn-box flex-css-row">
+                  <a href="#" class="yes-btn">Yes</a>
+                  <a href="#" class="no-btn">No</a>
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="title">
+                  <h1>Fully Refundable</h1>
+                  <p>* Conditions Applied</p>
+                </div>
+                <div class="btn-box flex-css-row">
+                  <a href="#" class="yes-btn">Yes</a>
+                  <a href="#" class="no-btn">No</a>
+                </div>
+              </div>
+            </div>
+            <div class="list-box my-4">
+              <div class="title pb-4">
+                <h1>Add Amenities</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/parking.png" alt="parking" />
+                  <p>Is Parking included ?</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/wifi.png" alt="parking" />
+                  <p>Does it have Free WiFi ?</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/spa.png" alt="parking" />
+                  <p>Any kinds of Spa ?</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/food.png" alt="parking" />
+                  <p>Does it have Restaurant ?</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/temp.png" alt="parking" />
+                  <p>Does it have Air conditioning System ?</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/gym.png" alt="parking" />
+                  <p>Does it have Gym Facility?</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+            </div>
+            <div class="list-box">
+              <div class="title pb-4">
+                <h1>Cleaning and Safety Practise</h1>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/spray.png" alt="parking" />
+                  <p>Cleaned with disinfectant</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/sani.png" alt="parking" />
+                  <p>Hand Sanitizer Provided</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/equip.png" alt="parking" />
+                  <p>Personal Protective Equipment</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/social.png" alt="parking" />
+                  <p>Social Distancing</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/temp.png" alt="parking" />
+                  <p>Does it have Air conditioning System ?</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+              <div class="list flex-css-row-sb">
+                <div class="left-list flex-css-row-start">
+                  <img src="./assets/image/gym.png" alt="parking" />
+                  <p>Does it have Gym Facility?</p>
+                </div>
+                <div class="right-list flex-css-row-end">
+                  <img src="./assets/image/blue_yes.png" alt="yes" />
+                  <img src="./assets/image/blue_no.png" alt="yes" />
+                </div>
+              </div>
+            </div>
+            <div class="btn-container sm-btn flex-css-row-start pt-4">
+              <a href="#" class="add-btn">Add Room</a>
+              <a href="#" class="add-another-btn">Add Another Room</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/hotel_add.js"></script>
+  </body>
+</html>
