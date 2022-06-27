@@ -224,8 +224,8 @@ body {
 }
 
 .main-container .add-container .question-box .list .btn-box a {
-  background: #006ce6;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #006ce6;
   font-weight: 600;
   font-size: 14px;
   padding: 8px 0 !important;
@@ -233,11 +233,15 @@ body {
   border: 1px solid #006ce6;
   width: 80px;
   text-align: center;
+  text-decoration: none;
+}
+
+.main-container .add-container .question-box .list .btn-box a.active {
+  background-color: #006ce6;
+  color: #ffffff;
 }
 
 .main-container .add-container .question-box .list .btn-box a.no-btn {
-  background-color: #ffffff;
-  color: #006ce6;
   margin-left: 10px !important;
 }
 
@@ -263,6 +267,11 @@ body {
 
 .main-container .add-container .list-box .list .right-list img {
   cursor: pointer;
+  opacity: 0.5;
+}
+
+.main-container .add-container .list-box .list .right-list img.active {
+  opacity: 1;
 }
 
 .main-container .add-container .list-box .list .right-list img:nth-child(1) {

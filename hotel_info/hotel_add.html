@@ -91,59 +91,13 @@
                       <img src="./assets/image/gallery.png" alt="gallery" />
                       <p>Upload a Logo</p>
                     </div>
-                    <input type="file" />
+                    <input type="file" id="uploadBtn" multiple />
                   </div>
                 </div>
-                <div class="img-wrapper flex-css-row-start-wrap">
-                  <div class="img-box">
-                    <img src="./assets/image/hotel1.png" alt="hotel" />
-                    <div class="icon-box flex-css">
-                      <img src="./assets/image/close.png" alt="close" />
-                    </div>
-                  </div>
-                  <div class="img-box">
-                    <img src="./assets/image/hotel2.png" alt="hotel" />
-                    <div class="icon-box flex-css">
-                      <img src="./assets/image/close.png" alt="close" />
-                    </div>
-                  </div>
-                  <div class="img-box">
-                    <img src="./assets/image/hotel1.png" alt="hotel" />
-                    <div class="icon-box flex-css">
-                      <img src="./assets/image/close.png" alt="close" />
-                    </div>
-                  </div>
-                  <div class="img-box">
-                    <img src="./assets/image/hotel2.png" alt="hotel" />
-                    <div class="icon-box flex-css">
-                      <img src="./assets/image/close.png" alt="close" />
-                    </div>
-                  </div>
-                  <div class="img-box">
-                    <img src="./assets/image/hotel1.png" alt="hotel" />
-                    <div class="icon-box flex-css">
-                      <img src="./assets/image/close.png" alt="close" />
-                    </div>
-                  </div>
-                  <div class="img-box">
-                    <img src="./assets/image/hotel2.png" alt="hotel" />
-                    <div class="icon-box flex-css">
-                      <img src="./assets/image/close.png" alt="close" />
-                    </div>
-                  </div>
-                  <div class="img-box">
-                    <img src="./assets/image/hotel1.png" alt="hotel" />
-                    <div class="icon-box flex-css">
-                      <img src="./assets/image/close.png" alt="close" />
-                    </div>
-                  </div>
-                  <div class="img-box">
-                    <img src="./assets/image/hotel2.png" alt="hotel" />
-                    <div class="icon-box flex-css">
-                      <img src="./assets/image/close.png" alt="close" />
-                    </div>
-                  </div>
-                </div>
+                <div
+                  class="img-wrapper flex-css-row-start-wrap"
+                  id="imageWrapper"
+                ></div>
               </div>
               <div class="btn-container lg-btn flex-css-row-start pt-4">
                 <a href="#" class="add-btn">Add Room</a>
@@ -157,18 +111,35 @@
                 <div class="title">
                   <h1>Free Breakfast ?</h1>
                 </div>
-                <div class="btn-box flex-css-row">
-                  <a href="#" class="yes-btn">Yes</a>
-                  <a href="#" class="no-btn">No</a>
+                <div
+                  class="btn-box yes-no-btn-box flex-css-row"
+                  id="breakfastYN"
+                >
+                  <a
+                    href="#"
+                    class="yes-no-btn yes-btn active"
+                    data-status="active"
+                    >Yes</a
+                  >
+                  <a href="#" class="yes-no-btn no-btn" data-status="inactive"
+                    >No</a
+                  >
                 </div>
               </div>
               <div class="list flex-css-row-sb">
                 <div class="title">
                   <h1>Are Pets Allowed?</h1>
                 </div>
-                <div class="btn-box flex-css-row">
-                  <a href="#" class="yes-btn">Yes</a>
-                  <a href="#" class="no-btn">No</a>
+                <div class="btn-box yes-no-btn-box flex-css-row" id="petsYN">
+                  <a
+                    href="#"
+                    class="yes-no-btn yes-btn active"
+                    data-status="active"
+                    >Yes</a
+                  >
+                  <a href="#" class="yes-no-btn no-btn" data-status="inactive"
+                    >No</a
+                  >
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -176,9 +147,19 @@
                   <h1>Fully Refundable</h1>
                   <p>* Conditions Applied</p>
                 </div>
-                <div class="btn-box flex-css-row">
-                  <a href="#" class="yes-btn">Yes</a>
-                  <a href="#" class="no-btn">No</a>
+                <div
+                  class="btn-box yes-no-btn-box flex-css-row"
+                  id="refundableYN"
+                >
+                  <a
+                    href="#"
+                    class="yes-no-btn yes-btn active"
+                    data-status="active"
+                    >Yes</a
+                  >
+                  <a href="#" class="yes-no-btn no-btn" data-status="inactive"
+                    >No</a
+                  >
                 </div>
               </div>
             </div>
@@ -191,9 +172,22 @@
                   <img src="./assets/image/parking.png" alt="parking" />
                   <p>Is Parking included ?</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="parkingSelection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -201,9 +195,22 @@
                   <img src="./assets/image/wifi.png" alt="parking" />
                   <p>Does it have Free WiFi ?</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="wifiSelection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -211,9 +218,22 @@
                   <img src="./assets/image/spa.png" alt="parking" />
                   <p>Any kinds of Spa ?</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="spaSelection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -221,9 +241,22 @@
                   <img src="./assets/image/food.png" alt="parking" />
                   <p>Does it have Restaurant ?</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="restaurantSelection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -231,9 +264,22 @@
                   <img src="./assets/image/temp.png" alt="parking" />
                   <p>Does it have Air conditioning System ?</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="acSelection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -241,9 +287,22 @@
                   <img src="./assets/image/gym.png" alt="parking" />
                   <p>Does it have Gym Facility?</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="gymSelection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
             </div>
@@ -256,9 +315,22 @@
                   <img src="./assets/image/spray.png" alt="parking" />
                   <p>Cleaned with disinfectant</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="cleanSelection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -266,9 +338,22 @@
                   <img src="./assets/image/sani.png" alt="parking" />
                   <p>Hand Sanitizer Provided</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="sanitizerSelection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -276,9 +361,22 @@
                   <img src="./assets/image/equip.png" alt="parking" />
                   <p>Personal Protective Equipment</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="equipSelection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -286,9 +384,22 @@
                   <img src="./assets/image/social.png" alt="parking" />
                   <p>Social Distancing</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="socialSelection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -296,9 +407,22 @@
                   <img src="./assets/image/temp.png" alt="parking" />
                   <p>Does it have Air conditioning System ?</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="ac2Selection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
               <div class="list flex-css-row-sb">
@@ -306,9 +430,22 @@
                   <img src="./assets/image/gym.png" alt="parking" />
                   <p>Does it have Gym Facility?</p>
                 </div>
-                <div class="right-list flex-css-row-end">
-                  <img src="./assets/image/blue_yes.png" alt="yes" />
-                  <img src="./assets/image/blue_no.png" alt="yes" />
+                <div
+                  class="right-list select-btn-box flex-css-row-end"
+                  id="gym2Selection"
+                >
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_yes.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
+                  <img
+                    class="select-btn"
+                    src="./assets/image/blue_no.png"
+                    alt="yes"
+                    data-status="inactive"
+                  />
                 </div>
               </div>
             </div>
