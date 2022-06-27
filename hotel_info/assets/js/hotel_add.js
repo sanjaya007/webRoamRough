@@ -20,7 +20,9 @@ $(window).on("load", function () {
   const triggerImageRemove = () => {
     $(".icon-box").on("click", function () {
       const imgBox = $(this).parent(".img-box");
-      imgBox.remove();
+      imgBox.fadeOut(500, function () {
+        $(this).remove();
+      });
     });
   };
 
